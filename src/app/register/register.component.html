@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div class="landing-page">
+  <div class="content">
+    <div class="container">
+      <div class="info">
+        <div class="form">
+          <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+          <label for="name">Name</label>
+            <input id="name" type="text">
+            <label for="surname">Surname</label>
+            <input id="surname" type="text">
+            <label for="gender">Gender</label>
+            <input id="gender" type="text">
+            <label for="email">Email Address</label>
+            <input id="email" type="email">
+            <label for="pass">Password</label>
+            <input id="pass" type="password" required>
+          </form>
+        </div>
+        <button type="submit" [disabled]="userForm.invalid" (click)="navigateToHome()">Submit</button>
+      </div>
+      <div class="image">
+        <img src="assets/Hi%20Ena.png" style="width: 90%; padding-left: 50px;">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Landing Page -->

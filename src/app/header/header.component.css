@@ -1,0 +1,146 @@
+/* Global Rules */
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+
+/* Start Landing Page */
+header {
+
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  header {
+    min-height: auto;
+    display: initial;
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  header .links {
+    text-align: center;
+    gap: 10px;
+  }
+
+  header .links button {
+    margin-left: 0;
+  }
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  color: #5d5d5d;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+header .links {
+  display: flex;
+  align-items: center;
+}
+
+header .links button {
+  color: #5d5d5d;
+  cursor: pointer;
+  transition: .3s;
+  border-radius: 20px;
+  border: white;
+  background-color: transparent;
+  margin: 5%;
+}
+
+header .links button:hover {
+  color: #66AFFF;
+}
+
+header .links #last_button:last-child {
+  border-radius: 20px;
+  margin: 2%;
+  background: #66AFFF;
+  color: #f8f8f8;
+}
+header .links #last2_button:last-child {
+  border-radius: 20px;
+  margin: 2%;
+  background: #66AFFF;
+  color: #f8f8f8;
+}
+
+header .links #last_button:hover {
+  color: #5d5d5d;
+  cursor: pointer;
+}
+
+/* Additional Styles for Content Section */
+.content .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 140px;
+  min-height: calc(100vh - 80px);
+}
+
+@media (max-width: 767px) {
+  .content .container {
+    gap: 0;
+    min-height: calc(100vh - 101px);
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+
+  .content .info {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}

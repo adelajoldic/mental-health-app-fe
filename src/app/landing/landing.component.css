@@ -1,0 +1,44 @@
+
+/* Start Landing Page */
+.landing-page .content .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 140px;
+  margin: 3%;
+}
+@media (max-width: 767px) {
+  .landing-page .content .container {
+    gap: 0;
+    min-height: calc(100vh - 101px);
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 767px) {
+  .landing-page .content .info {
+    text-align: center;
+    margin-bottom: 15px
+  }
+}
+.landing-page .content .info h1 {
+  color: #5d5d5d;
+  font-size: 44px;
+
+}
+.landing-page .content .info p {
+  text-align: justify;
+  margin: 2%;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #5d5d5d;
+}
+
+.landing-page .content .info button:hover {
+  color: #5d5d5d;
+  cursor: pointer;
+}
+.landing-page .content .image img {
+  max-width: 100%;
+}
+/* End Landing Page */

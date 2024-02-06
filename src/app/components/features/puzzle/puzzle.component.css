@@ -1,0 +1,43 @@
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(2, 100px);
+  grid-gap: 40px;
+  margin: 7% 20%;
+}
+
+.card {
+  width: 130px;
+  height: 130px;
+  background-color: #3498db;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.card.flipped {
+  background-color: #2ecc71;
+}
+
+.card.matched {
+  background: #E0AA3A;
+  pointer-events: none; /* Disable clicking on matched cards */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.header-image {
+  width: 30%;
+  margin: auto 1%;
+}
+
+.game-container {
+  margin-left: 20px; /* Adjust the margin as needed */
+}

@@ -13,6 +13,11 @@ import { ProfileComponent } from './components/features/profile/profile.componen
 import { GamesComponent } from './components/features/games/games.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FirstQuizComponent } from './components/features/first-quiz/first-quiz.component';
+import { AnxietyQuizComponent } from './components/features/anxiety-quiz/anxiety-quiz.component';
+import { DepressionQuizComponent } from './components/features/depression-quiz/depression-quiz.component';
+import { PuzzleComponent } from './components/features/puzzle/puzzle.component';
+import { ListeningComponent } from './components/features/listening/listening.component';
+import { KnowledgeComponent } from './components/features/knowledge/knowledge.component';
 
 
 
@@ -29,6 +34,11 @@ import { FirstQuizComponent } from './components/features/first-quiz/first-quiz.
     GamesComponent,
     FooterComponent,
     FirstQuizComponent,
+    AnxietyQuizComponent,
+    DepressionQuizComponent,
+    PuzzleComponent,
+    ListeningComponent,
+    KnowledgeComponent,
 
   ],
     imports: [

@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="container">
+  <img src="assets/Hi%20Ena.png" class="header-image">
+
+  <div id="game-board" class="game-container">
+    <div *ngFor="let card of shuffledCards" class="card" [class.flipped]="card.flipped" [class.matched]="card.matched" (click)="handleCardClick(card)">
+      <span *ngIf="card.flipped">{{ card.value }}</span>
+    </div>
+
+    <div class="quiz-result" *ngIf="areAllCardsMatched()">
+      <img src="{{ getResultImage() }}" class="images" alt="Result Image">
+      <h3>{{ getCongratulatoryMessage() }}</h3>
+      <p>You've matched all cards!</p>
+
+      <button (click)="navigateToGames()">Go Back</button>
+    </div>
+  </div>
+</div>

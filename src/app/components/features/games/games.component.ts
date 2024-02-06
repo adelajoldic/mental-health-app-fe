@@ -7,7 +7,13 @@ import {Router} from "@angular/router";
   styleUrls: ['./games.component.css']
 })
 export class GamesComponent implements OnInit{
+  constructor(private router:Router) {
+  }
   // public quiz = Router.QUIZ;
+  navigateToFirstQuiz(): void {
+    const path = "first-quiz"
+    this.router.navigate([path])
+  }
   currentSlide = 0;
   slides: HTMLElement[] = [];
 

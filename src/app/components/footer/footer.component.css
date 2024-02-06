@@ -1,0 +1,20 @@
+/* Footer */
+footer{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  text-align: center;
+  border-top: 1px solid #E1E1E1; /* Add this line for the upper border */
+  padding: 2% 0;
+  margin-top: 2%;
+}
+
+footer p {
+  color: #5d5d5d;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 40px;
+  margin: 1% auto;
+}

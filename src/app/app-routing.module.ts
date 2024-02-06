@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {LandingComponent} from "./components/landing/landing.component";
-import {HomeComponent} from "./components/home/home.component";
-import {ProfileComponent} from "./components/profile/profile.component";
-import {GamesComponent} from "./components/games/games.component";
-import {RegisterComponent} from "./components/register/register.component";
-import {LoginComponent} from "./components/login/login.component";
+import {HomeComponent} from "./components/features/home/home.component";
+import {EducationComponent} from "./components/features/education/education.component";
+import {ProfileComponent} from "./components/features/profile/profile.component";
+import {GamesComponent} from "./components/features/games/games.component";
+import {RegisterComponent} from "./components/features/register/register.component";
+import {LoginComponent} from "./components/features/login/login.component";
+import {FirstQuizComponent} from "./components/features/first-quiz/first-quiz.component";
 
 const routes: Routes = [
   {
     path: "",
-    component: LandingComponent
+    component: HomeComponent
   },
   {
     path: "register",
@@ -22,11 +23,15 @@ const routes: Routes = [
   },
   {
     path: "home",
-    component: HomeComponent,
+    component: EducationComponent,
   },
   {
     path: "games",
     component: GamesComponent,
+  },
+  {
+    path: "first-quiz",
+    component: FirstQuizComponent,
   },
   {
     path: "profile",

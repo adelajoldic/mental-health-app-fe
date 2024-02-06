@@ -1,8 +1,3 @@
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-weight: 100;
 }
@@ -15,7 +10,7 @@ body {
 
 /* Main */
 .main .container {
-  margin: 80px auto;
+  margin: 4% auto;
   color: #5d5d5d;
   gap: 10px;
   text-align: justify;
@@ -56,21 +51,6 @@ body {
   margin: 10px 0 0;
   float: right;}
 
-/* Footer */
-.footer {
-  height: 80px;
-}
-
-.footer p {
-  color: #5d5d5d;
-  font-style: italic;
-  text-transform: uppercase;
-  font-size: 15px;
-  height: 80px;
-  line-height: 80px;
-  margin: 0;
-  text-align: center;
-}
 /* Media Queries */
 @media (max-width: 500px) {
   .header h1 {

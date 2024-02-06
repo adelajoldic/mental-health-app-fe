@@ -1,0 +1,33 @@
+<app-header></app-header>
+<div class="quiz-container">
+<!--  <h2>{{ quizTitle }}</h2>-->
+
+  <div *ngIf="currentQuestionIndex < questions.length"  id="question-counter">
+    <p>Question {{ getCurrentQuestionNumber() }} out of {{ questions.length }}</p>
+  </div>
+
+  <div *ngIf="currentQuestionIndex < questions.length" class="question-container">
+    <p id="question">{{ currentQuestionIndex + 1 }}. {{ questions[currentQuestionIndex].questionText }}</p>
+
+    <div class="options-container">
+      <div *ngFor="let option of questions[currentQuestionIndex].options; let j = index" class="option"
+           [ngClass]="{ 'selected': j === questions[currentQuestionIndex].selectedOption }"
+           (click)="selectOption(currentQuestionIndex, j)">
+        {{ option }}
+      </div>
+    </div>
+
+    <button (click)="submitQuiz()">Next Question</button>
+  </div>
+
+  <div *ngIf="currentQuestionIndex === questions.length" class="quiz-result" id="quiz-result">
+      <div *ngIf="currentQuestionIndex === questions.length">
+        <div class="quiz-result">
+          <img [src]="getResultImage()" class="images" alt="Result Image">
+          <h3>{{ getResultMessage()}}</h3>
+          <p>You answered correctly on {{getTotalScore()}} out of {{getTotalQuestions()}} questions.</p>
+
+        </div>
+      </div>
+    </div>
+</div>

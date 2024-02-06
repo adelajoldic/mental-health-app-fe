@@ -11,10 +11,13 @@ ul {
 }
 
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 1%;
   margin-left: auto;
   margin-right: auto;
+  border-bottom: 1px solid #E1E1E1; /* Add this line for the upper border */
+
 }
 
 /* Small */
@@ -42,7 +45,6 @@ ul {
 
 /* Start Landing Page */
 header {
-
   display: flex;
 }
 

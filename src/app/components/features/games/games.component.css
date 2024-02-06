@@ -101,14 +101,14 @@
 
 .img-slider .slide .info h1 {
   color: white;
-  font-size: 60px;
+  font-size: 40px;
 }
 
 .img-slider .slide .info h2 {
   position: absolute;
-  margin-top: 10%;
+  margin-top: 0.5%;
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   opacity: 0;
   transition: opacity 1s ease-in-out 1s;
 }
@@ -151,7 +151,7 @@
 }
 @media (max-width: 1000px) {
   .img-slider .slide .info h1 {
-    font-size: 60px;
+    font-size: 40px;
   }
   .img-slider .slide img{
     height: 100vh;
@@ -163,13 +163,13 @@
   .img-slider .slide .info{
     width: 50%;
     height: 50vh;
-    top: 50%;
+    top: 40%;
     transform: translate(-10%, -50%);
     left: 10%;
     z-index: 1;
   }
   .img-slider .slide .info h2{
-    font-size:40px;
+    font-size:30px;
   }
   .background-image button{
     top: 95%;

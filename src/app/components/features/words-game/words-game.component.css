@@ -1,0 +1,66 @@
+#main-container{
+  margin-top: 0.5%;
+  margin-right: 5%;
+}
+
+.image {
+  width: 60%;
+  margin: auto auto;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+#game-container {
+  display: grid;
+  grid-template-columns: repeat(5, 50px);
+  gap: 5px;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #66AFFF;
+  color: white;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+button{
+  width: 170px;
+  padding: 2% 15%;
+}
+
+.word-search-container {
+  display: flex;
+}
+
+.word-input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 7%;
+}
+
+.word-input-container label {
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+
+.word-input-container input {
+  margin-bottom: 10px;
+  font-size: 16px;
+  width: 60%;
+}
+

@@ -10,10 +10,10 @@ interface Card {
 
 @Component({
   selector: 'app-puzzle',
-  templateUrl: './puzzle.component.html',
-  styleUrls: ['./puzzle.component.css']
+  templateUrl: './memory-game.component.html',
+  styleUrls: ['./memory-game.component.css']
 })
-export class PuzzleComponent implements OnInit {
+export class MemoryGameComponent implements OnInit {
   constructor(private router:Router) {
   }
   showCongratulatoryMessage: boolean = false;

@@ -9,7 +9,8 @@ import {LoginComponent} from "./components/features/login/login.component";
 import {FirstQuizComponent} from "./components/features/first-quiz/first-quiz.component";
 import {AnxietyQuizComponent} from "./components/features/anxiety-quiz/anxiety-quiz.component";
 import {DepressionQuizComponent} from "./components/features/depression-quiz/depression-quiz.component";
-import {PuzzleComponent} from "./components/features/puzzle/puzzle.component";
+import {MemoryGameComponent} from "./components/features/memory-game/memory-game.component";
+import {WordsGameComponent} from "./components/features/words-game/words-game.component";
 
 const routes: Routes = [
   {
@@ -45,8 +46,12 @@ const routes: Routes = [
     component: DepressionQuizComponent,
   },
   {
-    path: "puzzle",
-    component: PuzzleComponent,
+    path: "memory-game",
+    component: MemoryGameComponent,
+  },
+  {
+    path: "words-game",
+    component: WordsGameComponent,
   },
   {
     path: "profile",

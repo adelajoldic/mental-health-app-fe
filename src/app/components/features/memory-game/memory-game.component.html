@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="container">
-  <img src="assets/Hi%20Ena.png" class="header-image">
+  <img src="assets/MemoryGame.png" class="image">
 
   <div id="game-board" class="game-container">
     <div *ngFor="let card of shuffledCards" class="card" [class.flipped]="card.flipped" [class.matched]="card.matched" (click)="handleCardClick(card)">

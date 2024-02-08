@@ -3,10 +3,10 @@ import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-games',
-  templateUrl: './games.component.html',
-  styleUrls: ['./games.component.css']
+  templateUrl: './quiz.component.html',
+  styleUrls: ['./quiz.component.css']
 })
-export class GamesComponent implements OnInit{
+export class QuizComponent implements OnInit{
   constructor(private router:Router) {
   }
   // public quiz = Router.QUIZ;

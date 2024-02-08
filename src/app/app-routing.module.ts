@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {HomeComponent} from "./components/features/home/home.component";
 import {EducationComponent} from "./components/features/education/education.component";
 import {ProfileComponent} from "./components/features/profile/profile.component";
-import {GamesComponent} from "./components/features/games/games.component";
+import {QuizComponent} from "./components/features/quiz/quiz.component";
 import {RegisterComponent} from "./components/features/register/register.component";
 import {LoginComponent} from "./components/features/login/login.component";
 import {FirstQuizComponent} from "./components/features/first-quiz/first-quiz.component";
@@ -11,6 +11,7 @@ import {AnxietyQuizComponent} from "./components/features/anxiety-quiz/anxiety-q
 import {DepressionQuizComponent} from "./components/features/depression-quiz/depression-quiz.component";
 import {MemoryGameComponent} from "./components/features/memory-game/memory-game.component";
 import {WordsGameComponent} from "./components/features/words-game/words-game.component";
+import {GamesListComponent} from "./components/features/games-list/games-list.component";
 
 const routes: Routes = [
   {
@@ -30,8 +31,12 @@ const routes: Routes = [
     component: EducationComponent,
   },
   {
+    path: "quiz",
+    component: QuizComponent,
+  },
+  {
     path: "games",
-    component: GamesComponent,
+    component: GamesListComponent,
   },
   {
     path: "first-quiz",

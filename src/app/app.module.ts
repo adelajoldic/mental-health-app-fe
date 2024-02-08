@@ -10,7 +10,7 @@ import { LoginComponent } from './components/features/login/login.component';
 import { RegisterComponent } from './components/features/register/register.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ProfileComponent } from './components/features/profile/profile.component';
-import { GamesComponent } from './components/features/games/games.component';
+import { QuizComponent } from './components/features/quiz/quiz.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FirstQuizComponent } from './components/features/first-quiz/first-quiz.component';
 import { AnxietyQuizComponent } from './components/features/anxiety-quiz/anxiety-quiz.component';
@@ -19,6 +19,7 @@ import { MemoryGameComponent } from './components/features/memory-game/memory-ga
 import { ListeningComponent } from './components/features/listening/listening.component';
 import { KnowledgeComponent } from './components/features/knowledge/knowledge.component';
 import { WordsGameComponent } from './components/features/words-game/words-game.component';
+import { GamesListComponent } from './components/features/games-list/games-list.component';
 
 
 
@@ -32,7 +33,7 @@ import { WordsGameComponent } from './components/features/words-game/words-game.
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    GamesComponent,
+    QuizComponent,
     FooterComponent,
     FirstQuizComponent,
     AnxietyQuizComponent,
@@ -41,6 +42,7 @@ import { WordsGameComponent } from './components/features/words-game/words-game.
     ListeningComponent,
     KnowledgeComponent,
     WordsGameComponent,
+    GamesListComponent,
 
   ],
     imports: [

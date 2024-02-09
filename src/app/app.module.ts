@@ -20,6 +20,7 @@ import { ListeningComponent } from './components/features/listening/listening.co
 import { KnowledgeComponent } from './components/features/knowledge/knowledge.component';
 import { WordsGameComponent } from './components/features/words-game/words-game.component';
 import { GamesListComponent } from './components/features/games-list/games-list.component';
+import { NotesDialogComponent } from './components/features/notes-dialog/notes-dialog.component';
 
 
 
@@ -43,6 +44,7 @@ import { GamesListComponent } from './components/features/games-list/games-list.
     KnowledgeComponent,
     WordsGameComponent,
     GamesListComponent,
+    NotesDialogComponent,
 
   ],
     imports: [

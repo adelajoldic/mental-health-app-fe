@@ -12,6 +12,7 @@ import {DepressionQuizComponent} from "./components/features/depression-quiz/dep
 import {MemoryGameComponent} from "./components/features/memory-game/memory-game.component";
 import {WordsGameComponent} from "./components/features/words-game/words-game.component";
 import {GamesListComponent} from "./components/features/games-list/games-list.component";
+import {VideosComponent} from "./components/features/videos/videos.component";
 
 const routes: Routes = [
   {
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path: "profile",
     component: ProfileComponent,
+  },
+  {
+    path: "videos",
+    component: VideosComponent,
   }
 ];
 

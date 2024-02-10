@@ -3,6 +3,13 @@ h2{
   color: #404252;
 }
 
+#introduction{
+  text-align: center;
+  margin: 50px auto;
+  line-height: 30px;
+  font-size: 18px;
+}
+
 .game-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

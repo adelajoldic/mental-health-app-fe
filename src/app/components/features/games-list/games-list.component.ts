@@ -13,6 +13,9 @@ interface Game {
   styleUrls: ['./games-list.component.css']
 })
 export class GamesListComponent {
+  public intro:string = "Experience the positive influence of short quizzes and games on your mental well-being." +
+    " Delve into a variety of interactive challenges that not only entertain but also contribute to improved " +
+    "focus and cognitive wellness.";
   constructor(private router:Router) {
   }
 

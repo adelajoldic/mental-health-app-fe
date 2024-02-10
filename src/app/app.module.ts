@@ -16,7 +16,7 @@ import { FirstQuizComponent } from './components/features/first-quiz/first-quiz.
 import { AnxietyQuizComponent } from './components/features/anxiety-quiz/anxiety-quiz.component';
 import { DepressionQuizComponent } from './components/features/depression-quiz/depression-quiz.component';
 import { MemoryGameComponent } from './components/features/memory-game/memory-game.component';
-import { ListeningComponent } from './components/features/listening/listening.component';
+import { VideosComponent } from './components/features/videos/videos.component';
 import { KnowledgeComponent } from './components/features/knowledge/knowledge.component';
 import { WordsGameComponent } from './components/features/words-game/words-game.component';
 import { GamesListComponent } from './components/features/games-list/games-list.component';
@@ -39,7 +39,7 @@ import { GamesListComponent } from './components/features/games-list/games-list.
     AnxietyQuizComponent,
     DepressionQuizComponent,
     MemoryGameComponent,
-    ListeningComponent,
+    VideosComponent,
     KnowledgeComponent,
     WordsGameComponent,
     GamesListComponent,

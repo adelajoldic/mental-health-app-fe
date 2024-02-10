@@ -1,0 +1,13 @@
+<app-header></app-header>
+<h2>Healing Horizons: Videos for a Healthy Mind</h2>
+<p id="introduction">{{intro}}</p>
+<div class="video-list">
+  <div *ngFor="let video of videos" class="video-container">
+    <iframe width="560" height="315" [src]="video.embedUrl" frameborder="0" allowfullscreen></iframe>
+    <h3>{{ video.title }}</h3>
+    <p>{{ video.speaker }}</p>
+    <p id="description">Description:</p>
+    <p>{{ video.description }}</p>
+  </div>
+</div>
+<app-footer></app-footer>

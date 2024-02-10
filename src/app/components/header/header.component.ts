@@ -33,6 +33,12 @@ export class HeaderComponent {
     const path = "games"
     this.router.navigate([path])
   }
+
+  navigateToVideos() {
+    const path = "videos"
+    this.router.navigate([path])
+  }
+
   navigateToProfile() {
     const path = "profile"
     this.router.navigate([path])

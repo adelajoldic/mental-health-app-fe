@@ -4,16 +4,17 @@
     <div class="container">
       <div class="info">
         <div class="form">
-          <form>
+          <form [formGroup]="loginForm" (ngSubmit)="submit()">
             <label for="name">Full Name</label>
-            <input id="name" type="text">
+            <input id="name" type="text" [formControlName]="'name'" placeholder="">
             <label for="email">Email Address</label>
-            <input id="email" type="email">
+            <input id="email" type="email" [formControlName]="'email'" placeholder="">
             <label for="pass">Password</label>
-            <input id="pass" type="password" required>
+            <input id="pass" type="password" [formControlName]="'password'" placeholder="">
           </form>
         </div>
-        <button type="submit" (click)="navigateToHome()">Submit</button>
+        <button type="submit" [disabled]="loginForm.invalid" (click)="navigateToHome()">Login</button>
+        <p>You don't have an account? <a href="./register">Register here</a></p>
       </div>
       <div class="image">
         <img src="assets/Hello%20Again.png" style="width: 90%; padding-left: 50px;">
@@ -21,4 +22,4 @@
     </div>
   </div>
 </div>
-<!-- End Landing Page -->
+

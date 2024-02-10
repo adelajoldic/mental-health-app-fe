@@ -1,8 +1,8 @@
 .wrapper-intro {
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin: 40px auto;
+
 }
 
 .wrapper-content {
@@ -27,22 +27,4 @@ li{
   margin-bottom: 12px;
 }
 
-/* task-fulfilment.component.css */
-.task-fulfilment {
-  max-width: 600px;
-  margin: auto;
-}
 
-.task-list {
-  margin-top: 20px;
-}
-
-.task-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.task-item input {
-  margin-right: 10px;
-}

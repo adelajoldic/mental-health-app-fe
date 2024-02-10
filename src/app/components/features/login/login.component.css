@@ -2,32 +2,38 @@
 * {
   box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
 }
+
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
+
 /* Small */
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
 }
+
 /* Medium */
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
 }
+
 /* Large */
 @media (min-width: 1200px) {
   .container {
@@ -44,6 +50,7 @@ ul {
   gap: 140px;
   min-height: calc(100vh - 80px);
 }
+
 @media (max-width: 767px) {
   .landing-page .content .container {
     gap: 0;
@@ -52,17 +59,20 @@ ul {
     flex-direction: column-reverse;
   }
 }
+
 @media (max-width: 767px) {
   .landing-page .content .info {
     text-align: center;
     margin-bottom: 15px
   }
 }
+
 .landing-page .content .info h1 {
   color: #5d5d5d;
   font-size: 44px;
 
 }
+
 .landing-page .content .info p {
   text-align: justify;
   margin: 0;
@@ -70,30 +80,32 @@ ul {
   font-size: 15px;
   color: #5d5d5d;
 }
+
 .landing-page .content .info button {
   border: 0;
   border-radius: 20px;
   padding: 12px 30px;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 15px;
   cursor: pointer;
   color: #f8f8f8;
 }
+
 .landing-page .content .info button:hover {
   color: #5d5d5d;
   cursor: pointer;
 }
+
 .landing-page .content .image img {
   max-width: 100%;
 }
 /* End Landing Page */
 
 
-
-
 .form{
   width: 50%;
   height: 100%;
-  padding: 25px;
+  padding: 10px;
   top: 0;
   left: 0;
 }
@@ -102,16 +114,27 @@ input {
   background: #FFFFFF;
   width: 100%;
   padding: 8px;
-  margin: 15px 0;
+  margin-top: 5px;
+  margin-bottom: 30px;
   color: #5d5d5d;
-  font-size: 20px;
+  font-size: 12px;
+  font-weight: lighter;
+  border: 0.2px solid rgba(93, 93, 93, 0.09);
+  border-bottom: 1px solid rgba(93, 93, 93, 0.35);
+  border-radius: 5px;
 }
 
 label {
   font: 500 16px Poppins;
-  color: #5d5d5d;
+  color: #5D5D5DDF;
 }
 
 button {
   margin-bottom: 10px;
+}
+
+
+a{
+  color: #66AFFF;
+  appearance: none;
 }

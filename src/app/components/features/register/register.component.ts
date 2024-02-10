@@ -9,8 +9,9 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+  public registerForm!: FormGroup
+  public arrowImageUrl = 'assets/Move_light.png';
 
-  public userForm!: FormGroup
   constructor(private router: Router, private formBuilder: FormBuilder) {}
 
 
@@ -19,17 +20,47 @@ export class RegisterComponent implements OnInit {
     this.router.navigate([path])
   }
   ngOnInit() {
-    this.userForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      surname: ['', Validators.required],
-      gender: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
+    this.registerForm = this.formBuilder.group({
+      'name': ['', Validators.required],
+      'surname': ['', Validators.required],
+      'gender': ['', Validators.required],
+      'age': ['', Validators.required],
+      'email': ['', [Validators.required, Validators.email]],
+      'password': ['', [Validators.required, Validators.min(6), Validators.max(16)]],
     });
   }
+  // ngOnInit(): void {
+  //   this.registerForm = this.formBuilder.group({
+  //     'email': ['', [Validators.required, Validators.email]],
+  //     'password': ['', [Validators.required, Validators.min(6), Validators.max(16)]],
+  //     'fullName': ['', [Validators.required]],
+  //     'phoneNumber': ['', [Validators.required]],
+  //   });
+  // }
 
-  onSubmit() {
-    // Handle form submission logic here
-    console.log(this.userForm.value);
-  }
+  public submit(): void {
+    // if (!this.registerForm.valid) {
+    //   this._snackBar.open("Input is not valid", '', {
+    //     duration: 1000
+    //   })
+    //   return;
+    }
+
+  //   this.authService.register(this.registerForm.value).subscribe((data: any) => {
+  //     localStorage.setItem("authToken", data.token)
+  //     localStorage.setItem("isOrg", data.user.organization)
+  //     localStorage.setItem("currentId", data.user.id)
+  //
+  //     // this._snackBar.open("Account created, please log in", '', {
+  //     //   duration: 1000
+  //     // })
+  //     this.router.navigate(["/onboarding"])
+  //
+  //   }, error => {
+  //     this._snackBar.open("Unable to register account", '', {
+  //       duration: 1000
+  //     })
+  //   })
+  // }
+
 }

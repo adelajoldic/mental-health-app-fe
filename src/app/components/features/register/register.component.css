@@ -11,8 +11,6 @@ ul {
   margin: 0;
 }
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -65,7 +63,6 @@ ul {
 }
 .landing-page .content .info p {
   text-align: justify;
-  margin: 0;
   line-height: 1.6;
   font-size: 15px;
   color: #5d5d5d;
@@ -74,7 +71,8 @@ ul {
   border: 0;
   border-radius: 20px;
   padding: 12px 30px;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 15px;
   cursor: pointer;
   color: #f8f8f8;
 }
@@ -87,31 +85,68 @@ ul {
 }
 /* End Landing Page */
 
-
-
-
 .form{
   width: 50%;
   height: 100%;
-  padding: 25px;
+  padding: 10px;
   top: 0;
   left: 0;
 }
+
 
 input {
   background: #FFFFFF;
   width: 100%;
   padding: 8px;
-  margin: 15px 0;
+  margin-top: 5px;
+  margin-bottom: 20px;
   color: #5d5d5d;
-  font-size: 20px;
+  font-size: 12px;
+  font-weight: lighter;
+  border: 0.2px solid rgba(93, 93, 93, 0.09);
+  border-bottom: 1px solid rgba(93, 93, 93, 0.35);
+  border-radius: 5px;
+  appearance: none;
+}
+
+select {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: #5d5d5d;
+  font-size: 12px;
+  font-weight: lighter;
+  border: 0.2px solid rgba(93, 93, 93, 0.09);
+  border-bottom: 1px solid rgba(93, 93, 93, 0.35);
+  border-radius: 0px;
+  box-sizing: border-box;
+  appearance: none; /* Remove default arrow in some browsers */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  /* Adjust padding to make space for the arrow */
+  padding: 10px 30px 10px 10px;
+}
+.background-image{
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+/* Style the select dropdown arrow icon */
+select::-ms-expand {
+  display: none; /* Remove default arrow in Internet Explorer */
 }
 
 label {
   font: 500 16px Poppins;
-  color: #5d5d5d;
+  color: #5D5D5DDF;
 }
 
 button {
   margin-bottom: 10px;
+}
+
+
+a{
+  color: #66AFFF;
+  appearance: none;
 }

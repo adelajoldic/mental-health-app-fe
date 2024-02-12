@@ -18,8 +18,8 @@ h2{
 }
 
 section{
-  max-width: 80%;
-  margin: 0 auto;
+  max-width: 85%;
+  margin: 0 auto 0 5%;
   padding: 20px;
 }
 
@@ -28,8 +28,8 @@ h4{
   font-weight: bold;
 }
 
-.healing-notes{
-  margin-bottom: 10%;
+#playlist{
+  margin-left: 7%;
 }
 
 .video-list {

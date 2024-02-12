@@ -1,11 +1,11 @@
 <app-header></app-header>
-<h2>🎵🎻 Harmony for the Mind: Welcome to our Music & Mental Health Hub! 🎶</h2>
+<h2>🎵🎻 Harmony for the Mind: Welcome to our Music Health Hub! 🎶</h2>
 <p id="introduction">{{intro}}</p>
 <iframe class="intro-video" width="560" height="315" src="https://www.youtube.com/embed/_eXdP7ojSkI?si=BYES8_odHJPH8E1m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <section>
   <div class="power">
-    <h4>🎵 The Healing Power of Music 🌟</h4>
+    <h4>🌟 The Healing Power of Music</h4>
     <p>
       Music has an incredible ability to soothe the soul and uplift the spirit. In times of anxiety, depression, or stress, turning to music can be a powerful tool for finding solace and strength.
     </p>
@@ -36,7 +36,7 @@
   </div>
 </section>
 
-
+<h4 id="playlist">🎼 Music List:</h4>
 <div class="video-list">
   <div *ngFor="let video of videos" class="video-container">
     <iframe width="560" height="315" [src]="video.embedUrl" frameborder="0" allowfullscreen></iframe>

@@ -1,25 +1,20 @@
-import {Component, OnInit} from '@angular/core';
+import { Component } from '@angular/core';
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 
 @Component({
-  selector: 'app-listening',
-  templateUrl: './videos.component.html',
-  styleUrls: ['./videos.component.css']
+  selector: 'app-knowledge',
+  templateUrl: './music.component.html',
+  styleUrls: ['./music.component.css']
 })
-export class VideosComponent implements OnInit{
-  // public intro: string = "Explore powerful video narratives of individuals navigating mental health challenges." +
-  //   " Gain insights and practical strategies for coping as they share personal experiences, offering support" +
-  //   " and guidance on the journey to improved mental well-being. Discover resilience, find relatable stories," +
-  //   " and access resources to help navigate your own path towards mental health. 📺 #VideoTherapy";
-  public intro: string = " Explore a compassionate space " +
-    "dedicated to empowering minds and fostering well-being. Discover practical tips, evidence-based strategies, " +
-    "and uplifting stories to nurture your mental resilience. Let's break down stigmas, build a supportive community," +
-    " and embark on a journey towards mental wellness together. 💚📚 #MindMatters #EducateEmpowerThrive";
-
-    videos: any[] = [
+export class MusicComponent {
+  public intro: string = "From mood modulation to stress relief, uncover the healing notes that resonate" +
+    " within us. Join our community in celebrating the therapeutic magic of music" +
+    " and harmonizing our mental landscapes. Let the rhythm guide you towards a symphony of well-being!" +
+    " 🎧💖 #MusicHealsMind #SoundMindJourney";
+  videos: any[] = [
     {
       title: 'Why you should take a break: Prioritizing mental health in schools',
-      speaker: 'Hailey Hardcastle | TED Talk',
+      speaker: 'Hailey Hardcastle',
       description: 'One of the best ways to end the stigma surrounding mental health is' +
         ' by spreading the idea that it is always ok to take a break for your mental wellbeing,' +
         ' especially for teens and students.',
@@ -27,7 +22,7 @@ export class VideosComponent implements OnInit{
     },
     {
       title: 'What Nobody Tells You About Your Twenties',
-      speaker: 'Livi Redden | TED Talk',
+      speaker: 'Livi Redden',
       description: '\n' +
         'In her talk, Livi explains that a few mindset shifts and some intentional emotional development ' +
         'can eradicate so much of that unease and help young adults build the joyful, fulfilling future they ' +
@@ -36,7 +31,7 @@ export class VideosComponent implements OnInit{
     },
     {
       title: 'How to talk to the worst parts of yourself',
-      speaker: 'Karen Faith | TED Talk',
+      speaker: 'Karen Faith',
       description: 'People researcher and empathy trainer Karen Faith found it easier to welcome strangers than the ' +
         'strange parts of herself, until a breakthrough moment changed that for good. In this honest and funny talk, ' +
         'she shares the story for everyone who struggles with self-acceptance. ',
@@ -44,7 +39,7 @@ export class VideosComponent implements OnInit{
     },
     {
       title: 'How to cope with anxiety ',
-      speaker: 'Olivia Remes | TED Talk',
+      speaker: 'Olivia Remes',
       description: 'Anxiety can lead up to conditions such as depression, increased risk for suicide, ' +
         'disability and requirement of high health services, very few people who often need treatment actually ' +
         'receive it. In her talk “How to cope with anxiety”, Olivia Remes will ' +
@@ -54,14 +49,14 @@ export class VideosComponent implements OnInit{
     },
     {
       title: 'Stress: Its Impact on Teens ',
-      speaker: 'Arturo Williams | TED Talk',
+      speaker: 'Arturo Williams',
       description: 'Arturo Williams is using personal experiences as well as those of his peers to inform a' +
         ' larger audience in "Stress: how it impacts teens." ',
       embedUrl: 'https://www.youtube.com/embed/RtRdnog8eMc?si=_7jTv8ba5pG7Ix1H'
     },
     {
       title: 'Overcoming Anxiety ',
-      speaker: 'Jonas Kolker | TED Talk',
+      speaker: 'Jonas Kolker',
       description: 'Jonas Kolker is a 15-year-old in the ninth grade. From grades three through eight, he dealt with ' +
         'severe anxiety attacks that were triggered by his school environment. Jonas had to learn techniques and ' +
         'strategies that would help him manage and control his ideas as he progressed through his school career.',
@@ -69,7 +64,7 @@ export class VideosComponent implements OnInit{
     },
     {
       title: 'This could be why you\'re depressed or anxious',
-      speaker: 'Johann Hari | TED Talk',
+      speaker: 'Johann Hari',
       description: 'In a moving talk, journalist Johann Hari shares fresh insights on the causes of depression and' +
         ' anxiety from experts around the world -- as well as some exciting emerging solutions. "If you\'re depressed' +
         ' or anxious, you\'re not weak and you\'re not crazy -- you\'re a human being with unmet needs," Hari says.',
@@ -77,7 +72,7 @@ export class VideosComponent implements OnInit{
     },
     {
       title: 'Learning to Live with Clinical Depression',
-      speaker: 'Angelica Galluzzo | TED Talk',
+      speaker: 'Angelica Galluzzo',
       description: 'Angelica shares how living with depression has impacted her life. Angelica Galluzzo is a mental ' +
         'health advocate, largely motivated by her own struggles with mental illness. After battling depression and ' +
         'suicidal ideation for many years, she became passionate about making an impact, using her voice to create ' +
@@ -86,7 +81,7 @@ export class VideosComponent implements OnInit{
     },
     {
       title: 'The Secret of Becoming Mentally Strong',
-      speaker: 'Amy Morin | TED Talk',
+      speaker: 'Amy Morin',
       description: 'We spend a lot of time talking about physical strength and physical health, but much less time ' +
         'on mental strength and mental health. \n' +
         'We can choose to perform exercises that will help us learn to regulate our thoughts, manage our emotions,' +

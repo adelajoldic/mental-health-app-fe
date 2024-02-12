@@ -15,7 +15,9 @@ interface Game {
 export class GamesListComponent {
   public intro:string = "Experience the positive influence of short quizzes and games on your mental well-being." +
     " Delve into a variety of interactive challenges that not only entertain but also contribute to improved " +
-    "focus and cognitive wellness.";
+    "focus and cognitive wellness." +
+    "Your mental health is part of the game. Let's level up together, breaking barriers and embracing the positive " +
+    "impact of gaming on our well-being. 🚀💙🕹️ #GameMindWellness #LevelUpMentalHealth";
   constructor(private router:Router) {
   }
 

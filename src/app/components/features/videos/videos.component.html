@@ -1,9 +1,36 @@
 <app-header></app-header>
-<h2>Healing Horizons: Videos for a Healthy Mind</h2>
+<!--<h2>Healing Horizons: Videos for a Healthy Mind</h2>-->
+<h2>🧠✨ Welcome to our Mental Health Education Hub! 🌱</h2>
 <p id="introduction">{{intro}}</p>
+<iframe class="intro-video" width="560" height="500" src="https://www.youtube.com/embed/v2wo4bW55Jw?si=CWi2yBzoupNAZm1K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<section>
+  <p id="intro-text">
+    In this space, we believe in the power of shared experiences and the strength that comes from opening up about our mental health journeys. Our video collection features real stories from individuals who have faced the challenges of anxiety, depression, and stress head-on. These brave souls have chosen to speak up, sharing their personal struggles to inspire hope and foster a sense of community.
+  </p>
+  <div class="video-section">
+    <h4>🎥 Watch, Listen, Connect:</h4>
+    <p>
+      Embark on a journey of understanding as you watch these heartfelt testimonials. Each video is a testament to resilience, courage, and the transformative impact of acknowledging and addressing mental health.
+    </p>
+  </div>
+  <div class="why-share-section">
+    <h4>🤲 Why Share?</h4>
+    <p>
+      Sharing our struggles is an act of empowerment. It breaks the silence, dismantles stigma, and creates a supportive environment where healing can flourish. You are not alone, and through these narratives, we aim to build a community that understands, uplifts, and embraces the beauty of mental well-being.
+    </p>
+  </div>
+  <div class="remember">
+    <h4>💡Remember:</h4>
+    <p>
+      Your mental health matters, and you are not alone. Let's build a space where stories become a source of strength and connection. Together, we can break down barriers and cultivate a community that thrives on empathy and understanding. <br> 💙🌱 #MentalHealthStories #BreakTheStigma
+    </p>
+  </div>
+</section>
+<h4 id="playlist">🌟Video List:</h4>
 <div class="video-list">
   <div *ngFor="let video of videos" class="video-container">
-    <iframe width="560" height="315" [src]="video.embedUrl" frameborder="0" allowfullscreen></iframe>
+    <iframe class="ted-talks" width="560" height="315" [src]="video.embedUrl" frameborder="0" allowfullscreen></iframe>
     <h3>{{ video.title }}</h3>
     <p>{{ video.speaker }}</p>
     <p id="description">Description:</p>

@@ -13,6 +13,7 @@ import {MemoryGameComponent} from "./components/features/memory-game/memory-game
 import {WordsGameComponent} from "./components/features/words-game/words-game.component";
 import {GamesListComponent} from "./components/features/games-list/games-list.component";
 import {VideosComponent} from "./components/features/videos/videos.component";
+import {MusicComponent} from "./components/features/music/music.component";
 
 const routes: Routes = [
   {
@@ -66,6 +67,10 @@ const routes: Routes = [
   {
     path: "videos",
     component: VideosComponent,
+  },
+  {
+    path: "music",
+    component: MusicComponent,
   }
 ];
 

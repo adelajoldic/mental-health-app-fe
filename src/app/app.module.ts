@@ -17,9 +17,10 @@ import { AnxietyQuizComponent } from './components/features/anxiety-quiz/anxiety
 import { DepressionQuizComponent } from './components/features/depression-quiz/depression-quiz.component';
 import { MemoryGameComponent } from './components/features/memory-game/memory-game.component';
 import { VideosComponent } from './components/features/videos/videos.component';
-import { KnowledgeComponent } from './components/features/knowledge/knowledge.component';
+import { MusicComponent } from './components/features/music/music.component';
 import { WordsGameComponent } from './components/features/words-game/words-game.component';
 import { GamesListComponent } from './components/features/games-list/games-list.component';
+import { HomeHeaderComponent } from './components/home-header/home-header.component';
 
 
 
@@ -40,9 +41,10 @@ import { GamesListComponent } from './components/features/games-list/games-list.
     DepressionQuizComponent,
     MemoryGameComponent,
     VideosComponent,
-    KnowledgeComponent,
+    MusicComponent,
     WordsGameComponent,
     GamesListComponent,
+    HomeHeaderComponent,
 
   ],
     imports: [

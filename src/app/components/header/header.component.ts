@@ -39,6 +39,11 @@ export class HeaderComponent {
     this.router.navigate([path])
   }
 
+  navigateToMusic() {
+    const path = "music"
+    this.router.navigate([path])
+  }
+
   navigateToProfile() {
     const path = "profile"
     this.router.navigate([path])

@@ -26,8 +26,42 @@
           <img [src]="getResultImage()" class="images" alt="Result Image">
           <h3>{{ getResultMessage()}}</h3>
           <p>You answered correctly on {{getTotalScore()}} out of {{getTotalQuestions()}} questions.</p>
-
-        </div>
       </div>
     </div>
 </div>
+
+<!--<app-header></app-header>-->
+<!--<div class="quiz-container">-->
+<!--  <div *ngIf="currentQuestionIndex < questions.length" id="question-counter">-->
+<!--    <p>Question {{ getCurrentQuestionNumber() }} out of {{ questions.length }}</p>-->
+<!--  </div>-->
+
+<!--  <div *ngIf="currentQuestionIndex < questions.length" class="question-container">-->
+<!--    <p id="question">{{ currentQuestionIndex + 1 }}. {{ questions[currentQuestionIndex].questionText }}</p>-->
+
+<!--    <div class="options-container">-->
+<!--      <div *ngFor="let option of questions[currentQuestionIndex].options; let j = index" class="option"-->
+<!--           [ngClass]="{ 'selected': j === questions[currentQuestionIndex].selectedOption }"-->
+<!--           (click)="selectOption(currentQuestionIndex, j)">-->
+<!--        {{ option }}-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <button (click)="submitQuiz()">Next Question</button>-->
+<!--  </div>-->
+
+<!--  <div *ngIf="currentQuestionIndex === questions.length" class="quiz-result" id="quiz-result">-->
+<!--    <div class="quiz-result">-->
+<!--      <img [src]="getResultImage()" class="images" alt="Result Image">-->
+<!--      <h3>{{ getResultMessage() }}</h3>-->
+<!--      <p>You answered correctly on {{ getTotalScore() }} out of {{ getTotalQuestions() }} questions.</p>-->
+<!--      <div *ngIf="showResults">-->
+<!--        <p>Total Correct Answers: {{ correctQuestions }}</p>-->
+<!--        <p>Total Incorrect Answers: {{ incorrectQuestions }}</p>-->
+<!--        <p>Question with Most Correct Answers: {{ questions[maxCorrectIndex].questionText }}</p>-->
+<!--        <p>Question with Least Correct Answers: {{ questions[minCorrectIndex].questionText }}</p>-->
+<!--        <p *ngIf="incorrectlyAnsweredQuestions.length > 0">Incorrectly Answered Questions: {{ incorrectlyAnsweredQuestions.join(', ') }}</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->

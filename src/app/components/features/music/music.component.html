@@ -1,0 +1,49 @@
+<app-header></app-header>
+<h2>🎵🎻 Harmony for the Mind: Welcome to our Music & Mental Health Hub! 🎶</h2>
+<p id="introduction">{{intro}}</p>
+<iframe class="intro-video" width="560" height="315" src="https://www.youtube.com/embed/_eXdP7ojSkI?si=BYES8_odHJPH8E1m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<section>
+  <div class="power">
+    <h4>🎵 The Healing Power of Music 🌟</h4>
+    <p>
+      Music has an incredible ability to soothe the soul and uplift the spirit. In times of anxiety, depression, or stress, turning to music can be a powerful tool for finding solace and strength.
+    </p>
+  </div>
+  <div class="anxiety">
+    <h4>🌿 Reducing Anxiety:</h4>
+    <p>
+      Listening to calming music can have a direct impact on reducing feelings of anxiety. Slow, melodic tunes with a steady rhythm can help slow down racing thoughts and promote relaxation. The gentle harmonies and repetitive patterns can create a sense of tranquility, allowing the mind to find peace amidst chaos.
+    </p>
+  </div>
+  <div class="depression">
+    <h4>💪 Fighting Depression:</h4>
+    <p>
+      Music has the ability to evoke emotions and memories, making it a potent ally in the fight against depression. Listening to uplifting or emotionally resonant songs can uplift mood, provide comfort, and inspire hope. Music can serve as a form of self-expression, allowing individuals to process their feelings and find catharsis through lyrics and melodies.
+    </p>
+  </div>
+  <div class="stress">
+    <h4>🎶 Relieving Stress:</h4>
+    <p>
+      The rhythmic patterns and harmonious melodies of music have a natural calming effect on the body and mind. Engaging with music through activities like singing, playing an instrument, or even dancing can release tension, reduce cortisol levels, and promote a sense of well-being. Music serves as a form of self-care, offering a respite from the demands of daily life and providing a space for relaxation and rejuvenation.
+    </p>
+  </div>
+  <div class="healing-notes">
+    <h4>🎧 Embrace the Healing Notes:</h4>
+    <p>
+      Whether it's through creating playlists of favorite songs, attending live concerts, or simply taking a few moments to listen to a favorite track, incorporating music into your daily routine can have profound benefits for mental health. Let the healing power of music be a companion on your journey towards inner peace and emotional well-being. 🌿💖
+    </p>
+  </div>
+</section>
+
+
+<div class="video-list">
+  <div *ngFor="let video of videos" class="video-container">
+    <iframe width="560" height="315" [src]="video.embedUrl" frameborder="0" allowfullscreen></iframe>
+    <h3>{{ video.title }}</h3>
+    <p>{{ video.speaker }}</p>
+    <p id="description">Description:</p>
+    <p>{{ video.description }}</p>
+  </div>
+</div>
+<app-footer></app-footer>

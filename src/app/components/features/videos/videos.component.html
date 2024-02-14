@@ -28,6 +28,8 @@
   </div>
 </section>
 <h4 id="playlist">🌟Video List:</h4>
+<p class="text">{{closing}}</p>
+
 <div class="video-list">
   <div *ngFor="let video of videos" class="video-container">
     <iframe class="ted-talks" width="560" height="315" [src]="video.embedUrl" frameborder="0" allowfullscreen></iframe>

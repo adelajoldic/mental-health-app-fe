@@ -15,7 +15,10 @@ export class VideosComponent implements OnInit{
     "dedicated to empowering minds and fostering well-being. Discover practical tips, evidence-based strategies, " +
     "and uplifting stories to nurture your mental resilience. Let's break down stigmas, build a supportive community," +
     " and embark on a journey towards mental wellness together. 💚📚 #MindMatters #EducateEmpowerThrive";
-
+public closing: string = "Your experiences matter, your struggles are acknowledged, and your journey is significant." +
+  " As you navigate through these videos, hold onto the realization that you're not alone. " +
+  "Embrace the power of connection, find solace in the shared narratives, and remember, your well-being is crucial. " +
+  "Keep moving forward, and may your path be illuminated by the stories that resonate with your own. ";
     videos: any[] = [
     {
       title: 'Why you should take a break: Prioritizing mental health in schools',

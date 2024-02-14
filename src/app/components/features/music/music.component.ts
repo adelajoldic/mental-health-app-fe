@@ -11,83 +11,82 @@ export class MusicComponent {
     " within us. Join our community in celebrating the therapeutic magic of music" +
     " and harmonizing our mental landscapes. Let the rhythm guide you towards a symphony of well-being!" +
     " 🎧💖 #MusicHealsMind #SoundMindJourney";
+  public closing: string = "It's crucial to acknowledge that, although music can offer emotional support to " +
+    "individuals coping with depression, it should not be seen as a replacement for professional mental health care. " +
+    "These songs can be a supplementary resource alongside therapy and medication in addressing depression and anxiety." +
+    " Moreover, individual preferences and emotional reactions to music differ, so it's advisable for individuals to " +
+    "select songs that personally connect with their experiences with mental illness.";
   videos: any[] = [
     {
-      title: 'Why you should take a break: Prioritizing mental health in schools',
-      speaker: 'Hailey Hardcastle',
-      description: 'One of the best ways to end the stigma surrounding mental health is' +
-        ' by spreading the idea that it is always ok to take a break for your mental wellbeing,' +
-        ' especially for teens and students.',
-      embedUrl: 'https://www.youtube.com/embed/vD0w_gOEbUI?si=XKsOuI-BSAFGxO0J'
+      title: 'BTS - Answer : Love Myself',
+      description: 'The song “Answer: Love Myself” by BTS talks about learning to love yourself and the ' +
+        'struggles that go along with it. The lyrics have deep meanings and even though at first glance,' +
+        ' it may seem confusing, this song wasn’t created to just be out there, it was made to help people ' +
+        'who are learning self love. ',
+      embedUrl: 'https://www.youtube.com/embed/9mwRYgMmSGE?si=PUA7TiwwwZJJK3Hy'
     },
     {
-      title: 'What Nobody Tells You About Your Twenties',
-      speaker: 'Livi Redden',
-      description: '\n' +
-        'In her talk, Livi explains that a few mindset shifts and some intentional emotional development ' +
-        'can eradicate so much of that unease and help young adults build the joyful, fulfilling future they ' +
-        'deserve.',
-      embedUrl: 'https://www.youtube.com/embed/O9pD6LTF4Bk?si=eWlNs1cHXP3FpWHZ'
+      title: 'Matchbox Twenty - Unwell',
+      description: 'This song may mimic the thoughts and feelings of many people with depression and mental' +
+        ' disorders. Most with these conditions have experienced what it’s like to be “headed for a breakdown,” and ' +
+        'sometimes songs that talk about what we’re going through or have gone through help us feel like we aren’t alone.',
+      embedUrl: 'https://www.youtube.com/embed/WziA88-n02k?si=gA1a_sZV0yhQniAR'
     },
     {
-      title: 'How to talk to the worst parts of yourself',
-      speaker: 'Karen Faith',
-      description: 'People researcher and empathy trainer Karen Faith found it easier to welcome strangers than the ' +
-        'strange parts of herself, until a breakthrough moment changed that for good. In this honest and funny talk, ' +
-        'she shares the story for everyone who struggles with self-acceptance. ',
-      embedUrl: 'https://www.youtube.com/embed/gUV5DJb6KGs?si=a_ez1QGgridp4LMC'
+      title: 'Rachel Platten - Better Place ',
+      description: 'The song opens up with the lyrics, “I\'ll tell the world, I\'ll sing a song. It\'s a better' +
+        ' place since you came along,” and goes on to shed love and support to the listeners. “Better Place” is a' +
+        ' reminder of how important and loved you are, and lines like “it\'s a better place since you came along” offer ' +
+        'comfort to its listeners, reminding them that they are loved, they are important, and they are not alone.',
+      embedUrl: 'https://www.youtube.com/embed/pvI9PuGorwI?si=7p78Lfhzvab7EzHr'
     },
     {
-      title: 'How to cope with anxiety ',
-      speaker: 'Olivia Remes',
-      description: 'Anxiety can lead up to conditions such as depression, increased risk for suicide, ' +
-        'disability and requirement of high health services, very few people who often need treatment actually ' +
-        'receive it. In her talk “How to cope with anxiety”, Olivia Remes will ' +
-        'share her vision on anxiety and will ' +
-        'unravel ways to treat and manage this health disorder.',
-      embedUrl: 'https://www.youtube.com/embed/WWloIAQpMcQ?si=IliFIkIJMf4KYLxv'
+      title: 'Twenty One Pilots - Screen',
+      description: 'This song describes the person as having a screen on their chest that displays their thoughts and ' +
+        'emotions, making it impossible for them to hide their feelings from others. With lyrics like, “there\'s some' +
+        ' people and I who have a really tough time getting through this life,” and “we’re broken people,” the song ' +
+        'also acts as an anthem of support for those who feel this way, too.',
+      embedUrl: 'https://www.youtube.com/embed/NK7WWbXlkj4?si=iySK5OyZuu8a3VeG'
     },
     {
-      title: 'Stress: Its Impact on Teens ',
-      speaker: 'Arturo Williams',
-      description: 'Arturo Williams is using personal experiences as well as those of his peers to inform a' +
-        ' larger audience in "Stress: how it impacts teens." ',
-      embedUrl: 'https://www.youtube.com/embed/RtRdnog8eMc?si=_7jTv8ba5pG7Ix1H'
+      title: 'Paramore - Last Hope',
+      description: '“Last Hope” is a song about depression that hits the nail on the head for many people when it comes ' +
+        'to describing what having depression is like. It describes the ebb and flow of depression symptoms that many' +
+        ' can relate to, starting with the idea of needing to let go of control, hitting a good place, and then ' +
+        'experiencing another low.',
+      embedUrl: 'https://www.youtube.com/embed/yBatuRGZAmA?si=Omvw5zMeRYiV5Olh'
     },
     {
-      title: 'Overcoming Anxiety ',
-      speaker: 'Jonas Kolker',
-      description: 'Jonas Kolker is a 15-year-old in the ninth grade. From grades three through eight, he dealt with ' +
-        'severe anxiety attacks that were triggered by his school environment. Jonas had to learn techniques and ' +
-        'strategies that would help him manage and control his ideas as he progressed through his school career.',
-      embedUrl: 'https://www.youtube.com/embed/A1anXJhVamc?si=lerwgnbAAOQReRxv'
+      title: 'Linkin Park - Heavy',
+      description: 'Among their many other songs about depression and anxiety, “Heavy” is one of those Linkin Park' +
+        ' songs that accurately describe the loss of control, sadness, overthinking, and confusion caused by depression.' +
+        ' It’s another song that people with depression can relate to and find comfort in the fact that they aren’t alone ' +
+        'in how they feel.',
+      embedUrl: 'https://www.youtube.com/embed/5dmQ3QWpy1Q?si=15UNOw-GrtS16zCX'
     },
     {
-      title: 'This could be why you\'re depressed or anxious',
-      speaker: 'Johann Hari',
-      description: 'In a moving talk, journalist Johann Hari shares fresh insights on the causes of depression and' +
-        ' anxiety from experts around the world -- as well as some exciting emerging solutions. "If you\'re depressed' +
-        ' or anxious, you\'re not weak and you\'re not crazy -- you\'re a human being with unmet needs," Hari says.',
-      embedUrl: 'https://www.youtube.com/embed/MB5IX-np5fE?si=Z1Pa3ua9T3cGcEjR'
+      title: 'Lady Gaga - Million Reasons',
+      description: '“Million Reasons” is a powerful song about the power of one good reason over the millions of ' +
+        'reasons for feeling doubtful, discouraged, and hopeless. The song encourages listeners to find the light ' +
+        'at the end of the tunnel, to find that one good reason to keep fighting when there are a million other ' +
+        'reasons to quit.',
+      embedUrl: 'https://www.youtube.com/embed/en2D_5TzXCA?si=c0LNt1CJOdSc4j1D'
     },
     {
-      title: 'Learning to Live with Clinical Depression',
-      speaker: 'Angelica Galluzzo',
-      description: 'Angelica shares how living with depression has impacted her life. Angelica Galluzzo is a mental ' +
-        'health advocate, largely motivated by her own struggles with mental illness. After battling depression and ' +
-        'suicidal ideation for many years, she became passionate about making an impact, using her voice to create ' +
-        'positive change, and normalizing the struggles that many of us go through. ',
-      embedUrl: 'https://www.youtube.com/embed/Izy1TgMe-tI?si=yaGMkrBu4_xIfLlx'
+      title: 'David Guetta - Titanium ft. Sia',
+      description: 'With song lyrics like, “You shoot me down, but I won\'t fall. I am titanium,” Sia encourages ' +
+        'her listeners to think of themselves as titanium, invincible against inner and outer forces that threaten to' +
+        ' harm them. Whether it’s depression or any other mental illness, the idea of being “stone-hard as bulletproof' +
+        ' glass” can be a much-needed boost of confidence in tough times.',
+      embedUrl: 'https://www.youtube.com/embed/JRfuAukYTKg?si=6GMWk2b85NXQnRAf'
     },
     {
-      title: 'The Secret of Becoming Mentally Strong',
-      speaker: 'Amy Morin',
-      description: 'We spend a lot of time talking about physical strength and physical health, but much less time ' +
-        'on mental strength and mental health. \n' +
-        'We can choose to perform exercises that will help us learn to regulate our thoughts, manage our emotions,' +
-        ' and behave productively despite our circumstances - the 3 basic factors of mental strength. No matter what' +
-        ' your goals are, building mental strength is the key to reaching your greatest potential.',
-      embedUrl: 'https://www.youtube.com/embed/TFbv757kup4?si=2x2pMRMORkR0gkES'
+      title: 'BTS - Life Goes On',
+      description: '"Life Goes On" is a heartfelt anthem that goes beyond the stage, offering a candid portrayal of' +
+        ' people in their twenties navigating daily life. Conceived to uplift spirits and showcase a more carefree side, ' +
+        'the song takes a personal turn as Jungkook expresses the longing and sadness resulting from canceled tours due ' +
+        'to COVID-19. With a unique blend of gravity and power, the track delivers a gentle and authentic message of comfort.',
+      embedUrl: 'https://www.youtube.com/embed/-5q5mZbe3V8?si=BSMA2GfWur3jcrXE'
     },
     // Add more videos as needed
   ];

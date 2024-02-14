@@ -1,6 +1,6 @@
 <app-header></app-header>
 <h2>🎵🎻 Harmony for the Mind: Welcome to our Music Health Hub! 🎶</h2>
-<p id="introduction">{{intro}}</p>
+<p class="text">{{intro}}</p>
 <iframe class="intro-video" width="560" height="315" src="https://www.youtube.com/embed/_eXdP7ojSkI?si=BYES8_odHJPH8E1m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <section>
@@ -41,9 +41,9 @@
   <div *ngFor="let video of videos" class="video-container">
     <iframe width="560" height="315" [src]="video.embedUrl" frameborder="0" allowfullscreen></iframe>
     <h3>{{ video.title }}</h3>
-    <p>{{ video.speaker }}</p>
     <p id="description">Description:</p>
     <p>{{ video.description }}</p>
   </div>
 </div>
+<p class="text">{{closing}}</p>
 <app-footer></app-footer>

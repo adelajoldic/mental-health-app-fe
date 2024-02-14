@@ -3,7 +3,7 @@ h2{
   color: #404252;
 }
 
-#introduction{
+.text{
   text-align: center;
   margin: 50px auto;
   line-height: 30px;

@@ -93,7 +93,6 @@ ul {
   left: 0;
 }
 
-
 input {
   background: #FFFFFF;
   width: 100%;
@@ -103,10 +102,8 @@ input {
   color: #5d5d5d;
   font-size: 12px;
   font-weight: lighter;
-  border: 0.2px solid rgba(93, 93, 93, 0.09);
-  border-bottom: 1px solid rgba(93, 93, 93, 0.35);
-  border-radius: 5px;
-  appearance: none;
+  border: 0.1px solid rgba(93, 93, 93, 0.09);
+  border-bottom: 0.1px solid rgba(93, 93, 93, 0.35);
 }
 
 select {
@@ -116,15 +113,14 @@ select {
   color: #5d5d5d;
   font-size: 12px;
   font-weight: lighter;
-  border: 0.2px solid rgba(93, 93, 93, 0.09);
-  border-bottom: 1px solid rgba(93, 93, 93, 0.35);
+  border: 0.1px solid rgba(93, 93, 93, 0.09);
+  border-bottom: 0.1px solid rgba(93, 93, 93, 0.35);
   border-radius: 0px;
   box-sizing: border-box;
-  appearance: none; /* Remove default arrow in some browsers */
+  appearance: none;
   background-repeat: no-repeat;
   background-position: right 10px center;
-  /* Adjust padding to make space for the arrow */
-  padding: 10px 30px 10px 10px;
+  padding: 9px 30px 9px 10px;
 }
 .background-image{
   background-repeat: no-repeat;
@@ -144,7 +140,6 @@ label {
 button {
   margin-bottom: 10px;
 }
-
 
 a{
   color: #66AFFF;

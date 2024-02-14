@@ -1,13 +1,15 @@
 h2{
   text-align: center;
   color: #404252;
+  font-size: 28px;
 }
 
 #introduction{
   text-align: center;
-  margin: 50px auto;
+  margin: 3% 4%;
   line-height: 30px;
-  font-size: 18px;
+  letter-spacing: 1px;
+  color: #5d5d5d;
 }
 
 .game-grid {
@@ -16,21 +18,22 @@ h2{
   gap: 20px;
   margin: auto 2%;
   grid-row-gap: 5%;
+  font-size: 16px;
 }
 
 .game-grid h3{
   color: #404252;
+
 }
 
 .game-grid p {
   text-align: justify-all;
   font-size: 15px;
-  font-family: Poppins, sans-serif;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.7px;
   line-height: 25px;
   flex-grow: 1; /* Allow text to grow and take available space */
   margin: auto 5%;
-  color: #404252;
+  color: #5d5d5d;
 
 }
 

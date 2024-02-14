@@ -4,8 +4,31 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 940px;
+  max-width: 950px;
   padding: 0 10px;
+}
+
+
+.container p{
+  text-align: justify;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.container h2{
+  line-height: 45px;
+  text-align: justify;
+  text-underline: black;
+}
+
+.title-link {
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.title-link:hover {
+  text-decoration: underline;
 }
 
 /* Main */
@@ -25,29 +48,29 @@ body {
 
 /* Jumbotron */
 
-.jumbotron .container {
+.picture .container {
   position: relative;
   top: 220px;
 }
 
-.jumbotron {
+.picture {
   background: url(https://www.forbes.com/advisor/wp-content/uploads/2023/07/video-game-controller.jpeg-1.jpg) center center;
   background-size: cover;
   height: 600px;
   text-align: right;
 }
 
-.jumbotron h2 {
+.picture h2 {
   color: #fff;
   text-align: right;
 }
 
-.jumbotron p {
+.picture p {
   color: #fff;
   text-align: right;
 }
 
-.jumbotron .btn {
+.picture .btn {
   margin: 10px 0 0;
   float: right;}
 

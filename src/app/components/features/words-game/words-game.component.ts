@@ -8,13 +8,20 @@ import {Component, OnInit} from '@angular/core';
 export class WordsGameComponent {
 
 
-  wordsToFind: string[] = ['apple', 'banana', 'grape', 'orange', 'kiwi'];
+  wordsToFind: string[] = ['apple', 'banana', 'grape', 'orange', 'kiwi', 'adela', 'mihret', 'edina', 'samed', 'alma', 'ena'];
   grid: string[][] = [
     ['a', 'p', 'p', 'l', 'e'],
     ['b', 'a', 'n', 'a', 'n', 'a'],
     ['g', 'r', 'a', 'p', 'e'],
-    ['o', 'r', 'a', 'n', 'g', 'e'],
-    ['k', 'i', 'w', 'i']
+    // ['o', 'r', 'a', 'n', 'g', 'e', 'k', 'i', 'w', 'i'],
+    // ['k', 'i', 'w', 'i'],
+    ['a', 'd', 'e', 'l', 'a'],
+    ['m', 'i', 'h', 'r', 'e', 't'],
+    ['e', 'd', 'i', 'n', 'a'],
+    ['s', 'a', 'm', 'e', 'd'],
+    ['a', 'l', 'm', 'a'],
+    ['e', 'n', 'a']
+
   ];
   foundWords: string[] = [];
   userInput: string = '';

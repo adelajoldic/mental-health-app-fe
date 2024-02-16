@@ -9,8 +9,8 @@ import {Router} from "@angular/router";
 export class HomeComponent {
   constructor(private router:Router) {
   }
-  navigateToHome(): void {
-    const path = "/home"
+  navigateToEducation(): void {
+    const path = "/education"
     this.router.navigate([path])
   }
 }

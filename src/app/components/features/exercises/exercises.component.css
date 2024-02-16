@@ -57,8 +57,6 @@ h4{
   transition: transform 0.1s ease-in-out;
   width: 350px;
   margin: 5px 5px 25px;
-  flex-direction: column; /* Display child elements in a row */
-
 }
 
 .video-container:hover {
@@ -92,6 +90,11 @@ p {
 
 #description{
   font-weight: bolder;
+}
+
+.description {
+  width: 80%;
+  margin: 2% 6%;
 }
 
 /* Optional: Add media query for responsiveness */

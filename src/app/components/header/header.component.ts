@@ -20,12 +20,12 @@ export class HeaderComponent {
     this.router.navigate([path])
   }
   navigateToHome() {
-    const path = "home"
+    const path = ""
     this.router.navigate([path])
 
   }
   navigateToEducation() {
-    const path = ""
+    const path = "education"
     this.router.navigate([path])
   }
 
@@ -41,6 +41,10 @@ export class HeaderComponent {
 
   navigateToMusic() {
     const path = "music"
+    this.router.navigate([path])
+  }
+  navigateToExercises() {
+    const path = "exercises"
     this.router.navigate([path])
   }
 

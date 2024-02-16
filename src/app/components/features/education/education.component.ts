@@ -23,4 +23,9 @@ export class EducationComponent {
     const path = "music"
     this.router.navigate([path])
   }
+
+  navigateToExercises() {
+    const path = "exercises"
+    this.router.navigate([path])
+  }
 }

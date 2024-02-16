@@ -14,6 +14,7 @@ import {WordsGameComponent} from "./components/features/words-game/words-game.co
 import {GamesListComponent} from "./components/features/games-list/games-list.component";
 import {VideosComponent} from "./components/features/videos/videos.component";
 import {MusicComponent} from "./components/features/music/music.component";
+import {ExercisesComponent} from "./components/features/exercises/exercises.component";
 
 const routes: Routes = [
   {
@@ -29,17 +30,22 @@ const routes: Routes = [
     component: LoginComponent,
   },
   {
-    path: "home",
+    path: "education",
     component: EducationComponent,
   },
   {
-    path: "quiz",
-    component: QuizComponent,
+    path: "exercises",
+    component: ExercisesComponent,
   },
   {
     path: "games",
     component: GamesListComponent,
   },
+  {
+    path: "quiz",
+    component: QuizComponent,
+  },
+
   {
     path: "first-quiz",
     component: FirstQuizComponent,

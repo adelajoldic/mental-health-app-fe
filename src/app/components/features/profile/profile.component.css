@@ -1,7 +1,9 @@
 .wrapper-intro {
   display: flex;
   justify-content: space-between;
-  margin: 40px auto;
+  margin: 10px auto;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #3333333F;
 
 }
 
@@ -27,4 +29,15 @@ li{
   margin-bottom: 12px;
 }
 
+.quote-container {
+  text-align: center;
+  margin: 10px auto;
+  padding: 1%;
+  color: #333;
+}
+
+.quote-container p {
+  font-style: italic;
+  color: #333;
+}
 

@@ -21,6 +21,7 @@ import { MusicComponent } from './components/features/music/music.component';
 import { WordsGameComponent } from './components/features/words-game/words-game.component';
 import { GamesListComponent } from './components/features/games-list/games-list.component';
 import { HomeHeaderComponent } from './components/home-header/home-header.component';
+import { ExercisesComponent } from './components/features/exercises/exercises.component';
 
 
 
@@ -45,6 +46,7 @@ import { HomeHeaderComponent } from './components/home-header/home-header.compon
     WordsGameComponent,
     GamesListComponent,
     HomeHeaderComponent,
+    ExercisesComponent,
 
   ],
     imports: [

@@ -1,16 +1,16 @@
 .wrapper-intro {
   display: flex;
   justify-content: space-between;
-  margin: 10px auto;
+  /*margin: 10px auto;*/
   padding-bottom: 40px;
   border-bottom: 1px solid #3333333F;
-
+  width: 100%;
 }
 
 .wrapper-content {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
 }
 
 .wrapper-text {}
@@ -20,6 +20,7 @@
 img {
   width: 300px;
   border-radius: 12px;
+  margin-left: 10px;
 }
 
 p {
@@ -36,8 +37,12 @@ li{
   color: #333;
 }
 
-.quote-container p {
-  font-style: italic;
-  color: #333;
+.quote-container h2{
+  font-size: 20px;
+  color: #333333B7;
 }
 
+.quote-container p {
+  font-style: italic;
+  color: #333333;
+}

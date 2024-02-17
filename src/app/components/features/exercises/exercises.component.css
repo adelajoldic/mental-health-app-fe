@@ -88,7 +88,7 @@ p {
   letter-spacing: 0.3px;
 }
 
-#description{
+#title{
   font-weight: bolder;
 }
 
@@ -97,10 +97,42 @@ p {
   margin: 2% 6%;
 }
 
-/* Optional: Add media query for responsiveness */
 @media screen and (max-width: 768px) {
+  h2{
+    font-size: 17px;
+  }
+  .text{
+    display: none;
+  }
   .video-container {
     width: 100%;
-    margin: 10px 0; /* Adjust the margin for smaller screens */
+    margin: 10px 0;
+  }
+  .video-container:hover{
+    transform: none;
+  }
+  .video-container h3{
+    font-size: 16px;
+  }
+  .video-container p{
+    font-size: 14px;
+  }
+  .intro-video{
+    margin-top: 5%;
+    height: 150px;
+  }
+  .description{
+    width: 100%;
+    margin: 0;
+  }
+  .description #title, #playlist{
+    font-size: 17px;
+    text-align: center;
+  }
+  .description p{
+    font-size: 14px;
+  }
+  #closing, .footer{
+    display: none;
   }
 }

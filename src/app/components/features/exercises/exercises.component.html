@@ -4,7 +4,7 @@
 <iframe class="intro-video" width="560" height="315" src="https://www.youtube.com/embed/e9B3QWESkLI?si=YAzbYklgtUu51dO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <h4 id="playlist">Exercise List:</h4>
 <div *ngFor="let description of descriptions" class="description">
-  <p id="description">{{ description.title }}</p>
+  <p id="title">{{ description.title }}</p>
   <p>{{ description.text }}</p>
 </div>
 <div class="video-list">
@@ -13,4 +13,4 @@
     <h3>{{ video.title }}</h3>
   </div>
   </div>
-<app-footer></app-footer>
+<app-footer class="footer"></app-footer>

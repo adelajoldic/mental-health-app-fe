@@ -36,9 +36,10 @@ header .container {
 }
 
 header .logo {
-  color: #5d5d5d;
-  font-style: italic;
+  /*color: #5d5d5d;*/
+  /*font-style: italic;*/
   text-transform: uppercase;
+  color: #66AFFF;
   font-size: 20px;
 }
 

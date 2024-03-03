@@ -11,10 +11,17 @@ footer{
   margin-top: 2%;
 }
 
-footer p {
-  color: #5d5d5d;
+footer h5 {
+  color: #202020F2;
   font-style: normal;
   font-size: 15px;
-  line-height: 40px;
+  line-height: 20px;
   margin: 1% auto;
+}
+footer p {
+  color: #202020F2;
+  font-weight: lighter;
+  font-size: 13px;
+  line-height: 40px;
+  margin: auto 5%;
 }

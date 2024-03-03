@@ -1,6 +1,5 @@
 h2{
   text-align: center;
-  color: #404252;
   font-size: 28px;
 }
 
@@ -9,7 +8,6 @@ h2{
   margin: 3% 4%;
   line-height: 30px;
   letter-spacing: 1px;
-  color: #5d5d5d;
 }
 
 .game-grid {
@@ -21,20 +19,16 @@ h2{
   font-size: 16px;
 }
 
-.game-grid h3{
-  color: #404252;
 
-}
 
 .game-grid p {
   text-align: justify-all;
   font-size: 15px;
+  font-weight: lighter;
   letter-spacing: 0.7px;
   line-height: 25px;
   flex-grow: 1; /* Allow text to grow and take available space */
   margin: auto 5%;
-  color: #5d5d5d;
-
 }
 
 .game-card {

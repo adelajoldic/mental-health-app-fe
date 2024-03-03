@@ -4,8 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 140px;
-  margin: 3%;
+  gap: 20px;
 }
 /*@media (max-width: 767px) {*/
 /*  .landing-page .content .container {*/
@@ -19,8 +18,12 @@
 /*  }*/
 /*}*/
 
+.landing-page .content .info{
+  margin: 120px 30px 30px;
+}
+
 .landing-page .content .info h1 {
-  color: #5d5d5d;
+  color: #202020F2;
   font-size: 44px;
 
 }
@@ -29,15 +32,16 @@
   margin: 2%;
   line-height: 1.6;
   font-size: 15px;
-  color: #5d5d5d;
+  color: #202020F2;
 }
 
 .landing-page .content .info button:hover {
-  color: #5d5d5d;
+  color: #202020F2;
   cursor: pointer;
 }
 .landing-page .content .image img {
   max-width: 100%;
+  margin-top: 5px;
 }
 
 

@@ -150,18 +150,25 @@
 <!--</div>-->
 
 
+<div class="main">
 
 <div class="container">
   <div class="text-section">
-    <h1>Welcome to MindSpace</h1>
+    <div class="mind-space">
+      <span class="mind">Welcome to Mind</span>
+      <span class="space">Space</span>
+    </div>
+
     <p>Step into a space of compassion and understanding. Welcome to a community focused on mental well-being,
-      where support and resources come together. Your journey to a healthier mind begins here. You're not alone;
+      where support and resources come together. Your journey to a healthier mind begins here. You're not alone,
       let's navigate this path together.</p>
   </div>
 
   <div class="image-section">
 <!--    <img src="assets/MindSpace.png" alt="Image">-->
-    <img src="assets/Illustration1.svg" alt="Image">
+<!--    <img src="assets/Illustration1.svg" alt="Image">-->
+<!--    <img src="assets/Ena%20-%20Img1.png" alt="Image Ena Avatar">-->
+    <img class="img-start" src="assets/Welcome.png" alt="Image Ena Avatar">
   </div>
 </div>
 
@@ -172,39 +179,114 @@
 <div class="card-container">
   <a (click)="navigateToGames()">
       <div class="card">
-      <img src="assets/card1.png" alt="Image">
+      <img class="card-img" src="assets/Home-Puzzle.jpg" alt="Image">
       <h4>Entertainment</h4>
-  <!--    <p class="text">Explore the world of games. Whether it's casual fun or immersive adventures,-->
-  <!--      gaming offers an enjoyable escape. Level up your leisure time and discover the joy in every play.</p>-->
+      <p class="text">Explore the world of games</p>
       </div>
   </a>
 
   <a (click)="navigateToVideos()">
     <div class="card">
-      <img src="assets/card2.png" alt="Image">
+      <img class="card-img" src="assets/Home-Books.jpg" alt="Image">
       <h4>Education</h4>
-  <!--    <p class="text">Embrace the power of education. Fuel your curiosity, expand your knowledge, and-->
-  <!--      unlock endless possibilities. Education is the key to personal growth and a brighter future.</p>-->
+      <p class="text">Embrace the power of education</p>
     </div>
   </a>
 
   <a (click)="navigateToMusic()">
     <div class="card">
-            <img src="assets/card3.jpg" alt="Image">
-            <h4>Relaxation</h4>
-  <!--          <p>Discover the serenity of relaxation. Embrace calmness, reduce stress, and rejuvenate your mind and body.-->
-  <!--            Elevate your well-being through moments of tranquility.</p>-->
+      <img class="card-img" src="assets/Home-Music.jpg" alt="Image">
+      <i class="gg-headset"></i>
+      <h4>Relaxation</h4>
+            <p>Discover the serenity of relaxation</p>
     </div>
   </a>
 
   <a (click)="navigateToExercises()">
     <div class="card">
-      <img src="/assets/card4.jpg" alt="Image">
+      <img class="card-img" src="/assets/Home-Exercise.jpg" alt="Image">
       <h4>Exercises</h4>
-  <!--    <p>Unlock the benefits of exercise – a key to vitality, improved mood, enhanced energy, sharper focus,-->
-  <!--      and overall well-being. Move for a healthier, happier you!</p>-->
+      <p>Move for healthier and happier you</p>
     </div>
   </a>
 </div>
 
-<app-footer class="footer"></app-footer>
+
+<div class="new-cards">
+
+      <div class="new-card">
+        <img class="cards-img1" src="assets/card1.png" alt="Image">
+        <div class="new-card-content">
+          <a (click)="navigateToGames()">
+            <h4>Does Entertainment Ease Stress?</h4>
+          </a>
+          <p>
+            Engaging in gaming in a positive manner can serve as a valuable means of caring for your mental well-being.
+            It provides a space for relaxation and a break from the daily stresses, akin to activities such as reading
+            or taking a walk. Gaming fosters a sense of accomplishment and facilitates the acquisition of new skills,
+            such as problem-solving. Additionally, it offers a sociable and enjoyable avenue to stay connected with
+            friends and family.
+          </p>
+          <a class="check-out" (click)="navigateToGames()"> &#8689; Check out our simple games</a>
+      </div>
+      </div>
+
+
+
+      <div class="new-card">
+        <div class="new-card-content">
+          <a (click)="navigateToVideos()">
+            <h4>Why Invest in Mental Health Literacy?</h4>
+          </a>
+          <p>
+            Understanding mental health is crucial as it empowers individuals to recognize, address, and destigmatize
+            mental health challenges. By promoting positive conversations, individuals can contribute to reducing
+            the impact of mental health challenges, enabling early intervention and creating a compassionate environment.
+            Ultimately, mental health education equips people with valuable tools for self-care, promotes empathy,
+            and strengthens connections within communities.
+          </p>
+          <a class="check-out" (click)="navigateToVideos()"> &#8689; Learn from other stories</a>
+        </div>
+        <img class="cards-img2" src="assets/card2.png" alt="Image">
+      </div>
+
+
+
+    <div class="new-card">
+      <img class="cards-img1" src="assets/card3.jpg" alt="Image">
+      <div class="new-card-content">
+        <a (click)="navigateToMusic()">
+          <h4>How Does Relaxation Support Mental Health?</h4>
+        </a>
+        <p>
+          Research indicates that music can alleviate anxiety, lower stress levels, and facilitate emotional expression.
+          For teens, music becomes a crucial element in self-discovery, building communities, and fostering a sense
+          of belonging. Whether as a quick mood booster or a tool for those with hearing loss, music emerges as a
+          versatile and accessible avenue for promoting mental well-being.
+        </p>
+        <a class="check-out" (click)="navigateToMusic()"> &#8689; Relax by listening to music</a>
+      </div>
+    </div>
+
+
+    <div class="new-card">
+      <div class="new-card-content">
+        <a (click)="navigateToExercises()">
+          <h4>How Does Physical Activity Impact the Mind?</h4>
+        </a>
+        <p>
+          Exercise proves to be a valuable ally in supporting mental health by triggering the release of 'feel-good'
+          chemicals like endorphins and serotonin, contributing to mood improvement. Overcoming potential obstacles,
+          such as lack of motivation, cost concerns, anxiety, or time constraints, involves setting small goals,
+          exploring affordable options, and breaking exercise into manageable chunks. The emphasis is on finding
+          enjoyable activities, considering various resources and support networks, and ultimately integrating
+          exercise seamlessly into daily routines for enhanced mental well-being.
+        </p>
+        <a class="check-out" (click)="navigateToExercises()"> &#8689; Find your physical activity</a>
+      </div>
+      <img class="cards-img2" src="/assets/card4.jpg" alt="Image">
+    </div>
+
+</div>
+  <app-footer class="footer"></app-footer>
+</div>

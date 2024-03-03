@@ -84,11 +84,14 @@ button {
 }
 
 button:hover {
-  color: #5d5d5d;
+  color: #202020F2;
   cursor: pointer;
 }
 
 p, h1, h2, h3, h4 {
   color: #202020F2;
-
+}
+.button-avatar {
+  font-size: 18px;
+  font-weight: bold;
 }

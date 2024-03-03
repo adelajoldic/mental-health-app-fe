@@ -1,33 +1,45 @@
 <app-header></app-header>
-<h2>🧠✨ Welcome to our Mental Health Education Hub! 🌱</h2>
-<p class="text">{{intro}}</p>
-<iframe class="intro-video" width="560" height="500" src="https://www.youtube.com/embed/v2wo4bW55Jw?si=CWi2yBzoupNAZm1K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="start">
+  <div class="intro">
+    <h2>🧠✨ Welcome to our Mental Health Education Hub! 🌱</h2>
+    <p class="text">{{intro}}</p>
+  </div>
 
-<section>
-  <p class="explanation-text">
-    In this space, we believe in the power of shared experiences and the strength that comes from opening up about our mental health journeys. Our video collection features real stories from individuals who have faced the challenges of anxiety, depression, and stress head-on. These brave souls have chosen to speak up, sharing their personal struggles to inspire hope and foster a sense of community.
-  </p>
-  <div class="video-section">
-    <h4>🎥 Watch, Listen, Connect:</h4>
-    <p>
-      Embark on a journey of understanding as you watch these heartfelt testimonials. Each video is a testament to resilience, courage, and the transformative impact of acknowledging and addressing mental health.
-    </p>
-  </div>
-  <div class="why-share-section">
-    <h4>🤲 Why Share?</h4>
-    <p>
-      Sharing our struggles is an act of empowerment. It breaks the silence, dismantles stigma, and creates a supportive environment where healing can flourish. You are not alone, and through these narratives, we aim to build a community that understands, uplifts, and embraces the beauty of mental well-being.
-    </p>
-  </div>
-  <div class="remember">
-    <h4>💡Remember:</h4>
-    <p>
-      Your mental health matters, and you are not alone. Let's build a space where stories become a source of strength and connection. Together, we can break down barriers and cultivate a community that thrives on empathy and understanding. <br> 💙🌱 #MentalHealthStories #BreakTheStigma
-    </p>
-  </div>
-</section>
-<h4 id="playlist">🌟Video List:</h4>
-<p class="text">{{closing}}</p>
+<!--<section>-->
+<!--  <p class="explanation-text">-->
+<!--    In this space, we believe in the power of shared experiences and the strength that comes from opening up about our mental health journeys. Our video collection features real stories from individuals who have faced the challenges of anxiety, depression, and stress head-on. These brave souls have chosen to speak up, sharing their personal struggles to inspire hope and foster a sense of community.-->
+<!--  </p>-->
+<!--  <div class="video-section">-->
+<!--    <h4>🎥 Watch, Listen, Connect:</h4>-->
+<!--    <p>-->
+<!--      Embark on a journey of understanding as you watch these heartfelt testimonials. Each video is a testament to resilience, courage, and the transformative impact of acknowledging and addressing mental health.-->
+<!--    </p>-->
+<!--  </div>-->
+<!--  <div class="why-share-section">-->
+<!--    <h4>🤲 Why Share?</h4>-->
+<!--    <p>-->
+<!--      Sharing our struggles is an act of empowerment. It breaks the silence, dismantles stigma, and creates a supportive environment where healing can flourish. You are not alone, and through these narratives, we aim to build a community that understands, uplifts, and embraces the beauty of mental well-being.-->
+<!--    </p>-->
+<!--  </div>-->
+<!--  <div class="remember">-->
+<!--    <h4>💡Remember:</h4>-->
+<!--    <p>-->
+<!--      Your mental health matters, and you are not alone. Let's build a space where stories become a source of strength and connection. Together, we can break down barriers and cultivate a community that thrives on empathy and understanding. <br> 💙🌱 #MentalHealthStories #BreakTheStigma-->
+<!--    </p>-->
+<!--  </div>-->
+<!--</section>-->
+<!--<h4 id="playlist">🌟Video Playlist:</h4>-->
+
+<div class="why">
+  <h2>Why Do We Share Our Stories?</h2>
+
+<iframe class="intro-video" width="560" height="500" src="https://www.youtube.com/embed/v2wo4bW55Jw?si=CWi2yBzoupNAZm1K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+<div class="playlist">
+  <h2>Video Playlist</h2>
+
+<!--<p class="text">{{closing}}</p>-->
 
 <div class="video-list">
   <div *ngFor="let video of videos" class="video-container">
@@ -37,5 +49,6 @@
     <p id="description">Description:</p>
     <p>{{ video.description }}</p>
   </div>
+</div>
 </div>
 <app-footer class="footer"></app-footer>

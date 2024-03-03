@@ -15,6 +15,10 @@ import {GamesListComponent} from "./components/features/games-list/games-list.co
 import {VideosComponent} from "./components/features/videos/videos.component";
 import {MusicComponent} from "./components/features/music/music.component";
 import {ExercisesComponent} from "./components/features/exercises/exercises.component";
+import {VideoIntroAvatarComponent} from "./components/features/video-intro-avatar/video-intro-avatar.component";
+import {GameIntroAvatarComponent} from "./components/features/game-intro-avatar/game-intro-avatar.component";
+import {MusicIntroComponent} from "./components/features/music-intro/music-intro.component";
+import {ExerciseIntroComponent} from "./components/features/exercise-intro/exercise-intro.component";
 
 const routes: Routes = [
   {
@@ -30,12 +34,16 @@ const routes: Routes = [
     component: LoginComponent,
   },
   {
+    path: "education-ena",
+    component: VideoIntroAvatarComponent,
+  },
+  {
     path: "education",
     component: EducationComponent,
   },
   {
-    path: "exercises",
-    component: ExercisesComponent,
+    path: "games-ena",
+    component: GameIntroAvatarComponent,
   },
   {
     path: "games",
@@ -75,9 +83,21 @@ const routes: Routes = [
     component: VideosComponent,
   },
   {
+    path: "music-ena",
+    component: MusicIntroComponent,
+  },
+  {
     path: "music",
     component: MusicComponent,
-  }
+  },
+  {
+    path: "exercises-ena",
+    component: ExerciseIntroComponent,
+  },
+  {
+    path: "exercises",
+    component: ExercisesComponent,
+  },
 ];
 
 @NgModule({

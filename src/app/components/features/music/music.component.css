@@ -12,6 +12,12 @@ h2{
   color: #5d5d5d;
 }
 
+.intro{
+  background: linear-gradient(90deg, rgba(225,239,253,1) 2%, rgba(173,211,252,1) 23%, rgba(132,189,251,1) 90%, rgba(102,175,255,1) 100%);
+  padding: 30px 30px 40px;
+  border-radius: 250px 50px 250px 50px;
+}
+
 .intro-video{
   width: 90%;
   height: 600px;

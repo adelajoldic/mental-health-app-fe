@@ -10,6 +10,13 @@ h2{
   letter-spacing: 1px;
 }
 
+.intro{
+  background: linear-gradient(90deg, rgba(225,239,253,1) 2%, rgba(173,211,252,1) 23%, rgba(132,189,251,1) 90%, rgba(102,175,255,1) 100%);
+  padding: 30px 30px 40px;
+  border-radius: 210px 50px 210px 50px;
+}
+
+
 .intro-video{
   width: 90%;
   height: 600px;
@@ -17,17 +24,17 @@ h2{
   margin: 2% 5%;
 }
 
-section {
-  max-width: 85%;
-  margin: 0 auto 0 5%;
-  padding: 15px;
-}
+/*section {*/
+/*  max-width: 85%;*/
+/*  margin: 0 auto 0 5%;*/
+/*  padding: 15px;*/
+/*}*/
 
-section p {
-  font-size: 16px;
-  font-weight: lighter;
-  letter-spacing: 1px;
-}
+/*section p {*/
+/*  font-size: 16px;*/
+/*  font-weight: lighter;*/
+/*  letter-spacing: 1px;*/
+/*}*/
 
 h4{
   font-weight: bold;

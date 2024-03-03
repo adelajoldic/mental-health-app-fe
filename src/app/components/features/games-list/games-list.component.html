@@ -1,7 +1,8 @@
 <app-header></app-header>
-<!--<h2>Hello, Brain Explorer!<br> Dive into Our Friendly Game Zone!</h2>-->
-<h2>🎮 Level Up Your Mind: Welcome to our Gaming & Mental Health Hub! 🌟</h2>
-<p id="introduction">{{intro}}</p>
+<div class="intro">
+  <h2>🎮 Level Up Your Mind: Welcome to our Gaming & Mental Health Hub! 🌟</h2>
+  <p id="introduction">{{intro}}</p>
+</div>
 <div class="game-grid">
   <div *ngFor="let game of games" class="game-card">
     <img [src]="game.image" alt="{{ game.title }}">

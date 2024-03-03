@@ -22,6 +22,10 @@ import { WordsGameComponent } from './components/features/words-game/words-game.
 import { GamesListComponent } from './components/features/games-list/games-list.component';
 import { HomeHeaderComponent } from './components/home-header/home-header.component';
 import { ExercisesComponent } from './components/features/exercises/exercises.component';
+import { VideoIntroAvatarComponent } from './components/features/video-intro-avatar/video-intro-avatar.component';
+import { GameIntroAvatarComponent } from './components/features/game-intro-avatar/game-intro-avatar.component';
+import { MusicIntroComponent } from './components/features/music-intro/music-intro.component';
+import { ExerciseIntroComponent } from './components/features/exercise-intro/exercise-intro.component';
 
 
 
@@ -47,6 +51,10 @@ import { ExercisesComponent } from './components/features/exercises/exercises.co
     GamesListComponent,
     HomeHeaderComponent,
     ExercisesComponent,
+    VideoIntroAvatarComponent,
+    GameIntroAvatarComponent,
+    MusicIntroComponent,
+    ExerciseIntroComponent,
 
   ],
     imports: [

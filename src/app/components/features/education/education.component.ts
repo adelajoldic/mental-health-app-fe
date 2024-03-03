@@ -7,25 +7,24 @@ import {Router} from "@angular/router";
   styleUrls: ['./education.component.css']
 })
 export class EducationComponent {
-  constructor(private router:Router) {
-  }
-  navigateToGames() {
-    const path = "games"
+  constructor(private router:Router) {}
+  navigateToGameIntro() {
+    const path = "games-ena"
     this.router.navigate([path])
   }
 
-  navigateToVideos() {
-    const path = "videos"
+  navigateToVideoIntro() {
+    const path = "education-ena"
     this.router.navigate([path])
   }
 
-  navigateToMusic() {
-    const path = "music"
+  navigateToMusicIntro() {
+    const path = "music-ena"
     this.router.navigate([path])
   }
 
-  navigateToExercises() {
-    const path = "exercises"
+  navigateToExerciseIntro() {
+    const path = "exercises-ena"
     this.router.navigate([path])
   }
 }

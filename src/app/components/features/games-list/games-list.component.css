@@ -10,16 +10,21 @@ h2{
   letter-spacing: 1px;
 }
 
+.intro{
+  background: linear-gradient(90deg, rgba(225,239,253,1) 2%, rgba(173,211,252,1) 23%, rgba(132,189,251,1) 90%, rgba(102,175,255,1) 100%);
+  padding: 30px 30px 40px;
+  border-radius: 250px 50px 250px 50px;
+  margin-bottom: 5%;
+}
+
 .game-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
-  margin: auto 2%;
   grid-row-gap: 5%;
   font-size: 16px;
+  margin: auto 2% 5%;
 }
-
-
 
 .game-grid p {
   text-align: justify-all;

@@ -97,6 +97,35 @@ public closing: string = "Your experiences matter, your struggles are acknowledg
         ' your goals are, building mental strength is the key to reaching your greatest potential.',
       embedUrl: 'https://www.youtube.com/embed/TFbv757kup4?si=2x2pMRMORkR0gkES'
     },
+      {
+        title: 'Why students should have mental health days',
+        speaker: 'Hailey Hardcastle | TED Talk',
+        description: 'School can be rife with stress, anxiety, panic attacks and even burnout — but there\'s often no ' +
+          'formal policy for students who need to prioritize their well-being. Hailey Hardcastle explains why schools ' +
+          'should offer mental health days and allow students time to practice emotional hygiene without stigma. ' +
+          'Follow along to learn how she and a team of fellow teens transformed their advocacy into law.',
+        embedUrl: 'https://www.youtube.com/embed/1qq7lDL-bzY?si=ZF453smnUrnztBgz'
+      },
+      {
+        title: 'Mental Disease: Empower Others by Sharing Your Story',
+        speaker: 'Ashley Perkins | TED Talk',
+        description: 'Ashley Perkins envisions a world where individuals are not defined by their diagnoses, but ' +
+          'where stigmas are removed, mental diseases are spoken of openly without fear of judgement, and more people ' +
+          'are comfortable seeking treatment. Ashley Perkins, Pharm.D., is a mental health advocate with a background ' +
+          'as a pharmacist and educator. ',
+        embedUrl: 'https://www.youtube.com/embed/mRhO6ooS3eQ?si=bck1J86y_H0SSWuV'
+      },
+      {
+        title: 'You Don\'t Find Happiness, You Create It',
+        speaker: 'Katarina Blom | TED Talk',
+        description: 'According to psychologist Katarina Blom, the brain is not always on your side when it comes to ' +
+          'well-being. Survival, absolutely. The rest, not so much. But there is hope! In this personal and inspiring ' +
+          'talk, Katarina Blom lets you in on a few secrets of the mind - and how you can cultivate happiness by ' +
+          'befriending your brain. Katarina Blom is a psychologist, a co-founder of a gym for the mind, the first ' +
+          'author to publish a Swedish book on positive psychology, and she is the creator of one of the biggest ' +
+          'digital platforms on psychology in Sweden.',
+        embedUrl: 'https://www.youtube.com/embed/9DtcSCFwDdw?si=7vT92AZPnkh1-zBT'
+      },
     // Add more videos as needed
   ];
   constructor(private sanitizer: DomSanitizer) {}

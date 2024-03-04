@@ -20,7 +20,7 @@ export class ExercisesComponent {
       embedUrl: 'https://www.youtube.com/embed/ybl3Cou9pTc?si=bDp9N-K9E8YKX_rZ'
     },
     {
-      title: '30 MIN MOOD BOOST & ANXIETY RELEASE CARDIO WORKOUT',
+      title: '30 Min Mood Boost & Anxiety Release Cardio Workout',
       embedUrl: 'https://www.youtube.com/embed/0X6qRWrnIEE?si=20hydzzpMsnmvoa-'
     },
     {
@@ -28,7 +28,7 @@ export class ExercisesComponent {
       embedUrl: 'https://www.youtube.com/embed/LxiJe2XCyjo?si=SIgNwQmSeOOz9PYb'
     },
     {
-      title: '30 minute NO REPEAT Full Body Strength Training',
+      title: '30 minute No Repeat Full Body Strength Training',
       embedUrl: 'https://www.youtube.com/embed/tj0o8aH9vJw?si=Y7dZHfW4Z1z2Gadj'
     },
     {

@@ -14,32 +14,18 @@ h2{
 }
 
 .intro-video{
-  /*width: 50%;*/
-  /*height: 350px;*/
   width: 72%;
   height: 500px;
   border-radius: 10px;
-  /*margin: 2% 20% 9%;*/
   margin: 1% 5%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
+
 .intro{
   background: linear-gradient(90deg, rgba(225,239,253,1) 2%, rgba(173,211,252,1) 23%, rgba(132,189,251,1) 90%, rgba(102,175,255,1) 100%);
   padding: 30px 30px 40px;
   border-radius: 250px 50px 250px 50px;
 }
-
-/*section {*/
-/*  max-width: 85%;*/
-/*  margin: 0 auto 0 5%;*/
-/*  padding: 15px;*/
-/*  letter-spacing: 0.5px;*/
-/*}*/
-
-/*section p {*/
-/*  font-size: 16px;*/
-/*  color: #5d5d5d;*/
-/*}*/
 
 h4{
   color: #202020F2;
@@ -58,16 +44,14 @@ h4{
   justify-content: center;
   background: white;
   color: #202020F2;
-  /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);*/
 }
 
 .video-container {
-  /* Adjust the margin to reduce the gap */
   border: 1px solid #dddddd;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.1s ease-in-out;
-  width: 300px;
+  width: 350px;
   margin: 5px 5px 25px;
 }
 
@@ -79,7 +63,7 @@ h4{
   width: 100%;
   height: 200px; /* Adjust the height as needed */
   border: none;
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
 }
 
 h3 {
@@ -94,14 +78,11 @@ h3 {
 p {
   color: #202020F2;
   font-size: 16px;
-  /*padding-left: 15px;*/
-  /*padding-right: 15px;*/
   padding-left: 20px;
   padding-right: 20px;
   text-align: justify;
   line-height: 24px;
   font-weight: lighter;
-
 }
 
 #description{

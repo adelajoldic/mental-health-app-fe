@@ -1,25 +1,26 @@
-<app-header></app-header>
-<div class="landing-page">
-  <div class="content">
+<div class="content">
     <div class="container">
       <div class="info">
+        <div class="intro">
+          <h2 class="welcome">Welcome back Friend 🥳</h2>
+          <h4 class="login">Let's continue your mental health journey </h4>
+        </div>
         <div class="form">
           <form [formGroup]="loginForm" (ngSubmit)="submit()">
             <label for="name">Full Name</label>
-            <input id="name" type="text" [formControlName]="'name'" placeholder="">
-            <label for="email">Email Address</label>
-            <input id="email" type="email" [formControlName]="'email'" placeholder="">
+            <input id="name" type="text" [formControlName]="'name'" placeholder="name@example.com">
+            <label for="email">Email address</label>
+            <input id="email" type="email" [formControlName]="'email'" placeholder="name@example.com">
             <label for="pass">Password</label>
-            <input id="pass" type="password" [formControlName]="'password'" placeholder="">
+            <input id="pass" type="password" [formControlName]="'password'" placeholder="********">
           </form>
         </div>
-        <button type="submit" [disabled]="loginForm.invalid" (click)="navigateToHome()">Login</button>
-        <p>You don't have an account? <a href="./register">Register here</a></p>
+        <button type="submit" [disabled]="loginForm.invalid" (click)="navigateToHome()">Prijava</button>
+        <p class="register">You don't have an account? <a href="./register" >Create here.</a></p>
       </div>
       <div class="image">
-        <img src="assets/Hello%20Again.png" style="width: 90%; padding-left: 50px;">
+        <img src="assets/Login.png" style="width: 90%; padding-left: 50px;">
       </div>
     </div>
   </div>
-</div>
 

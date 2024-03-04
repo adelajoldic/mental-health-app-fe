@@ -30,25 +30,22 @@
 <!--</section>-->
 <!--<h4 id="playlist">🌟Video Playlist:</h4>-->
 
-<div class="why">
-  <h2>Why Do We Share Our Stories?</h2>
-
-<iframe class="intro-video" width="560" height="500" src="https://www.youtube.com/embed/v2wo4bW55Jw?si=CWi2yBzoupNAZm1K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-</div>
-<div class="playlist">
-  <h2>Video Playlist</h2>
-
-<!--<p class="text">{{closing}}</p>-->
-
-<div class="video-list">
-  <div *ngFor="let video of videos" class="video-container">
-    <iframe class="ted-talks" width="560" height="315" [src]="video.embedUrl" frameborder="0" allowfullscreen></iframe>
-    <h3>{{ video.title }}</h3>
-    <p>{{ video.speaker }}</p>
-    <p id="description">Description:</p>
-    <p>{{ video.description }}</p>
+  <div class="why">
+    <h2>Why Do We Share Our Stories?</h2>
+    <iframe class="intro-video" width="560" height="500" src="https://www.youtube.com/embed/v2wo4bW55Jw?si=CWi2yBzoupNAZm1K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
 </div>
+<div class="playlist">
+  <h2>🎥 Video Playlist</h2>
+  <div class="video-list">
+    <div *ngFor="let video of videos" class="video-container">
+      <iframe class="ted-talks" width="560" height="315" [src]="video.embedUrl" frameborder="0" allowfullscreen></iframe>
+      <h3>{{ video.title }}</h3>
+      <p>{{ video.speaker }}</p>
+      <p id="description">Description:</p>
+      <p>{{ video.description }}</p>
+    </div>
+  </div>
 </div>
+<!--<p class="text">{{closing}}</p>-->
 <app-footer class="footer"></app-footer>

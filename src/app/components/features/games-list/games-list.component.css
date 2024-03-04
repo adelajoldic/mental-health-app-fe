@@ -24,8 +24,8 @@ h2{
 }
 
 .adventures{
-    text-align: center;
-    color: #202020F2;
+  text-align: center;
+  color: #202020F2;
   margin-top: 3%;
 }
 
@@ -68,7 +68,7 @@ h2{
 .game-card img {
   max-width: 100%;
   height: auto;
-  border-radius: 30px;
+  border-radius: 10px;
   margin-bottom: 10px;
 }
 
@@ -82,7 +82,7 @@ h2{
 button {
   width: 80%;
   font-size: 20px;
-  margin: 0 auto; /* Center the button horizontally */
+  margin: 5% auto; /* Center the button horizontally */
   padding: 10px; /* Adjust padding as needed */
 }
 

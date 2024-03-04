@@ -11,7 +11,7 @@ ul {
 .intro{
   color: #FFFFFF;
   margin-left: 50px;
-  margin-bottom: 15%;
+  margin-bottom: 10%;
   font-weight: lighter;
 }
 
@@ -34,13 +34,14 @@ ul {
   justify-content: space-between;
   /*max-height: calc(800px - 100px);*/
   /*margin-left: -9px;*/
+
 }
 
 .content .container .info {
   /*background: rgba(102, 175, 255, 0.8);*/
   background: #66AFFF;
-  padding-top: 4%;
-  padding-bottom: 5%;
+  padding-top: 2%;
+  padding-bottom: 4%;
   width: 50%;
   border-radius: 40px;
 }
@@ -51,8 +52,7 @@ ul {
 }
 
 .form{
-  /*height: 100%;*/
-  padding-left: 10%;
+  padding-left: 8%;
   width: 80%;
 }
 
@@ -60,8 +60,8 @@ input {
   background: #FFFFFF;
   width: 100%;
   height: 40px;
-  padding: 2px 2px 2px 15px;
-  margin-bottom: 15px;
+  padding: 1px 1px 1px 15px;
+  margin-bottom: 10px;
   margin-top: 5px;
   color: #202020F2;
   font-size: 13px;
@@ -86,7 +86,7 @@ label {
 select {
   width: 104%;
   margin-top: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #5d5d5d;
   font-size: 13px;
   font-weight: lighter;

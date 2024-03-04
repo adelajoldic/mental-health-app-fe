@@ -16,7 +16,7 @@ ul {
 .intro{
   color: #FFFFFF;
   margin-left: 50px;
-  margin-bottom: 15%;
+  margin-bottom: 10%;
   font-weight: lighter;
 }
 
@@ -37,6 +37,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 2%;
   /*max-height: calc(800px - 100px);*/
   /*margin-left: -9px;*/
 }
@@ -44,7 +45,7 @@ ul {
 .content .container .info {
   /*background: rgba(102, 175, 255, 0.8);*/
   background: #66AFFF;
-  padding-top: 4%;
+  padding-top: 2%;
   padding-bottom: 5%;
   width: 80%;
   border-radius: 40px;
@@ -88,7 +89,7 @@ label {
   padding: 2px;
 }
 
-.content .info button {
+.content button {
   margin-bottom: 10px;
   padding: 8px 50px;
   width: 83%;
@@ -102,7 +103,7 @@ label {
   font-weight: lighter;
 }
 
-.content .info button:hover {
+.content button:hover {
   color: #5d5d5d;
   cursor: pointer;
 }

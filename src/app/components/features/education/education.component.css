@@ -95,6 +95,10 @@
   color: #202020F2;
 }
 
+.card h4:hover{
+  color: #202020A5;
+}
+
 a:hover{
   text-decoration: none;
   color: #66AFFF;

@@ -6,23 +6,18 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./words-game.component.css']
 })
 export class WordsGameComponent {
+  // Define words for each level
+  levels: { [key: number]: string[] } = {
+    1: ['love', 'smile', 'happiness', 'joy'],
+    2: ['harmony', 'gratitude', 'joyful', 'soft', 'hopeful', 'bliss', 'empower', 'success'],
+    3: ['positive', 'compassion', 'cherish', 'empathy', 'optimistic', 'kind', 'sweet', 'fun', 'safe', 'free', 'nice', 'wise']
+  };
 
+  // Set default level to 1
+  currentLevel: number = 1;
 
-  wordsToFind: string[] = ['apple', 'banana', 'grape', 'orange', 'kiwi', 'adela', 'mihret', 'edina', 'samed', 'alma', 'ena'];
-  grid: string[][] = [
-    ['a', 'p', 'p', 'l', 'e'],
-    ['b', 'a', 'n', 'a', 'n', 'a'],
-    ['g', 'r', 'a', 'p', 'e'],
-    // ['o', 'r', 'a', 'n', 'g', 'e', 'k', 'i', 'w', 'i'],
-    // ['k', 'i', 'w', 'i'],
-    ['a', 'd', 'e', 'l', 'a'],
-    ['m', 'i', 'h', 'r', 'e', 't'],
-    ['e', 'd', 'i', 'n', 'a'],
-    ['s', 'a', 'm', 'e', 'd'],
-    ['a', 'l', 'm', 'a'],
-    ['e', 'n', 'a']
-
-  ];
+  wordsToFind: string[] = [];
+  grid: string[][] = [];
   foundWords: string[] = [];
   userInput: string = '';
   errorMessage: string | null = null;
@@ -30,12 +25,11 @@ export class WordsGameComponent {
   timer: number = 0;
   timerInterval: any;
   gameStarted: boolean = false;
-  showTimer: boolean = true;
   displayTimeTaken: boolean = false;
   elapsedTime: number = 0;
-  constructor() {}
 
   ngOnInit(): void {
+    this.generateGrid();
     this.startTimer();
   }
 
@@ -51,70 +45,206 @@ export class WordsGameComponent {
 
   stopTimer(): void {
     clearInterval(this.timerInterval);
-    this.timerInterval = null; // Set timerInterval to null when stopping the timer
+    this.timerInterval = null;
   }
 
   startGame(): void {
     this.gameStarted = true;
   }
 
+  generateRandomDirection(): { row: number; col: number } {
+    const directions = [
+      { row: -1, col: 0 }, { row: 1, col: 0 }, { row: 0, col: -1 }, { row: 0, col: 1 },
+      { row: -1, col: -1 }, { row: -1, col: 1 }, { row: 1, col: -1 }, { row: 1, col: 1 }
+    ];
+
+    const randomIndex = Math.floor(Math.random() * directions.length);
+    return directions[randomIndex];
+  }
+
+  generateGrid(): void {
+    // Use the current level to get the words for that level
+    this.wordsToFind = this.levels[this.currentLevel];
+
+    // Find the length of the longest word
+    const maxWordLength = Math.max(...this.wordsToFind.map(word => word.length));
+
+    // Initialize a blank grid with as many rows as there are words and columns based on the longest word
+    this.grid = Array.from({ length: this.wordsToFind.length }, () => Array(maxWordLength).fill(''));
+
+    for (const word of this.wordsToFind) {
+      let placed = false;
+
+      while (!placed) {
+        const direction = this.generateRandomDirection();
+        const wordLength = word.length;
+
+        let startRow: number;
+        let startCol: number;
+
+        startRow = Math.floor(Math.random() * this.grid.length);
+        startCol = Math.floor(Math.random() * this.grid[startRow].length);
+
+        const endRow = startRow + direction.row * (wordLength - 1);
+        const endCol = startCol + direction.col * (wordLength - 1);
+
+        if (
+          endRow >= 0 && endRow < this.grid.length &&
+          endCol >= 0 && endCol < this.grid[startRow].length
+        ) {
+          let validPlacement = true;
+
+          for (let i = 0; i < wordLength; i++) {
+            const newRow = startRow + direction.row * i;
+            const newCol = startCol + direction.col * i;
+
+            if (this.grid[newRow][newCol] && this.grid[newRow][newCol] !== word[i]) {
+              validPlacement = false;
+              break;
+            }
+          }
+
+          if (validPlacement) {
+            for (let i = 0; i < wordLength; i++) {
+              const newRow = startRow + direction.row * i;
+              const newCol = startCol + direction.col * i;
+              this.grid[newRow][newCol] = word[i];
+            }
+
+            placed = true;
+          }
+        }
+      }
+    }
+
+    // Fill empty spaces with random letters
+    for (let i = 0; i < this.grid.length; i++) {
+      for (let j = 0; j < this.grid[i].length; j++) {
+        if (this.grid[i][j] === '') {
+          this.grid[i][j] = this.getRandomLetter();
+        }
+      }
+    }
+  }
+
+  getRandomLetter(): string {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    return alphabet[Math.floor(Math.random() * alphabet.length)];
+  }
+
   checkWord(): void {
-    const word = this.userInput.toLowerCase();
+    const word = this.userInput.toLowerCase().trim();
 
     if (!this.gameStarted) {
       this.startGame();
-      this.startTimer(); // Start the timer when the game begins
+      this.startTimer();
     }
 
-    if (word.trim() !== '') {
-      if (this.wordsToFind.includes(word) && !this.foundWords.includes(word)) {
-        this.foundWords.push(word);
-        console.log(`Found word: ${word}`);
-        this.highlightFoundWord(word);
-        this.checkGameCompletion();
-        this.errorMessage = null; // Clear error message on correct word
+    if (word !== '') {
+      if (this.wordsToFind.includes(word)) {
+        if (this.foundWords.includes(word)) {
+          this.errorMessage = `The word "${word}" was already found!`;
+        } else {
+          this.foundWords.push(word);
+          this.highlightFoundWord(word);
+          this.checkGameCompletion();
+          this.errorMessage = null;
+        }
       } else {
-        console.log(`Word not found: ${word}`);
         this.errorMessage = `No such word found: ${word}`;
       }
 
-      // Clear the input after checking the word
       this.userInput = '';
     }
   }
 
   highlightFoundWord(word: string): void {
+    const directions = [
+      { row: -1, col: 0 }, { row: 1, col: 0 }, { row: 0, col: -1 }, { row: 0, col: 1 },
+      { row: -1, col: -1 }, { row: -1, col: 1 }, { row: 1, col: -1 }, { row: 1, col: 1 }
+    ];
+
     for (let i = 0; i < this.grid.length; i++) {
       for (let j = 0; j < this.grid[i].length; j++) {
         const cellText = this.grid[i][j].toLowerCase();
 
         if (cellText === word[0]) {
-          let found = true;
+          for (const direction of directions) {
+            let found = true;
 
-          for (let k = 1; k < word.length; k++) {
-            const nextCellText = this.grid[i][j + k].toLowerCase();
-            if (!nextCellText || nextCellText !== word[k]) {
-              found = false;
-              break;
-            }
-          }
+            const highlightedCells: { row: number, col: number }[] = [];
 
-          if (found) {
             for (let k = 0; k < word.length; k++) {
-              this.grid[i][j + k] = this.grid[i][j + k].toUpperCase();
+              const newRow = i + direction.row * k;
+              const newCol = j + direction.col * k;
+
+              // Check if the new position is within the grid boundaries
+              if (newRow < 0 || newRow >= this.grid.length || newCol < 0 || newCol >= this.grid[i].length) {
+                found = false;
+                break;
+              }
+
+              const nextCellText = this.grid[newRow][newCol].toLowerCase();
+              if (nextCellText !== word[k]) {
+                found = false;
+                break;
+              }
+
+              highlightedCells.push({ row: newRow, col: newCol });
             }
-            return; // Stop searching for the word after it's found
+
+            if (found) {
+              // Mark the cells for highlighting
+              for (const cell of highlightedCells) {
+                this.grid[cell.row][cell.col] = this.grid[cell.row][cell.col].toUpperCase();
+              }
+              return; // Stop searching for the word after it's found
+            }
           }
         }
       }
     }
   }
+
   checkGameCompletion(): void {
-    if (this.foundWords.length === this.wordsToFind.length) {
+    const wordsToFind = this.levels[this.currentLevel];
+
+    if (this.foundWords.length === wordsToFind.length) {
       this.stopTimer();
       this.congratulatoryMessage = `Congratulations! All the words are found.`;
       this.displayTimeTaken = true;
-      this.elapsedTime = this.timer; // Store the elapsed time
+      this.elapsedTime = this.timer;
+
+      // Trigger the next level
+      this.goToNextLevel();
     }
   }
+
+// Method to go to the next level
+  goToNextLevel(): void {
+    this.currentLevel++;
+
+    if (this.currentLevel > Object.keys(this.levels).length) {
+      console.log("You've completed all levels!");
+      // Optionally, you can reset the game or perform other actions here
+    } else {
+      this.resetGame();
+      this.generateGrid(); // Ensure to generate a new grid for the new level
+      this.startGame();
+    }
+  }
+
+  // Method to reset the game properties
+  resetGame(): void {
+    this.grid = [];
+    this.foundWords = [];
+    this.userInput = '';
+    this.errorMessage = null;
+    this.congratulatoryMessage = null;
+    this.timer = 0;
+    this.elapsedTime = 0;
+    this.displayTimeTaken = false;
+    this.gameStarted = false;
+  }
 }
+

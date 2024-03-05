@@ -18,9 +18,10 @@ h2{
 }
 
 .choice{
-  width: 100%;
-  height: 40%;
+  width: 65%;
+  height: 24%;
   border-radius: 10px 0 50px 100px;
+  margin-left: 15%;
 }
 
 .adventures{
@@ -31,11 +32,12 @@ h2{
 
 .game-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   grid-row-gap: 5%;
   font-size: 16px;
   margin: auto 2% 5%;
+
 }
 
 .game-grid p {

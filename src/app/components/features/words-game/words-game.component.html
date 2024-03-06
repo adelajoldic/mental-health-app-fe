@@ -1,43 +1,40 @@
 <app-header></app-header>
-<div class="content">
-  <div class="container">
-    <div id="main-container">
-      <div class="message">
-        <img src="assets/Find.png">
-        <h4 class="mission" *ngIf="foundWords.length === 0 && !errorMessage && !congratulatoryMessage">
-          Hello Player! Welcome to the word hunt challenge. 🔍You have an exciting task ahead – 👀 find and uncover a
-          total of {{ wordsToFind.length }} words hidden within the grid. Best of luck on your word-finding journey!
-          May your vocabulary prowess shine brightly as you embark on this linguistic adventure. Happy hunting! 💫
-        </h4>
-      </div>
-      <div class="message">
-        <div *ngIf="congratulatoryMessage || foundWords.length > 0">
-          <div *ngIf="congratulatoryMessage">{{ congratulatoryMessage }}</div>
-        </div>
-        <h2 class="level-title">Level {{ currentLevel }}:</h2> <!-- Display the level number as a title -->
-      </div>
-      <div id="game-container">
-        <div *ngFor="let row of grid; let i = index" class="row">
-          <div *ngFor="let cell of row; let j = index" class="cell">
-            {{ cell }}
-          </div>
-        </div>
-      </div>
-      <div class="word-input-container">
-        <label for="wordInput">Enter Word:</label>
-        <input type="text" id="wordInput" [(ngModel)]="userInput" (keyup.enter)="checkWord()" />
-        <p>Found Words ({{ foundWords.length }}/{{ wordsToFind.length }}):</p>
-      </div>
-      <button (click)="checkWord()">Check Word</button>
-      <div class="word-search-container">
-        <div class="found-words-container">
-          <div *ngIf="errorMessage">{{ errorMessage }}</div>
-<!--          <p>Found Words ({{ foundWords.length }}/{{ wordsToFind.length }}):</p>-->
-          <ul>
-            <li *ngFor="let foundWord of foundWords">{{ foundWord }}</li>
-          </ul>
-        </div>
-      </div>
+
+<div class="main">
+  <div class="choose-level">
+    <label for="wordInput">Enter word: </label>
+    <input type="text" id="wordInput" [(ngModel)]="userInput" (keyup.enter)="checkWord()"/>
+    <button (click)="checkWord()">Check</button>
+    <div class="levels">
+      <button *ngFor="let level of levelOptions" [disabled]="level > currentLevel" (click)="selectLevel(level)">
+        Level {{ level }}
+      </button>
     </div>
   </div>
+    <div>
+    </div>
+  <h2 class="level-title">Level {{ currentLevel }}</h2> <!-- Display the level number as a title -->
+  <div class="word-search-container">
+      <div class="found-words-container">
+        <div class="found-words" *ngIf="errorMessage">{{ errorMessage }}</div>
+        <p id="counter" class="found-words">Found Words ({{ foundWords.length }} / {{ wordsToFind.length }}):</p>
+      </div>
+    </div>
+  <p class="congratulation" *ngIf="congratulatoryMessage">{{ congratulatoryMessage }}</p>
+</div>
+
+  <div>
+  <div class="grid-game">
+    <div id="game-container">
+    <div *ngFor="let row of grid" class="row">
+      <div *ngFor="let cell of row" class="cell">
+        {{ cell }}
+      </div>
+    </div>
+    </div>
+  </div>
+    <p class="list">List of Found Words: <br></p>
+    <ol>
+      <li class="list" *ngFor="let foundWord of foundWords">{{ foundWord }}</li>
+    </ol>
 </div>

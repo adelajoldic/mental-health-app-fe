@@ -1,17 +1,38 @@
-.content {
-  max-width: 1000px;
-  margin: 0 auto;
+.main{
+  max-width: 100%;
 }
 
 #game-container {
   display: grid;
-  grid-template-columns: repeat(12, 50px);
+  grid-template-columns: repeat(12, 40px);
   gap: 5px;
-  /*border: 1px solid #202020F2;*/
-  /*border-radius: 20px;*/
-  padding: 10px;
   justify-content: center;
   align-items: center;
+  margin: 5px 15%;
+}
+
+.choose-level{
+  margin-left: 28%;
+}
+
+.level-title {
+  margin-left: 44.5%;
+}
+
+#counter{
+  margin-left: 41.5%;
+}
+
+.congratulation{
+  margin-left: 37.5%;
+  color: #202020F2;
+  font-weight: lighter;
+}
+
+.levels{
+  width: 60%;
+  margin-top: 5px;
+  margin-left: 5%;
 }
 
 img{
@@ -20,19 +41,18 @@ img{
   margin-bottom: -2%;
 }
 
-.mission{
-  font-size: 18px;
-  font-weight: bold;
-}
-
 .message{
   text-align: center;
   line-height: 30px;
 }
 
+.level-title{
+  font-size: 22px;
+}
+
 .cell {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   text-align: center;
   vertical-align: middle;
   border: 1px solid #ccc;
@@ -46,34 +66,7 @@ img{
   border-radius: 5px;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-
-found-words-counter{
-  margin-bottom: 5px;
-  margin-right: 10px;
-  color: #202020F2;
-  margin-left: 5px;
-  font-weight: lighter;
-  padding: 2px;
-  font-size: 15px;
-}
-
-.word-input-container, button {
-  margin-left: 5%;
-}
-
-.word-input-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 4%;
-}
-
-.word-input-container label, p {
+ label, .found-words, .list{
   margin-bottom: 5px;
   margin-right: 10px;
   color: #202020F2;
@@ -82,35 +75,24 @@ found-words-counter{
   padding: 2px;
 }
 
-.word-input-container input {
+#wordInput{
   background: #FFFFFF;
-  height: 40px;
-  padding: 1px 1px 1px 10px;
-  margin-bottom: 10px;
-  color: #202020F2;
-  font-size: 13px;
-  font-weight: lighter;
-  border: 0.2px solid #5D5D5D16;
-  border-bottom: 0.1px solid #5D5D5D59;
-  border-radius: 30px;
-  width: 50%;
+    height: 40px;
+    padding: 1px 1px 1px 10px;
+    /*margin-bottom: 5px;*/
+    color: #202020F2;
+    font-size: 13px;
+    font-weight: lighter;
+    border: 0.2px solid #5D5D5D16;
+    border-bottom: 0.1px solid #5D5D5D59;
+    border-radius: 30px;
 }
 
 button{
-  width: 50%;
+  width: 20%;
+  margin: 8px 2%;
 }
 
-.word-search-container {
-  display: flex;
-}
-
-.content .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 140px;
-  margin: auto 3%;
-}
 @media (max-width: 767px) {
  .content .container {
     gap: 0;

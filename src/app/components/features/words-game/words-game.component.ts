@@ -1,22 +1,22 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-words-game',
   templateUrl: './words-game.component.html',
-  styleUrls: ['./words-game.component.css']
+  styleUrls: ['./words-game.component.css'],
 })
-export class WordsGameComponent {
-  // Define words for each level
+export class WordsGameComponent implements OnDestroy {
+  private ngUnsubscribe = new Subject<void>();
+
   levels: { [key: number]: string[] } = {
     1: ['love', 'smile', 'happiness', 'joy'],
-    2: ['harmony', 'gratitude', 'joyful', 'soft', 'hopeful', 'bliss'],
-    3: ['positive', 'compassion', 'cherish', 'empathy', 'optimistic', 'kind', 'sweet', 'fun', 'safe', 'free']
+    2: ['harmony', 'gratitude', 'joyful', 'soft', 'hope', 'bliss'],
+    3: ['positive', 'compassion', 'cherish', 'empathy', 'optimistic', 'kind', 'sweet', 'fun', 'safe', 'free'],
   };
-  // , 'empower', 'success'],
-  // , 'nice', 'wise'
 
-  // Set default level to 1
   currentLevel: number = 1;
+  levelOptions: number[] = Object.keys(this.levels).map(Number);
 
   wordsToFind: string[] = [];
   grid: string[][] = [];
@@ -27,31 +27,29 @@ export class WordsGameComponent {
   timer: number = 0;
   timerInterval: any;
   gameStarted: boolean = false;
-  displayTimeTaken: boolean = false;
-  elapsedTime: number = 0;
-
-  ngOnInit(): void {
-    this.generateGrid();
-    this.startTimer();
-  }
 
   ngOnDestroy(): void {
-    this.stopTimer();
-  }
-
-  startTimer(): void {
-    this.timerInterval = setInterval(() => {
-      this.timer++;
-    }, 1000);
-  }
-
-  stopTimer(): void {
-    clearInterval(this.timerInterval);
-    this.timerInterval = null;
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
   }
 
   startGame(): void {
     this.gameStarted = true;
+  }
+
+  changeLevel(): void {
+    this.resetGame();
+    this.generateGrid();
+    this.startGame();
+  }
+
+  selectLevel(selectedLevel: number): void {
+    if (selectedLevel <= this.currentLevel) {
+      this.currentLevel = selectedLevel;
+      this.resetGame();
+      this.generateGrid();
+      this.startGame();
+    }
   }
 
   generateRandomDirection(): { row: number; col: number } {
@@ -139,7 +137,7 @@ export class WordsGameComponent {
 
     if (!this.gameStarted) {
       this.startGame();
-      this.startTimer();
+      // this.startTimer();
     }
 
     if (word !== '') {
@@ -212,10 +210,10 @@ export class WordsGameComponent {
     const wordsToFind = this.levels[this.currentLevel];
 
     if (this.foundWords.length === wordsToFind.length) {
-      this.stopTimer();
+      // this.stopTimer();
       this.congratulatoryMessage = `Congratulations! All the words are found.`;
-      this.displayTimeTaken = true;
-      this.elapsedTime = this.timer;
+      // this.displayTimeTaken = true;
+      // this.elapsedTime = this.timer;
 
       // Trigger the next level
       this.goToNextLevel();
@@ -244,9 +242,12 @@ export class WordsGameComponent {
     this.errorMessage = null;
     this.congratulatoryMessage = null;
     this.timer = 0;
-    this.elapsedTime = 0;
-    this.displayTimeTaken = false;
+    // this.elapsedTime = 0;
+    // this.displayTimeTaken = false;
     this.gameStarted = false;
   }
 }
+
+
+
 

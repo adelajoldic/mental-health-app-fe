@@ -4,10 +4,17 @@
 
  img{
    max-width: 60%;
-   margin: 5% 5% auto;
+   margin: 5% 5% auto 12%;
  }
 
  button{
    margin-bottom: 5%;
    width: 20%;
+   font-size: 24px;
+   font-family: "Gochi Hand", cursive;
+   background: #202020F2;
  }
+
+button:hover{
+  color: #add3fc;
+}

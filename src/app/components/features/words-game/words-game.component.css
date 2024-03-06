@@ -1,6 +1,11 @@
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 #game-container {
   display: grid;
-  grid-template-columns: repeat(12, 70px);
+  grid-template-columns: repeat(12, 50px);
   gap: 5px;
   /*border: 1px solid #202020F2;*/
   /*border-radius: 20px;*/
@@ -11,19 +16,23 @@
 
 img{
   max-width: 100%;
-  height: 200px;
+  height: 100px;
   margin-bottom: -2%;
 }
+
+.mission{
+  font-size: 18px;
+  font-weight: bold;
+}
+
 .message{
   text-align: center;
   line-height: 30px;
-  margin: auto auto 2% 25%;
-
 }
 
 .cell {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   text-align: center;
   vertical-align: middle;
   border: 1px solid #ccc;
@@ -42,14 +51,29 @@ ul {
   padding: 0;
 }
 
+
+found-words-counter{
+  margin-bottom: 5px;
+  margin-right: 10px;
+  color: #202020F2;
+  margin-left: 5px;
+  font-weight: lighter;
+  padding: 2px;
+  font-size: 15px;
+}
+
+.word-input-container, button {
+  margin-left: 5%;
+}
+
 .word-input-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 2%;
+  margin-top: 4%;
 }
 
-.word-input-container label {
+.word-input-container label, p {
   margin-bottom: 5px;
   margin-right: 10px;
   color: #202020F2;
@@ -69,11 +93,11 @@ ul {
   border: 0.2px solid #5D5D5D16;
   border-bottom: 0.1px solid #5D5D5D59;
   border-radius: 30px;
-  width: 30%;
+  width: 50%;
 }
 
 button{
-  width: 170px;
+  width: 50%;
 }
 
 .word-search-container {

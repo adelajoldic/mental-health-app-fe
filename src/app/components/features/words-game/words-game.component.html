@@ -1,47 +1,43 @@
 <app-header></app-header>
-  <div class="content">
-    <div class="container">
-      <div id="main-container">
-        <div class="message">
-          <img src="assets/Find.png">
-          <p class="mission" *ngIf="foundWords.length === 0 && !errorMessage && !congratulatoryMessage">
-            🔍 Your mission, should you choose to accept it is:
-            <br class="find-words"> Hunt down {{ wordsToFind.length }} words hidden in the vast labyrinth of language and unlock the rest of the cells.
-<!--            <br>⏰ Tick-tock, the clock is already racing against you! 🚨-->
-          </p>
+<div class="content">
+  <div class="container">
+    <div id="main-container">
+      <div class="message">
+        <img src="assets/Find.png">
+        <h4 class="mission" *ngIf="foundWords.length === 0 && !errorMessage && !congratulatoryMessage">
+          Hello Player! Welcome to the word hunt challenge. 🔍You have an exciting task ahead – 👀 find and uncover a
+          total of {{ wordsToFind.length }} words hidden within the grid. Best of luck on your word-finding journey!
+          May your vocabulary prowess shine brightly as you embark on this linguistic adventure. Happy hunting! 💫
+        </h4>
+      </div>
+      <div class="message">
+        <div *ngIf="congratulatoryMessage || foundWords.length > 0">
+          <div *ngIf="congratulatoryMessage">{{ congratulatoryMessage }}</div>
         </div>
-        <div class="message">
-<!--          <div *ngIf="foundWords.length > 0">-->
-<!--            <p class="time" *ngIf="congratulatoryMessage && displayTimeTaken">Time taken: {{ elapsedTime }} seconds</p>-->
-<!--          </div>-->
-          <div *ngIf="congratulatoryMessage || foundWords.length > 0">
-            <div *ngIf="congratulatoryMessage">{{ congratulatoryMessage }}</div>
-          </div>
-<!--            <p *ngIf="!(congratulatoryMessage && displayTimeTaken)">-->
-<!--              Time elapsed: {{ timer }} seconds-->
-<!--            </p>-->
-        </div>
-         <div id="game-container">
-          <div *ngFor="let row of grid; let i = index" class="row">
-            <div *ngFor="let cell of row; let j = index" class="cell">
-              {{ cell }}
-            </div>
+        <h2 class="level-title">Level {{ currentLevel }}:</h2> <!-- Display the level number as a title -->
+      </div>
+      <div id="game-container">
+        <div *ngFor="let row of grid; let i = index" class="row">
+          <div *ngFor="let cell of row; let j = index" class="cell">
+            {{ cell }}
           </div>
         </div>
-        <div class="word-input-container">
-          <label for="wordInput">Enter Word:</label>
-          <input type="text" id="wordInput" [(ngModel)]="userInput" (keyup.enter)="checkWord()" />
-        </div>
-        <button (click)="checkWord()">Check Word</button>
-        <div class="word-search-container">
-          <div class="found-words-container">
-            <div *ngIf="errorMessage">{{ errorMessage }}</div>
-            <p>Found Words ({{ foundWords.length }}/{{ wordsToFind.length }}):</p>
-            <ul>
-              <li *ngFor="let foundWord of foundWords">{{ foundWord }}</li>
-            </ul>
-          </div>
+      </div>
+      <div class="word-input-container">
+        <label for="wordInput">Enter Word:</label>
+        <input type="text" id="wordInput" [(ngModel)]="userInput" (keyup.enter)="checkWord()" />
+        <p>Found Words ({{ foundWords.length }}/{{ wordsToFind.length }}):</p>
+      </div>
+      <button (click)="checkWord()">Check Word</button>
+      <div class="word-search-container">
+        <div class="found-words-container">
+          <div *ngIf="errorMessage">{{ errorMessage }}</div>
+<!--          <p>Found Words ({{ foundWords.length }}/{{ wordsToFind.length }}):</p>-->
+          <ul>
+            <li *ngFor="let foundWord of foundWords">{{ foundWord }}</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
+</div>

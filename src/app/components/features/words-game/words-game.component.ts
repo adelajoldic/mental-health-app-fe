@@ -9,9 +9,11 @@ export class WordsGameComponent {
   // Define words for each level
   levels: { [key: number]: string[] } = {
     1: ['love', 'smile', 'happiness', 'joy'],
-    2: ['harmony', 'gratitude', 'joyful', 'soft', 'hopeful', 'bliss', 'empower', 'success'],
-    3: ['positive', 'compassion', 'cherish', 'empathy', 'optimistic', 'kind', 'sweet', 'fun', 'safe', 'free', 'nice', 'wise']
+    2: ['harmony', 'gratitude', 'joyful', 'soft', 'hopeful', 'bliss'],
+    3: ['positive', 'compassion', 'cherish', 'empathy', 'optimistic', 'kind', 'sweet', 'fun', 'safe', 'free']
   };
+  // , 'empower', 'success'],
+  // , 'nice', 'wise'
 
   // Set default level to 1
   currentLevel: number = 1;

@@ -23,20 +23,20 @@ export class GamesListComponent {
 
   games: Game[] = [
     {
-      title: 'Mental Health Quiz',
-      description: 'Improve your mental health literacy',
+      title: 'Mood Meter Quiz',
+      description: 'Asses your current mood',
       image: 'assets/knowledge-game.jpeg',
       route: 'quiz'
     },
     {
       title: 'Anxiety Quiz',
-      description: 'Gain insights into managing anxiety',
+      description: 'Gain skills for anxiety management',
       image: 'assets/anxiety-quiz.jpeg',
       route: 'anxiety-quiz'
     },
     {
       title: 'Depression Quiz',
-      description: 'Understand depression management',
+      description: 'Learn about depression management',
       image: 'assets/depression-quiz.jpeg',
       route: 'depression-quiz'
     },

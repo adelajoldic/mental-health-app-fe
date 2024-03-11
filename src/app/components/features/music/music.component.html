@@ -42,8 +42,28 @@
 <!--  </div>-->
 <!--</section>-->
 
-<div class="playlist">
-  <h2>🎼 Music List:</h2>
+<div style="text-align:center">
+  <h3>
+    {{ surveyTitle }}!
+  </h3>
+</div>
+
+<div *ngIf="!isSurveyComplete" class="question-container container">
+  <h2 class="title">Survey</h2>
+  <form (ngSubmit)="submitSurvey()" class="form-container">
+    <div *ngFor="let question of surveyQuestions; let i = index" class="question">
+      <p>{{ question.question }}</p>
+      <select [(ngModel)]="userResponses[i]" name="{{i}}" class="response-select">
+        <option *ngFor="let option of question.options" [value]="option">{{ option }}</option>
+      </select>
+    </div>
+    <button type="submit" class="submit-button">Submit</button>
+  </form>
+</div>
+
+<div *ngIf="isSurveyComplete && canOpenContent">
+  <h2 class="title">Thank you for completing the survey!</h2>
+  <h2>🎼 Music Playlist:</h2>
   <div class="video-list">
     <div *ngFor="let video of videos" class="video-container">
       <iframe width="560" height="315" [src]="video.embedUrl" frameborder="0" allowfullscreen></iframe>
@@ -53,5 +73,6 @@
     </div>
   </div>
 </div>
+
 <p class="text" id="closing">{{closing}}</p>
 <app-footer class="footer"></app-footer>

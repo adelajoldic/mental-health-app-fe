@@ -4,7 +4,7 @@
 
 #game-container {
   display: grid;
-  grid-template-columns: repeat(12, 40px);
+  grid-template-columns: repeat(8, 40px);
   gap: 5px;
   justify-content: center;
   align-items: center;
@@ -12,19 +12,19 @@
 }
 
 .choose-level{
-  margin-left: 28%;
+  margin-left: 31%;
 }
 
 .level-title {
-  margin-left: 44.5%;
+  margin-left: 46.5%;
 }
 
 #counter{
-  margin-left: 41.5%;
+  margin-left: 44.5%;
 }
 
 .congratulation{
-  margin-left: 37.5%;
+  margin-left: 38.5%;
   color: #202020F2;
   font-weight: lighter;
 }
@@ -32,7 +32,7 @@
 .levels{
   width: 60%;
   margin-top: 5px;
-  margin-left: 5%;
+  margin-left: 7%;
 }
 
 img{

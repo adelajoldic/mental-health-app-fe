@@ -11,8 +11,10 @@ export class WordsGameComponent implements OnDestroy {
 
   levels: { [key: number]: string[] } = {
     1: ['love', 'smile', 'happiness', 'joy'],
-    2: ['harmony', 'gratitude', 'joyful', 'soft', 'hope', 'bliss'],
-    3: ['positive', 'compassion', 'cherish', 'empathy', 'optimistic', 'kind', 'sweet', 'fun', 'safe', 'free'],
+    2: ['harmony', 'gratitude', 'joyful', 'hope', 'bliss', 'happy'],
+    3: ['positive', 'compassion', 'cherish', 'empathy', 'optimistic', 'kind', 'powerful', 'sweet']
+    // 1: ['positive', 'compassion', 'cherish', 'empathy', 'optimistic', 'kind', 'sweet', 'fun', 'safe', 'free', 'harmony',
+    //   'gratitude', 'joyful', 'soft', 'hope', 'bliss', 'love', 'smile', 'happiness', 'joy'],
   };
 
   currentLevel: number = 1;
@@ -24,33 +26,47 @@ export class WordsGameComponent implements OnDestroy {
   userInput: string = '';
   errorMessage: string | null = null;
   congratulatoryMessage: string | null = null;
-  timer: number = 0;
+  // timer: number = 0;
   timerInterval: any;
   gameStarted: boolean = false;
 
+  ngOnInit(): void {
+    // Initialize the game when the component is loaded
+    this.resetGame();
+    this.generateGrid();
+  }
   ngOnDestroy(): void {
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.complete();
   }
+
 
   startGame(): void {
     this.gameStarted = true;
   }
 
   changeLevel(): void {
-    this.resetGame();
-    this.generateGrid();
-    this.startGame();
+    if (this.gameStarted) {
+      const confirmChange = confirm('Changing the level during the game will reset your progress. Are you sure you want to continue?');
+
+      if (confirmChange) {
+        this.resetGame();
+        this.goToNextLevel();
+      }
+    } else {
+      this.goToNextLevel();
+    }
   }
 
   selectLevel(selectedLevel: number): void {
-    if (selectedLevel <= this.currentLevel) {
+    if (!this.gameStarted && selectedLevel <= this.currentLevel) {
       this.currentLevel = selectedLevel;
       this.resetGame();
       this.generateGrid();
       this.startGame();
     }
   }
+
 
   generateRandomDirection(): { row: number; col: number } {
     const directions = [
@@ -241,9 +257,6 @@ export class WordsGameComponent implements OnDestroy {
     this.userInput = '';
     this.errorMessage = null;
     this.congratulatoryMessage = null;
-    this.timer = 0;
-    // this.elapsedTime = 0;
-    // this.displayTimeTaken = false;
     this.gameStarted = false;
   }
 }

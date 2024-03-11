@@ -90,6 +90,23 @@ export class MusicComponent {
     },
     // Add more videos as needed
   ];
+
+
+  surveyQuestions = [
+    { question: 'Question 1', options: ['Option A', 'Option B', 'Option C'] },
+    { question: 'Question 2', options: ['Option X', 'Option Y', 'Option Z'] },
+    { question: 'Question 3', options: ['Option P', 'Option Q', 'Option R'] },
+    { question: 'Question 4', options: ['Option M', 'Option N', 'Option O'] },
+    { question: 'Question 5', options: ['Option D', 'Option E', 'Option F'] }
+  ];
+
+  userResponses: string[] = new Array(5);
+  isSurveyComplete = false;
+  canOpenContent = false;
+  surveyTitle= 'To unlock the music playlist, please fill out this survey';
+  userAnswers = new Array(5);
+  isQuizComplete = false;
+
   constructor(private sanitizer: DomSanitizer) {}
 
   ngOnInit() {
@@ -102,4 +119,11 @@ export class MusicComponent {
     video.isExpanded = !video.isExpanded;
   }
 
+  submitSurvey() {
+    // Check if all survey questions are answered
+    this.isSurveyComplete = this.userResponses.every(response => !!response);
+
+    // Allow opening content only if the survey is complete and all questions are answered
+    this.canOpenContent = this.isSurveyComplete && this.userResponses.every(response => !!response);
+  }
 }

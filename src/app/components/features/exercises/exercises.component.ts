@@ -94,10 +94,88 @@ export class ExercisesComponent {
     }
     ];
   constructor(private sanitizer: DomSanitizer) {}
+  timeLeft: number = this.getRandomTime(); // Initial timer value between 5 and 15 minutes
+  interval: any;
+  isBreathing: boolean = false;
+  isTimeUp: boolean = false;
+  instructions: string[] = [
+    'Sit or lie down 🧘🏼‍♀️ in a comfortable position',
+    'Close your eyes 👁 and count to 7 to relax',
+    'Inhale deeply through your nose 👃🏼 for a count of 4',
+    'Hold your breath ⌛ for a count of 7',
+    'Exhale 🗣️ slowly and completely through your mouth for a count of 8',
+    'Repeat 🔁 this cycle for the duration of the exercise'
+  ];
+  currentInstructionIndex: number = 0;
+  currentInstruction: string = this.instructions[0];
+
   ngOnInit() {
+    this.startInstructionInterval();
     this.videos.forEach(video => {
       video.embedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(video.embedUrl) as SafeResourceUrl;
     });
+
+  }
+
+  startBreathingExercise() {
+    this.isBreathing = true;
+    this.isTimeUp = false;
+    this.resetInstructionIndex();
+    this.interval = setInterval(() => {
+      if (this.timeLeft > 0) {
+        this.timeLeft--;
+      } else {
+        this.stopBreathingExercise();
+        this.isTimeUp = true;
+      }
+    }, 1000);
+  }
+
+  stopBreathingExercise() {
+    this.isBreathing = false;
+    clearInterval(this.interval);
+    this.timeLeft = this.getRandomTime(); // Reset time to a random value between 5 and 15 minutes
+    this.resetInstructionIndex(); // Reset the instruction index
+  }
+
+  getRandomTime(): number {
+    return Math.floor(Math.random() * (15 - 5 + 1) + 5) * 60; // Convert minutes to seconds
+  }
+
+  formatTime(seconds: number): string {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+
+    const formattedTime = `${this.padNumber(minutes)}:${this.padNumber(remainingSeconds)}`;
+    return formattedTime;
+  }
+
+  padNumber(num: number): string {
+    return num < 10 ? `0${num}` : `${num}`;
+  }
+
+  resetInstructionIndex() {
+    this.currentInstructionIndex = 0;
+    this.currentInstruction = this.instructions[0];
+  }
+
+  startInstructionInterval() {
+    setInterval(() => {
+      if (this.isBreathing) {
+        this.showNextInstruction();
+      }
+    }, 10000); // Change instruction every 10 seconds
+  }
+  showNextInstruction() {
+    this.currentInstructionIndex = (this.currentInstructionIndex + 1) % this.instructions.length;
+    this.currentInstruction = this.instructions[this.currentInstructionIndex];
+  }
+
+  ngOnDestroy() {
+    // Ensure the interval is cleared when the component is destroyed
+    if (this.interval) {
+      clearInterval(this.interval);
+    }
   }
 
   toggleDescription(video: any): void {

@@ -1,6 +1,5 @@
-import {AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
-import {RandomService} from "../../../services/random.service";
-import {Router} from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 
 interface Card {
   value: string;
@@ -9,14 +8,17 @@ interface Card {
 }
 
 @Component({
-  selector: 'app-puzzle',
+  selector: 'app-memory-game',
   templateUrl: './memory-game.component.html',
   styleUrls: ['./memory-game.component.css']
 })
 export class MemoryGameComponent implements OnInit {
-  constructor(private router:Router) {
-  }
-  showCongratulatoryMessage: boolean = false;
+  congratulatoryMessage: string = "";
+  timerStarted: boolean = false;
+  startTime: number = 0;
+  endTime: number = 0;
+  elapsedTime: number = 0;
+  timerInterval: any;
   imageWon = "/assets/Win.png";
   cards: Card[] = [
     { value: "Happy", flipped: false, matched: false },
@@ -31,7 +33,14 @@ export class MemoryGameComponent implements OnInit {
     { value: "Time", flipped: false, matched: false },
     { value: "Awareness", flipped: false, matched: false },
     { value: "Time", flipped: false, matched: false },
-    // Add more cards as needed
+    { value: "Success", flipped: false, matched: false },
+    { value: "Hope", flipped: false, matched: false },
+    { value: "Dream", flipped: false, matched: false },
+    { value: "Courage", flipped: false, matched: false },
+    { value: "Success", flipped: false, matched: false },
+    { value: "Hope", flipped: false, matched: false },
+    { value: "Dream", flipped: false, matched: false },
+    { value: "Courage", flipped: false, matched: false }
   ];
 
   shuffledCards: Card[] = [];
@@ -39,13 +48,26 @@ export class MemoryGameComponent implements OnInit {
   firstFlippedCard: Card | null = null;
   secondFlippedCard: Card | null = null;
 
-  navigateToGames() {
-    const path = "games"
-    this.router.navigate([path])
+  // Add a flag to control visibility of the game board
+  showGameBoard: boolean = true;
+
+  // Add a flag to control visibility of the timer
+  showTimer: boolean = true;
+
+  // Add a flag to control visibility of the congratulatory message
+  showCongratulatoryMessage: boolean = false;
+
+  constructor(private router: Router) { }
+
+  ngOnInit(): void {
+    this.resetGame();
   }
 
-  ngOnInit() {
-    this.resetGame();
+  formatTime(milliseconds: number): string {
+    const totalSeconds = Math.floor(milliseconds / 1000);
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+    return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
   }
 
   resetGame(): void {
@@ -55,6 +77,7 @@ export class MemoryGameComponent implements OnInit {
     });
 
     this.shuffleCards();
+    this.showCongratulatoryMessage = false;
   }
 
   shuffleCards(): void {
@@ -79,6 +102,15 @@ export class MemoryGameComponent implements OnInit {
       // Flip the clicked card
       clickedCard.flipped = true;
 
+      if (!this.timerStarted) {
+        // Start the timer
+        this.timerStarted = true;
+        this.startTime = Date.now();
+        this.timerInterval = setInterval(() => {
+          this.elapsedTime = Date.now() - this.startTime;
+        }, 1000);
+      }
+
       if (!this.firstFlippedCard) {
         // First card flip
         this.firstFlippedCard = clickedCard;
@@ -87,7 +119,9 @@ export class MemoryGameComponent implements OnInit {
         this.secondFlippedCard = clickedCard;
 
         // Check for a match after a short delay
-        setTimeout(() => this.checkForMatch(), 500);
+        setTimeout(() => {
+          this.checkForMatch();
+        }, 500);
       }
     }
   }
@@ -101,20 +135,21 @@ export class MemoryGameComponent implements OnInit {
           .filter(card => card.flipped && !card.matched)
           .forEach(card => (card.matched = true));
 
-        // Check if all cards are matched
         if (this.shuffledCards.every(card => card.matched)) {
-          alert("Congratulations! You've matched all pairs.");
-          // Optionally, reset the game for a new round
-          this.resetGame();
+          clearInterval(this.timerInterval);
+          this.endTime = Date.now();
+          this.elapsedTime = this.endTime - this.startTime;
+          this.showCongratulatoryMessage = true;
+          this.congratulatoryMessage = this.getCongratulatoryMessage();
+          this.showGameBoard = false;
+          this.showTimer = false;
         }
       } else {
-        // If no match, flip cards back
         this.shuffledCards
           .filter(card => card.flipped && !card.matched)
           .forEach(card => (card.flipped = false));
       }
 
-      // Reset flipped cards for the next turn
       this.firstFlippedCard = null;
       this.secondFlippedCard = null;
     }
@@ -124,18 +159,11 @@ export class MemoryGameComponent implements OnInit {
     return this.shuffledCards.filter(card => card.flipped && !card.matched).length;
   }
 
-  areAllCardsMatched(): boolean {
-    return this.shuffledCards.every(card => card.matched);
-  }
-
   getCongratulatoryMessage(): string {
     const messages = [
-      "Great job!",
-      "Congratulations!",
-      "Well done!",
-      "Fantastic!",
-      "You're a memory master!",
-      "Perfect match!",
+      "Great job on matching all the cards! Your memory is amazing!",
+      "Fantastic! You've matched all the cards!",
+      "Perfect match! You're a memory master!",
     ];
 
     // Pick a random message
@@ -145,5 +173,9 @@ export class MemoryGameComponent implements OnInit {
 
   getResultImage(): string {
     return this.imageWon;
+  }
+
+  playAgain(): void {
+    this.resetGame();
   }
 }

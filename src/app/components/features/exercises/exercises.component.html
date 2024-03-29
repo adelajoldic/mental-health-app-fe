@@ -1,4 +1,6 @@
 <app-header></app-header>
+
+<div class="main">
   <div class="intro">
     <h2>🌺 Exercise for Serenity: Combating Depression and Stress with Physical Activity 🧘</h2>
     <p class="text">{{intro}}</p>
@@ -19,11 +21,22 @@
   </div>
 </div>
 
-<div class="why">
-  <h2>How To Improve Our Thinking Through Physical Activity?</h2>
-  <iframe class="intro-video" width="560" height="315" src="https://www.youtube.com/embed/e9B3QWESkLI?si=YAzbYklgtUu51dO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<!--<div class="why">-->
+<!--  <h2>How To Improve Our Thinking Through Physical Activity?</h2>-->
+<!--  <iframe class="intro-video" width="560" height="315" src="https://www.youtube.com/embed/e9B3QWESkLI?si=YAzbYklgtUu51dO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
+<!--</div>-->
 
+<div class="card-container">
+  <img class="card-img" src="assets/Home-Puzzle.jpg" alt="Image">
+  <h4>Running</h4>
+  <p class="text">Exercise proves to be a valuable ally in supporting mental health by triggering the release of 'feel-good'
+    chemicals like endorphins and serotonin, contributing to mood improvement. Overcoming potential obstacles,
+    such as lack of motivation, cost concerns, anxiety, or time constraints, involves setting small goals,
+    exploring affordable options, and breaking exercise into manageable chunks. The emphasis is on finding
+    enjoyable activities, considering various resources and support networks, and ultimately integrating
+    exercise seamlessly into daily routines for enhanced mental well-being. </p>
 </div>
+
 <!--<h4 id="playlist">Exercise List:</h4>-->
 <!--<div *ngFor="let description of descriptions" class="description">-->
 <!--  <p id="title">{{ description.title }}</p>-->
@@ -37,5 +50,6 @@
       <h3 class="video-title">{{ video.title }}</h3>
     </div>
   </div>
+</div>
 </div>
 <app-footer class="footer"></app-footer>

@@ -1,32 +1,36 @@
-<app-header></app-header>
+<!--<app-header></app-header>-->
 <div class="quiz-container">
-  <!--  <h2>{{ quizTitle }}</h2>-->
-
   <div *ngIf="currentQuestionIndex < questions.length"  id="question-counter">
     <p>Question {{ getCurrentQuestionNumber() }} out of {{ questions.length }}</p>
   </div>
 
+  <!-- Display feedback message -->
+  <p class="feedback-message" *ngIf="showFeedback">{{ feedbackMessage }}</p>
+
   <div *ngIf="currentQuestionIndex < questions.length" class="question-container">
-    <p id="question">{{ currentQuestionIndex + 1 }}. {{ questions[currentQuestionIndex].questionText }}</p>
-
-    <div class="options-container">
-      <div *ngFor="let option of questions[currentQuestionIndex].options; let j = index" class="option"
-           [ngClass]="{ 'selected': j === questions[currentQuestionIndex].selectedOption }"
-           (click)="selectOption(currentQuestionIndex, j)">
-        {{ option }}
-      </div>
-    </div>
-
-    <button (click)="submitQuiz()">Next Question</button>
+    <img src="assets/Ena-Thinking.png" alt="Ena Thinking">
+    <p id="question">
+      {{ getCurrentQuestionNumber() }}. {{ questions[currentQuestionIndex].questionText }}
+    </p>
   </div>
+
+  <div class="options-container" *ngIf="currentQuestionIndex < questions.length">
+    <div *ngFor="let option of questions[currentQuestionIndex].options; let j = index" class="option"
+         [ngClass]="{ 'selected': j === questions[currentQuestionIndex].selectedOption }"
+         (click)="selectOption(currentQuestionIndex, j)">
+      {{ option }}
+    </div>
+  </div>
+
+  <button *ngIf="currentQuestionIndex < questions.length" class="submit" (click)="submitQuiz()">Submit Answer</button>
 
   <div *ngIf="currentQuestionIndex === questions.length" class="quiz-result" id="quiz-result">
     <div *ngIf="currentQuestionIndex === questions.length">
       <div class="quiz-result">
         <img [src]="getResultImage()" class="images" alt="Result Image">
-        <h3>{{ getResultMessage()}}</h3>
-        <p>You answered correctly on {{getTotalScore()}} out of {{getTotalQuestions()}} questions.</p>
-
+        <h3>{{ getResultMessage() }}</h3>
+        <p>You answered correctly on {{ getTotalScore() }} out of {{ getTotalQuestions() }} questions.</p>
+        <button *ngIf="currentQuestionIndex === questions.length" class="go-back" (click)=navigateToGames()>Go Back</button>
       </div>
     </div>
   </div>

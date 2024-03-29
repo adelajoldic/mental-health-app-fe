@@ -121,14 +121,14 @@ export class ExercisesComponent {
     this.isBreathing = true;
     this.isTimeUp = false;
     this.resetInstructionIndex();
-    this.interval = setInterval(() => {
+    this.interval = setInterval(() => {   // Start an interval to decrement the remaining time every second
       if (this.timeLeft > 0) {
         this.timeLeft--;
       } else {
         this.stopBreathingExercise();
         this.isTimeUp = true;
       }
-    }, 1000);
+    }, 1000); // Execute the interval callback function every second (1000 milliseconds)
   }
 
   stopBreathingExercise() {
@@ -154,11 +154,13 @@ export class ExercisesComponent {
     return num < 10 ? `0${num}` : `${num}`;
   }
 
+  // Reset and update the current instruction
   resetInstructionIndex() {
     this.currentInstructionIndex = 0;
     this.currentInstruction = this.instructions[0];
   }
 
+  // Start an interval that displays the next instruction every 10 seconds
   startInstructionInterval() {
     setInterval(() => {
       if (this.isBreathing) {
@@ -166,6 +168,8 @@ export class ExercisesComponent {
       }
     }, 10000); // Change instruction every 10 seconds
   }
+
+  // Function to display the next instruction
   showNextInstruction() {
     this.currentInstructionIndex = (this.currentInstructionIndex + 1) % this.instructions.length;
     this.currentInstruction = this.instructions[this.currentInstructionIndex];

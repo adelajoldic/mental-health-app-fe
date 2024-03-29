@@ -1,18 +1,22 @@
 <app-header></app-header>
-<div class="container">
+<div class="congratulatory-message" *ngIf="showCongratulatoryMessage">
+  <img src="{{ getResultImage() }}" class="result-image" alt="Result Image">
+  <h3>{{ congratulatoryMessage }}</h3>
+  <h4 *ngIf="elapsedTime > 0">Time taken: {{ formatTime(elapsedTime) }}</h4>
+  <button (click)="playAgain()">Play Again</button>
+</div>
+
+<div class="timer" *ngIf="!showCongratulatoryMessage">
+  <h2 class="timer"> {{ formatTime(elapsedTime) }}</h2>
+</div>
+<div class="container" *ngIf="!showCongratulatoryMessage">
+
   <img src="assets/MemoryGame.png" class="image">
 
   <div id="game-board" class="game-container">
+
     <div *ngFor="let card of shuffledCards" class="card" [class.flipped]="card.flipped" [class.matched]="card.matched" (click)="handleCardClick(card)">
       <span *ngIf="card.flipped">{{ card.value }}</span>
-    </div>
-
-    <div class="quiz-result" *ngIf="areAllCardsMatched()">
-      <img src="{{ getResultImage() }}" class="images" alt="Result Image">
-      <h3>{{ getCongratulatoryMessage() }}</h3>
-      <p>You've matched all cards!</p>
-
-      <button (click)="navigateToGames()">Go Back</button>
     </div>
   </div>
 </div>

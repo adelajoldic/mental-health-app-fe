@@ -153,7 +153,6 @@ export class WordsGameComponent implements OnDestroy {
 
     if (!this.gameStarted) {
       this.startGame();
-      // this.startTimer();
     }
 
     if (word !== '') {
@@ -226,10 +225,7 @@ export class WordsGameComponent implements OnDestroy {
     const wordsToFind = this.levels[this.currentLevel];
 
     if (this.foundWords.length === wordsToFind.length) {
-      // this.stopTimer();
       this.congratulatoryMessage = `Congratulations! All the words are found.`;
-      // this.displayTimeTaken = true;
-      // this.elapsedTime = this.timer;
 
       // Trigger the next level
       this.goToNextLevel();
@@ -242,10 +238,9 @@ export class WordsGameComponent implements OnDestroy {
 
     if (this.currentLevel > Object.keys(this.levels).length) {
       console.log("You've completed all levels!");
-      // Optionally, you can reset the game or perform other actions here
     } else {
       this.resetGame();
-      this.generateGrid(); // Ensure to generate a new grid for the new level
+      this.generateGrid(); // Generate a new grid for the new level
       this.startGame();
     }
   }

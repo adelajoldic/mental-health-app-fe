@@ -1,36 +1,35 @@
-<!--<app-header></app-header>-->
 <div class="quiz-container">
-  <div *ngIf="currentQuestionIndex < questions.length"  id="question-counter">
-    <p>Question {{ getCurrentQuestionNumber() }} out of {{ questions.length }}</p>
+  <div *ngIf="anxietyQuizService.currentQuestionIndex < anxietyQuizService.questions.length"  id="question-counter">
+    <p>Question {{ anxietyQuizService.getCurrentQuestionNumber() }} out of {{ anxietyQuizService.questions.length }}</p>
   </div>
 
   <!-- Display feedback message -->
-  <p class="feedback-message" *ngIf="showFeedback">{{ feedbackMessage }}</p>
+  <p class="feedback-message" *ngIf="anxietyQuizService.showFeedback">{{ anxietyQuizService.feedbackMessage }}</p>
 
-  <div *ngIf="currentQuestionIndex < questions.length" class="question-container">
+  <div *ngIf="anxietyQuizService.currentQuestionIndex < anxietyQuizService.questions.length" class="question-container">
     <img src="assets/Ena-Thinking.png" alt="Ena Thinking">
     <p id="question">
-      {{ getCurrentQuestionNumber() }}. {{ questions[currentQuestionIndex].questionText }}
+      {{ anxietyQuizService.getCurrentQuestionNumber() }}. {{ anxietyQuizService.questions[anxietyQuizService.currentQuestionIndex].questionText }}
     </p>
   </div>
 
-  <div class="options-container" *ngIf="currentQuestionIndex < questions.length">
-    <div *ngFor="let option of questions[currentQuestionIndex].options; let j = index" class="option"
-         [ngClass]="{ 'selected': j === questions[currentQuestionIndex].selectedOption }"
-         (click)="selectOption(currentQuestionIndex, j)">
+  <div class="options-container" *ngIf="anxietyQuizService.currentQuestionIndex < anxietyQuizService.questions.length">
+    <div *ngFor="let option of anxietyQuizService.questions[anxietyQuizService.currentQuestionIndex].options; let j = index" class="option"
+         [ngClass]="{ 'selected': j === anxietyQuizService.questions[anxietyQuizService.currentQuestionIndex].selectedOption }"
+         (click)="anxietyQuizService.selectOption(j)">
       {{ option }}
     </div>
   </div>
 
-  <button *ngIf="currentQuestionIndex < questions.length" class="submit" (click)="submitQuiz()">Submit Answer</button>
+  <button *ngIf="anxietyQuizService.currentQuestionIndex < anxietyQuizService.questions.length" class="submit" (click)="anxietyQuizService.submitQuiz()">Submit Answer</button>
 
-  <div *ngIf="currentQuestionIndex === questions.length" class="quiz-result" id="quiz-result">
-    <div *ngIf="currentQuestionIndex === questions.length">
+  <div *ngIf="anxietyQuizService.currentQuestionIndex === anxietyQuizService.questions.length" class="quiz-result" id="quiz-result">
+    <div *ngIf="anxietyQuizService.currentQuestionIndex === anxietyQuizService.questions.length">
       <div class="quiz-result">
-        <img [src]="getResultImage()" class="images" alt="Result Image">
-        <h3>{{ getResultMessage() }}</h3>
-        <p>You answered correctly on {{ getTotalScore() }} out of {{ getTotalQuestions() }} questions.</p>
-        <button *ngIf="currentQuestionIndex === questions.length" class="go-back" (click)=navigateToGames()>Go Back</button>
+        <img [src]="anxietyQuizService.getResultImage()" class="images" alt="Result Image">
+        <h3>{{ anxietyQuizService.getResultMessage() }}</h3>
+        <p>You answered correctly on {{ anxietyQuizService.getTotalScore() }} out of {{ anxietyQuizService.getTotalQuestions() }} questions.</p>
+        <button *ngIf="anxietyQuizService.currentQuestionIndex === anxietyQuizService.questions.length" class="go-back" (click)="anxietyQuizService.navigateToGames()">Go Back</button>
       </div>
     </div>
   </div>

@@ -11,7 +11,7 @@ export class QuizComponent implements OnInit{
   }
   // public quiz = Router.QUIZ;
   navigateToFirstQuiz(): void {
-    const path = "first-quiz"
+    const path = "mood-quiz"
     this.router.navigate([path])
   }
   currentSlide = 0;

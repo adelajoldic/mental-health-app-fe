@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="main">
+  <div *ngIf="showQuizOptions()">
+    <div class="question-container">
+      <p id="question">
+        {{ moodQuizService.getCurrentQuestionNumber() }}. {{ moodQuizService.questions[moodQuizService.currentQuestionIndex].questionText }}
+      </p>
+    </div>
+
+    <div class="options-container">
+      <div *ngFor="let option of moodQuizService.questions[moodQuizService.currentQuestionIndex].options; let j = index" class="option"
+           [ngClass]="{ 'selected': j === moodQuizService.questions[moodQuizService.currentQuestionIndex].selectedOption }"
+           (click)="moodQuizService.questions[moodQuizService.currentQuestionIndex].selectedOption = j">
+        {{ option }}
+      </div>
+    </div>
+
+    <div class="button-container">
+      <button class="submit" (click)="moodQuizService.moveToNextQuestion()">Next</button>
+      <button class="go-back" *ngIf="moodQuizService.currentQuestionIndex > 0" (click)="moodQuizService.goBack()">Previous</button>
+    </div>
+  </div>
+</div>
+<div *ngIf="moodQuizService.analysisResult" class="quiz-result">
+  <img src="assets/analysis.png" class="images" alt="Result Image">
+  <h3>Analysis Result</h3>
+  <p>{{ moodQuizService.analysisResult }}</p>
+  <div class="button-container">
+    <button class="submit" (click)="moodQuizService.restartQuiz()">Restart Quiz</button>
+    <button class="submit" (click)="navigateToGames()">Go Back</button>
+  </div>
+</div>

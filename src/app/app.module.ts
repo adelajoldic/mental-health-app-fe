@@ -12,7 +12,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ProfileComponent } from './components/features/profile/profile.component';
 import { QuizComponent } from './components/features/quiz/quiz.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { FirstQuizComponent } from './components/features/first-quiz/first-quiz.component';
+import { MoodQuizComponent } from './components/features/mood-quiz/mood-quiz.component';
 import { AnxietyQuizComponent } from './components/features/anxiety-quiz/anxiety-quiz.component';
 import { DepressionQuizComponent } from './components/features/depression-quiz/depression-quiz.component';
 import { MemoryGameComponent } from './components/features/memory-game/memory-game.component';
@@ -41,7 +41,7 @@ import { ExerciseIntroComponent } from './components/features/exercise-intro/exe
     ProfileComponent,
     QuizComponent,
     FooterComponent,
-    FirstQuizComponent,
+    MoodQuizComponent,
     AnxietyQuizComponent,
     DepressionQuizComponent,
     MemoryGameComponent,

@@ -6,7 +6,7 @@ import {ProfileComponent} from "./components/features/profile/profile.component"
 import {QuizComponent} from "./components/features/quiz/quiz.component";
 import {RegisterComponent} from "./components/features/register/register.component";
 import {LoginComponent} from "./components/features/login/login.component";
-import {FirstQuizComponent} from "./components/features/first-quiz/first-quiz.component";
+import {MoodQuizComponent} from "./components/features/mood-quiz/mood-quiz.component";
 import {AnxietyQuizComponent} from "./components/features/anxiety-quiz/anxiety-quiz.component";
 import {DepressionQuizComponent} from "./components/features/depression-quiz/depression-quiz.component";
 import {MemoryGameComponent} from "./components/features/memory-game/memory-game.component";
@@ -55,8 +55,8 @@ const routes: Routes = [
   },
 
   {
-    path: "first-quiz",
-    component: FirstQuizComponent,
+    path: "mood-quiz",
+    component: MoodQuizComponent,
   },
   {
     path: "anxiety-quiz",

@@ -1,5 +1,5 @@
 #question-counter {
-  font-size: 15px;
+  font-size: 12px;
   color: #5d5d5d;
   margin: auto;
   text-align: center;
@@ -8,6 +8,7 @@
   line-height: 1.09524;
   letter-spacing: 1px;
 }
+
 
 .quiz-container:after {
   content: "";
@@ -18,36 +19,45 @@
 .centered,
 .quiz-container {
   float: none;
+
 }
 
-.quiz-container h2
-{
-  text-align: center;
-  max-width: 600px;
-  margin: auto auto 1%;
-  color: #525559;
-  font-size: 35px;
-  font-weight: 300;
-  line-height: 1.09524;
-  letter-spacing: 1px;
-  padding-bottom: 5px;
+.question-container{
+  display: flex;
+  align-items: center;
+  width: 100%; /* Take up the full width of the screen */
+  margin: auto auto 3%;
+  background: #5ada86;
+}
 
+.question-container img {
+  flex: 0 0 auto; /* Allow image to grow or shrink as needed */
+  max-width: 50%; /* Set maximum width of the image to 50% of container width */
+  height: 147px;
+  margin-left: 11%;
+}
+
+.question-container p {
+  flex: 1; /* Allow paragraph to take up remaining space */
 }
 
 .question-container p{
   font-weight: 300;
-  font-size: 25px;
+  font-size: 22px;
   line-height: 1.5;
-  /*margin-top: 3%;*/
+  max-width: 80%;
+  padding-left: 2%;
   letter-spacing: 1px;
-  text-align: center;
+  text-align: left;
   padding-bottom: 5%;
+
 }
 
 #question {
+  /*background: #66AFFF;*/
   background: #5ada86;
   color: #f8f8f8;
-  padding-top: 5%;
+  padding-top: 4%;
 }
 
 .options-container {
@@ -56,28 +66,18 @@
   flex-wrap: wrap;
   justify-content: space-between;
   text-align: center;
-
 }
 
 .option {
-  /*font-weight: 300;*/
-  /*font-size: 1.125em;*/
-  /*line-height: 1.5;*/
-  /*letter-spacing: 0.5px;*/
-  /*display: inline-block;*/
-  /*padding-left: 1%;*/
-  /*margin: 5px;*/
-  /*width: 48%;*/
-  /*text-align: left;*/
-  width: 48%; /* Adjust as needed, leave some space for margin */
-  margin-left: 25%; /* Adjust spacing between options */
-  margin-bottom: 3%;
+  width: 70%; /* Adjust as needed, leave some space for margin */
+  margin-left: 15%; /* Adjust spacing between options */
+  margin-bottom: 1.5%;
   padding: 10px; /* Add padding to create a box */
+  font-size: 14px;
   border: 1px solid #ccc; /* Add border for box styling */
-  border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+  border-radius: 30px; /* Optional: Add border-radius for rounded corners */
   cursor: pointer; /* Add cursor pointer for better UX */
   transition: background-color 0.3s; /* Add smooth transition for color change */
-
 }
 
 .option:hover {
@@ -90,8 +90,18 @@
 }
 
 .selected {
-  background: #5ada86; /* Set the color for selected option */
+  background-color: #5ada86; /* Set the color for selected option */
   color: #fff; /* Set text color for better visibility */
+}
+
+.feedback-message{
+  color: #5ada86;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+  padding: 10px;
+  width: 25%;
+  margin: auto;
 }
 
 @media (max-width: 768px) {
@@ -108,19 +118,27 @@
     width: 100%;
   }
 }
-button {
-  margin: 3% 0 1% 37%;
+.submit {
+  margin: 1% 0 1% 37%;
   padding: 1% 10%;
   cursor: pointer;
   background: #5ada86;
 }
+.go-back{
+  /*width: 100%;*/
+  /*padding: 2% 15%;*/
+  margin: auto 35%;
+}
+
 .quiz-result {
   color: #1D212B;
-  margin: 7% 20%;
+  margin: 7% 19%;
+  /*margin: auto;*/
 }
 
 .quiz-result h3 {
-  margin: 2% 22%;
+  /*margin: 2% 22%;*/
+  margin: 2% auto;
   font-size: 30px;
   color: #5d5d5d;
   text-align: center;
@@ -131,7 +149,7 @@ button {
 }
 
 .images {
-  width: 130px;
-  height: 240px;
-  margin: 0 32%
+  max-width: 100%;
+  height: 320px;
+  margin: 5% 32%
 }

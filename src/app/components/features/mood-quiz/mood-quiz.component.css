@@ -1,3 +1,7 @@
+.main{
+  margin-top: 6%;
+}
+
 #question-counter {
   font-size: 15px;
   color: #5d5d5d;
@@ -60,21 +64,12 @@
 }
 
 .option {
-  /*font-weight: 300;*/
-  /*font-size: 1.125em;*/
-  /*line-height: 1.5;*/
-  /*letter-spacing: 0.5px;*/
-  /*display: inline-block;*/
-  /*padding-left: 1%;*/
-  /*margin: 5px;*/
-  /*width: 48%;*/
-  /*text-align: left;*/
   width: 48%; /* Adjust as needed, leave some space for margin */
   margin-left: 25%; /* Adjust spacing between options */
   margin-bottom: 3%;
   padding: 10px; /* Add padding to create a box */
   border: 1px solid #ccc; /* Add border for box styling */
-  border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+  border-radius: 30px; /* Optional: Add border-radius for rounded corners */
   cursor: pointer; /* Add cursor pointer for better UX */
   transition: background-color 0.3s; /* Add smooth transition for color change */
 
@@ -113,24 +108,87 @@ button {
   padding: 1% 10%;
   cursor: pointer;
 }
+
+.images {
+  width: 120px;
+  height: 240px;
+  margin: 0 34%
+}
+.question-container {
+  margin-bottom: 20px;
+}
+
+#question {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.option:hover {
+  background-color: #f0f0f0;
+}
+
+.selected {
+  background-color: #66AFFF;
+  color: #fff;
+}
+
+.submit, .go-back {
+  padding: 10px 20px;
+  border: none;
+  background-color: #66AFFF;
+  color: #fff;
+  cursor: pointer;
+}
+
 .quiz-result {
   color: #1D212B;
-  margin: 7% 20%;
+  margin: 2% auto auto;
+  max-width: 600px;
 }
 
 .quiz-result h3 {
-  margin: 2% 22%;
-  font-size: 30px;
-  color: #5d5d5d;
+  font-size: 24px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
 .quiz-result p {
-  font-size: 20px;
+  font-size: 16px;
+  text-align: center;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.submit,
+.go-back {
+  margin: 0 10px; /* Add some space between the buttons */
+  padding: 10px 90px; /* Increase button width */
+  border: none;
+  background-color: #66AFFF;
+  color: #fff;
+  cursor: pointer;
+}
 .images {
-  width: 130px;
-  height: 240px;
+  max-width: 100%;
+  height: 320px;
+  width: 200px;
   margin: 0 32%
 }
+

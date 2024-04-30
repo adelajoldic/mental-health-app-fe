@@ -148,3 +148,86 @@ a:hover{
 .check-out:hover{
   text-decoration: underline;
 }
+@media only screen and (max-width: 767px) {
+  .logo{
+    display: none;
+  }
+  .container {
+    margin-top: 3%;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 70px 100px 100px 80px;
+  }
+
+  .text-section {
+    padding-left: 0;
+    text-align: center;
+    margin: 0;
+  }
+
+  .text-section p{
+    margin-top: 10%;
+    font-size: 13.2px;
+    text-align: center;
+    line-height: 23px;
+  }
+
+  .mind-space {
+    font-size: 40px;
+  }
+
+  .image-section {
+    max-width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .img-start {
+    border-radius: 70px 130px 70px 140px;
+    height: auto;
+    width: 80%;
+  }
+
+  .service h1{
+    font-size: 32px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .new-card {
+    flex-direction: column;
+    max-width: 90%;
+    margin: 10% auto;
+    align-items: center;
+  }
+
+  .new-card img {
+    width: 100%;
+    height: auto;
+    order: -1; /* Place the image before other content */
+    margin-bottom: 20px; /* Add space between image and content */
+  }
+
+  .cards-img1,
+  .cards-img2 {
+    border-radius: 0;
+  }
+
+  .new-card-content {
+    padding: 0;
+    text-align: justify;
+  }
+
+  .footer{
+    display: none;
+  }
+}

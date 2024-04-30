@@ -87,30 +87,73 @@ button {
   margin: 5% auto; /* Center the button horizontally */
   padding: 10px; /* Adjust padding as needed */
 }
-
 @media (max-width: 768px) {
+  .choice {
+    max-width: 99.9%;
+    height: 100px;
+    margin: 0;
+  }
+
+  #introduction {
+    display: none; /* Hide the introduction text on mobile devices */
+  }
+
   h2{
-    font-size: 17px;
+    font-size: 24px;
   }
-  #introduction{
-    display: none;
-  }
-  .game-grid{
+
+  .game-grid {
     margin: auto;
-    grid-row-gap: 2%;
+    grid-row-gap: 1%;
   }
-  .game-card:hover{
+
+  .game-card:hover {
     transition: none;
-    background: #ffffff;
+    /*background: #ffffff;*/
   }
-  .game-grid h3{
-    font-size: 16px;
+
+  .game-grid img{
+    max-width: 100%;
+    height: 60%;
   }
-  .game-grid p{
+
+  .game-grid h3 {
+    font-size: 22px;
+  }
+
+  .game-grid p {
     font-size: 14px;
   }
-   button{
-    font-size: 14px;
-    padding: 4px;
+
+  button {
+    font-size: 18px;
+    padding: 10px;
   }
 }
+
+/*@media (max-width: 768px) {*/
+/*  h2{*/
+/*    font-size: 17px;*/
+/*  }*/
+/*  #introduction{*/
+/*    display: none;*/
+/*  }*/
+/*  .game-grid{*/
+/*    margin: auto;*/
+/*    grid-row-gap: 2%;*/
+/*  }*/
+/*  .game-card:hover{*/
+/*    transition: none;*/
+/*    background: #ffffff;*/
+/*  }*/
+/*  .game-grid h3{*/
+/*    font-size: 16px;*/
+/*  }*/
+/*  .game-grid p{*/
+/*    font-size: 14px;*/
+/*  }*/
+/*   button{*/
+/*    font-size: 14px;*/
+/*    padding: 4px;*/
+/*  }*/
+/*}*/

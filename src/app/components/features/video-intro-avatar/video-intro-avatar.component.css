@@ -18,3 +18,38 @@
 button:hover{
   color: #add3fc;
 }
+@media only screen and (max-width: 767px) {
+  body{
+    margin: 0;
+  }
+  .header{
+    display: none;
+  }
+  .main {
+    background: #add3fc;
+    padding: 20px;
+    min-height: 92vh;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+    margin: 50% auto 10px;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    font-family: "Gochi Hand", cursive;
+    background: #202020F2;
+    color: #add3fc;
+    padding: 10px;
+    border-radius: 30px;
+    margin-top: 70px;
+  }
+
+  button:hover {
+    background: #202020;
+  }
+}

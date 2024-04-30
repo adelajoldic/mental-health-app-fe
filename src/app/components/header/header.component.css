@@ -102,6 +102,15 @@ header .links #last_button:hover {
     text-align: center;
     margin-bottom: 15px;
   }
+
+  header .logo {
+    margin-top: 20px;
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+
+  header .logo img {
+    height: 30px; /* Set the height of the images in mobile version */
+  }
 }
 
 
@@ -113,6 +122,16 @@ header .links #last_button:hover {
   .container links{
     display: none;
   }
+  header .logo .logo-pic {
+    display: none; /* Hide the first logo image in mobile version */
+  }
+  header .logo {
+    margin-top: 20px;
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+  header .logo img {
+    height: 30px; /* Set the height of the images in mobile version */
+  }
 }
 
 /* Medium */
@@ -120,12 +139,37 @@ header .links #last_button:hover {
   .container {
     width: 970px;
   }
+  header .logo .logo-pic {
+    display: none; /* Hide the first logo image in mobile version */
+  }
+  header .logo {
+    margin-top: 20px;
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+  header .logo img {
+    height: 30px; /* Set the height of the images in mobile version */
+  }
 }
 
 /* Large */
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1270px;
+  }
+  header .logo .logo-pic {
+    display: none; /* Hide the first logo image in mobile version */
+  }
+  header .logo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  header .logo img {
+    height: 40px;
+  }
+
+  header .logo .logo-pic {
+    display: none;
   }
 }
 
@@ -139,7 +183,9 @@ header .links #last_button:hover {
     flex-direction: column;
     align-items: center;
   }
-
+  header .logo .logo-pic {
+    display: none; /* Hide the first logo image in mobile version */
+  }
   header .logo {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -151,5 +197,13 @@ header .links #last_button:hover {
 
   header .links button {
     margin-left: 0;
+  }
+  header .logo {
+    margin-top: 20px;
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+
+  header .logo img {
+    height: 30px; /* Set the height of the images in mobile version */
   }
 }

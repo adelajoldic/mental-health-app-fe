@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import {Component, HostListener, OnDestroy} from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Component({
@@ -35,7 +35,9 @@ export class WordsGameComponent implements OnDestroy {
     this.resetGame();
     this.generateGrid();
   }
+
   ngOnDestroy(): void {
+    this.resetGame();
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.complete();
   }
@@ -86,7 +88,9 @@ export class WordsGameComponent implements OnDestroy {
     const maxWordLength = Math.max(...this.wordsToFind.map(word => word.length));
 
     // Initialize a blank grid with as many rows as there are words and columns based on the longest word
-    this.grid = Array.from({ length: this.wordsToFind.length }, () => Array(maxWordLength).fill(''));
+    const numRows = this.wordsToFind.length;
+    const numCols = maxWordLength;
+    this.grid = Array.from({ length: numRows }, () => Array(numCols).fill(''));
 
     for (const word of this.wordsToFind) {
       let placed = false;
@@ -95,18 +99,16 @@ export class WordsGameComponent implements OnDestroy {
         const direction = this.generateRandomDirection();
         const wordLength = word.length;
 
-        let startRow: number;
-        let startCol: number;
+        let startRow: number = Math.floor(Math.random() * numRows);
+        let startCol: number = Math.floor(Math.random() * numCols);
 
-        startRow = Math.floor(Math.random() * this.grid.length);
-        startCol = Math.floor(Math.random() * this.grid[startRow].length);
-
+        // Check if the word can be placed in the grid
         const endRow = startRow + direction.row * (wordLength - 1);
         const endCol = startCol + direction.col * (wordLength - 1);
 
         if (
-          endRow >= 0 && endRow < this.grid.length &&
-          endCol >= 0 && endCol < this.grid[startRow].length
+          endRow >= 0 && endRow < numRows &&
+          endCol >= 0 && endCol < numCols
         ) {
           let validPlacement = true;
 
@@ -134,14 +136,15 @@ export class WordsGameComponent implements OnDestroy {
     }
 
     // Fill empty spaces with random letters
-    for (let i = 0; i < this.grid.length; i++) {
-      for (let j = 0; j < this.grid[i].length; j++) {
+    for (let i = 0; i < numRows; i++) {
+      for (let j = 0; j < numCols; j++) {
         if (this.grid[i][j] === '') {
           this.grid[i][j] = this.getRandomLetter();
         }
       }
     }
   }
+
 
   getRandomLetter(): string {
     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
@@ -253,6 +256,11 @@ export class WordsGameComponent implements OnDestroy {
     this.errorMessage = null;
     this.congratulatoryMessage = null;
     this.gameStarted = false;
+  }
+
+  @HostListener('window:beforeunload', ['$event'])
+  unloadHandler(event: Event) {
+    this.resetGame();
   }
 }
 

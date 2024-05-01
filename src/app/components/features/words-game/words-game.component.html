@@ -86,7 +86,7 @@
   <div class="choose-level">
     <label for="wordInput">Enter word: </label>
     <input type="text" id="wordInput" [(ngModel)]="userInput" (keyup.enter)="checkWord()"/>
-    <button (click)="checkWord()">Check</button>
+    <button class="word-input" (click)="checkWord()">Check</button>
     <div class="levels">
       <button *ngFor="let level of levelOptions" [disabled]="level > currentLevel" (click)="changeLevel()">
         Level {{ level }}

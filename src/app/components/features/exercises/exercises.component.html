@@ -12,7 +12,7 @@
   <p class="timer" *ngIf="isBreathing">Time left: {{ formatTime(timeLeft) }}</p>
   <div *ngIf="isBreathing" class="instructions">
     <p class="follow">Follow these instructions:</p>
-    <h4> ✔︎ {{ currentInstruction }}</h4>
+    <h4 class="follow-instructions"> ✔︎ {{ currentInstruction }}</h4>
   </div>
   <h3 class="message" *ngIf="isTimeUp">Congratulations 🏆! You've completed the breathing exercise.</h3>
   <div class="button-container">

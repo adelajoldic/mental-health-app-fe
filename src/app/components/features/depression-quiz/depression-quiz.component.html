@@ -1,6 +1,6 @@
 <div class="quiz-container">
   <div *ngIf="depressionQuizService.currentQuestionIndex < depressionQuizService.questions.length"  id="question-counter">
-    <p>Question {{ depressionQuizService.getCurrentQuestionNumber() }} out of {{ depressionQuizService.questions.length }}</p>
+    <p class="question-number">Question {{ depressionQuizService.getCurrentQuestionNumber() }} out of {{ depressionQuizService.questions.length }}</p>
   </div>
 
   <!-- Display feedback message -->

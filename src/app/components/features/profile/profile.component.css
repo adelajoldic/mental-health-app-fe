@@ -1,9 +1,9 @@
 .wrapper-intro {
   display: flex;
   justify-content: space-between;
-  /*margin: 10px auto;*/
+  margin: 70px auto;
   padding-bottom: 40px;
-  border-bottom: 1px solid #3333333F;
+  /*border-bottom: 1px solid #3333333F;*/
   width: 100%;
 }
 
@@ -31,6 +31,7 @@ li{
 }
 
 .quote-container {
+  max-width: 30%;
   text-align: center;
   margin: 10px auto;
   padding: 1%;
@@ -39,10 +40,66 @@ li{
 
 .quote-container h2{
   font-size: 20px;
-  color: #333333B7;
 }
 
 .quote-container p {
   font-style: italic;
   color: #333333;
+}
+
+button {
+  margin: 10px;
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .wrapper-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #3333333F;
+  }
+
+  .wrapper-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wrapper-content img {
+    width: 200px;
+    border-radius: 12px;
+  }
+
+  .button-container {
+    display: flex;
+    gap: 10px;
+  }
+
+  .button {
+    margin: 30px auto;
+  }
+
+  .quote-container {
+    text-align: center;
+    margin: 10px auto;
+    padding: 1%;
+    color: #333;
+    max-width: 100%;
+  }
+
+  .wrapper-content h1 {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .quote-container h2 {
+    font-size: 20px;
+  }
+
+  .quote-container p {
+    font-style: italic;
+    font-size: 14px;
+    color: #333333;
+  }
 }

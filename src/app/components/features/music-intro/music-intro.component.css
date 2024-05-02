@@ -36,6 +36,7 @@ button:hover{
     max-width: 100%;
     display: block;
     margin: 50% auto 10px;
+    object-fit: cover;
   }
 
   button {
@@ -47,7 +48,7 @@ button:hover{
     color: #add3fc;
     padding: 10px;
     border-radius: 30px;
-    margin-top: 70px;
+    margin-top: 200px;
   }
 
   button:hover {

@@ -20,8 +20,9 @@
       {{ option }}
     </div>
   </div>
-
-  <button *ngIf="anxietyQuizService.currentQuestionIndex < anxietyQuizService.questions.length" class="submit" (click)="anxietyQuizService.submitQuiz()">Submit Answer</button>
+  <div class="button-container">
+    <button *ngIf="anxietyQuizService.currentQuestionIndex < anxietyQuizService.questions.length" class="submit" (click)="anxietyQuizService.submitQuiz()">Submit Answer</button>
+  </div>
 
   <div *ngIf="anxietyQuizService.currentQuestionIndex === anxietyQuizService.questions.length" class="quiz-result" id="quiz-result">
     <div *ngIf="anxietyQuizService.currentQuestionIndex === anxietyQuizService.questions.length">

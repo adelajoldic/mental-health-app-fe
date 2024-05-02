@@ -10,9 +10,9 @@ export class WordsGameComponent implements OnDestroy {
   private ngUnsubscribe = new Subject<void>();
 
   levels: { [key: number]: string[] } = {
-    1: ['love', 'smile', 'happiness', 'joy'],
-    2: ['harmony', 'gratitude', 'joyful', 'hope', 'bliss', 'happy'],
-    3: ['positive', 'compassion', 'cherish', 'empathy', 'optimistic', 'kind', 'powerful', 'sweet']
+    1: ['love', 'smile', 'happiness'],
+    2: ['harmony', 'gratitude', 'joyful', 'hope'],
+    3: ['positive', 'compassion', 'cherish', 'empathy', 'optimistic', 'kind', 'sweet', 'safe']
     // 1: ['positive', 'compassion', 'cherish', 'empathy', 'optimistic', 'kind', 'sweet', 'fun', 'safe', 'free', 'harmony',
     //   'gratitude', 'joyful', 'soft', 'hope', 'bliss', 'love', 'smile', 'happiness', 'joy'],
   };

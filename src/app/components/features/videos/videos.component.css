@@ -24,7 +24,8 @@ h2{
 .intro{
   background: linear-gradient(90deg, rgba(225,239,253,1) 2%, rgba(173,211,252,1) 23%, rgba(132,189,251,1) 90%, rgba(102,175,255,1) 100%);
   padding: 30px 30px 40px;
-  border-radius: 250px 50px 250px 50px;
+  /*border-radius: 250px 50px 250px 50px;*/
+  border-radius: 8px;
 }
 
 h4{
@@ -44,6 +45,7 @@ h4{
   justify-content: center;
   background: white;
   color: #202020F2;
+  border-radius: 0;
 }
 
 .video-container {
@@ -89,12 +91,18 @@ p {
   font-weight: bolder;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+  .intro{
+    padding: 10px;
+  }
   h2{
     font-size: 17px;
   }
   .text{
     display: none;
+  }
+  .ted-talks {
+    border-radius: 0;
   }
   .video-container {
     width: 100%;
@@ -105,13 +113,20 @@ p {
   }
   .video-container h3{
     font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .video-container p{
-    font-size: 14px;
+    font-size: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .intro-video{
-    margin-top: 5%;
-    height: 150px;
+    height: 200px;
+    width: 100%;
+    padding: 0;
+    margin: auto 0;
+    border-radius: 0;
   }
   section{
     max-width: none;

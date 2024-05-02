@@ -26,7 +26,7 @@ export class GamesListComponent {
       title: 'Mood Meter Quiz',
       description: 'Asses your current mood',
       image: 'assets/knowledge-game.jpeg',
-      route: 'quiz'
+      route: 'mood-quiz'
     },
     {
       title: 'Anxiety Quiz',

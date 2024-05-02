@@ -3,7 +3,7 @@
 <div class="main">
   <div class="intro">
     <h2>🌺 Exercise for Serenity: Combating Depression and Stress with Physical Activity 🧘</h2>
-    <p class="text">{{intro}}</p>
+    <p class="text-intro">{{intro}}</p>
 </div>
 
 <div class="breathing-container">
@@ -25,7 +25,7 @@
 <!--  <h2>How To Improve Our Thinking Through Physical Activity?</h2>-->
 <!--  <iframe class="intro-video" width="560" height="315" src="https://www.youtube.com/embed/e9B3QWESkLI?si=YAzbYklgtUu51dO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
 <!--</div>-->
-
+  <h2 id="playlist">Exercises</h2>
 <div class="card-container">
   <img class="card-img" src="assets/Home-Puzzle.jpg" alt="Image">
   <h4>Running</h4>
@@ -36,8 +36,6 @@
     enjoyable activities, considering various resources and support networks, and ultimately integrating
     exercise seamlessly into daily routines for enhanced mental well-being. </p>
 </div>
-
-<!--<h4 id="playlist">Exercise List:</h4>-->
 <!--<div *ngFor="let description of descriptions" class="description">-->
 <!--  <p id="title">{{ description.title }}</p>-->
 <!--  <p>{{ description.text }}</p>-->
@@ -46,7 +44,7 @@
   <h2> 🧘‍♀️ Exercise Playlist</h2>
   <div class="video-list">
     <div *ngFor="let video of videos" class="video-container">
-      <iframe width="560" height="315" [src]="video.embedUrl" frameborder="0" allowfullscreen></iframe>
+      <iframe class="videos" width="560" height="315" [src]="video.embedUrl" frameborder="0" allowfullscreen></iframe>
       <h3 class="video-title">{{ video.title }}</h3>
     </div>
   </div>

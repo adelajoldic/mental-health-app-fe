@@ -52,6 +52,7 @@
   max-width: 100%;
   border-radius: 250px 150px 150px 250px;
   height: 600px;
+  object-fit: cover;
   /*padding-right: 5px;*/
   /*border: 4px solid #202020F2;*/
 }

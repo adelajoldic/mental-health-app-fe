@@ -1,9 +1,11 @@
 h2{
   text-align: center;
   font-size: 28px;
+  margin: 0 auto;
+  padding: 0;
 }
 
-.text{
+.text, .text-intro{
   text-align: center;
   margin: 3% 4%;
   line-height: 30px;
@@ -73,7 +75,8 @@ button{
 .intro{
   background: linear-gradient(90deg, rgba(225,239,253,1) 2%, rgba(173,211,252,1) 23%, rgba(132,189,251,1) 90%, rgba(102,175,255,1) 100%);
   padding: 30px 30px 40px;
-  border-radius: 210px 50px 210px 50px;
+  /*border-radius: 210px 50px 210px 50px;*/
+  border-radius: 8px;
 }
 
 .intro-video{
@@ -104,9 +107,9 @@ h4{
   font-weight: bold;
 }
 
-#playlist{
-  margin-left: 6%;
-}
+/*#playlist{*/
+/*  margin-left: 6%;*/
+/*}*/
 
 .video-list {
   display: flex;
@@ -164,156 +167,106 @@ p {
   margin: 2% 6%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .header {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-
+  .text-intro{
+    display: none;
+  }
   .button-container {
     text-align: right; /* Align button to the right */
     margin-right: 10%; /* Adjust margin as needed */
   }
-
   .button {
     width: 150px; /* Adjust button width as needed */
     font-size: 16px;
     height: 40px;
   }
-
   .intro {
     border-radius: 5px;
+    padding: 10px;
   }
-
   .intro h2 {
     font-size: 12px;
   }
-
   .text {
-    display: none;
+    /*display: none;*/
+    padding: 0;
+    text-align: justify;
+    line-height: 20px;
+    font-size: 13px;
+    margin: 0 0 5%;
   }
-
   .breathing-container {
     border: none;
+    border-radius: 0;
+    padding: 0;
     box-shadow: none;
     text-align: center;
-    margin: 0;
-    padding: 0;
+    margin: 15%;
+    border-bottom: 1px solid #ccc;
   }
   .breathing-container .title, .timer {
     font-size: 17px;
   }
-
   .breathing-container .message, .follow, .follow-instructions {
     font-size: 12px;
   }
-
   .button-container {
     margin-right: 0;
   }
-
   button {
     padding: 8px;
     margin: 15px;
   }
-
   .video-container {
     width: 100%;
-    margin: 10px 0;
-  }
+    margin: 5px 0;
+    padding: 0;
 
+  }
   .video-container:hover {
     transform: none;
   }
-
   .video-container h3 {
     font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: justify;
   }
-
   .video-container p {
     font-size: 14px;
+    /*padding: 0;*/
   }
-
+  .videos {
+    border-radius: 0;
+  }
   .intro-video {
     margin-top: 5%;
     height: 150px;
   }
-
   .description {
     width: 100%;
     margin: 0;
   }
-
   .card-container {
     border: none;
     box-shadow: none;
   }
-
   .description #title,
   #playlist {
     font-size: 17px;
     text-align: center;
   }
-
   .description p {
     font-size: 14px;
   }
-
   #closing,
   .footer {
     display: none;
   }
 }
-
-
-/*@media screen and (max-width: 768px) {*/
-/*  .header {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*    text-align: center;*/
-/*  }*/
-/*  !*.header img {*!*/
-/*  !*  max-width: 80%;*!*/
-/*  !*  margin: auto;*!*/
-/*  !*}*!*/
-/*  h2{*/
-/*    font-size: 17px;*/
-/*  }*/
-/*  .text{*/
-/*    display: none;*/
-/*  }*/
-/*  .video-container {*/
-/*    width: 100%;*/
-/*    margin: 10px 0;*/
-/*  }*/
-/*  .video-container:hover{*/
-/*    transform: none;*/
-/*  }*/
-/*  .video-container h3{*/
-/*    font-size: 16px;*/
-/*  }*/
-/*  .video-container p{*/
-/*    font-size: 14px;*/
-/*  }*/
-/*  .intro-video{*/
-/*    margin-top: 5%;*/
-/*    height: 150px;*/
-/*  }*/
-/*  .description{*/
-/*    width: 100%;*/
-/*    margin: 0;*/
-/*  }*/
-/*  .description #title, #playlist{*/
-/*    font-size: 17px;*/
-/*    text-align: center;*/
-/*  }*/
-/*  .description p{*/
-/*    font-size: 14px;*/
-/*  }*/
-/*  #closing, .footer{*/
-/*    display: none;*/
-/*  }*/
-/*}*/

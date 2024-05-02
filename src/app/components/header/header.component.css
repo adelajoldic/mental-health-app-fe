@@ -1,5 +1,3 @@
-/* Global Rules */
-
 a {
   text-decoration: none;
 }
@@ -16,15 +14,8 @@ ul {
   padding-bottom: 1%;
   margin-left: auto;
   margin-right: auto;
-  /*border-bottom: 1px solid #E1E1E1;*/
-
 }
 
-
-
-/* End Global Rules */
-
-/* Start Landing Page */
 header {
   display: flex;
   background: transparent;
@@ -36,12 +27,13 @@ header .container {
   justify-content: space-between;
 }
 
-header .logo {
+header .logo-pic {
   /*color: #5d5d5d;*/
   /*font-style: italic;*/
   text-transform: uppercase;
   color: #66AFFF;
   font-size: 20px;
+  object-fit: cover;
 }
 
 header .links {
@@ -81,7 +73,6 @@ header .links #last_button:hover {
   cursor: pointer;
 }
 
-/* Additional Styles for Content Section */
 .content .container {
   display: flex;
   align-items: center;
@@ -184,7 +175,7 @@ header .links #last_button:hover {
     align-items: center;
   }
   header .logo .logo-pic {
-    display: none; /* Hide the first logo image in mobile version */
+    display: none;
   }
   header .logo {
     margin-top: 20px;

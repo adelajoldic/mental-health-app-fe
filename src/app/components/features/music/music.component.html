@@ -66,7 +66,7 @@
   <h2>🎼 Music Playlist:</h2>
   <div class="video-list">
     <div *ngFor="let video of videos" class="video-container">
-      <iframe width="560" height="315" [src]="video.embedUrl" frameborder="0" allowfullscreen></iframe>
+      <iframe class="songs" width="560" height="315" [src]="video.embedUrl" frameborder="0" allowfullscreen></iframe>
       <h3>{{ video.title }}</h3>
       <p id="description">Description:</p>
       <p>{{ video.description }}</p>

@@ -104,6 +104,46 @@
   margin: auto;
 }
 
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.submit,.go-back {
+  width: 150px;
+  padding: 10px 0;
+  margin: 20px 10px;
+  border: none;
+  background-color: #E0A3AA;
+  color: #fff;
+  cursor: pointer;
+}
+
+.quiz-result {
+  text-align: center;
+  /*margin-top: 10px;*/
+}
+
+.images {
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  width: 180px;
+  height: auto;
+}
+
+.quiz-result h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.quiz-result p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 768px) {
   .main {
     margin-top: 5%;

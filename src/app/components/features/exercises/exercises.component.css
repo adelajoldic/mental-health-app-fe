@@ -108,6 +108,11 @@ button{
   color: #FFFFFF;
 }
 
+#playlist{
+  font-size: 32px;
+  margin-bottom: 10%;
+}
+
 h4{
   font-weight: bold;
 }
@@ -193,8 +198,10 @@ p {
   .intro h2 {
     font-size: 12px;
   }
+  #playlist{
+    font-size: 25px;
+  }
   .text {
-    /*display: none;*/
     padding: 0;
     text-align: justify;
     line-height: 20px;
@@ -257,8 +264,7 @@ p {
     border: none;
     box-shadow: none;
   }
-  .description #title,
-  #playlist {
+  .description #title {
     font-size: 17px;
     text-align: center;
   }

@@ -7,7 +7,7 @@
 </div>
 
 <div class="breathing-container">
-  <h2 class="title" *ngIf="!isBreathing && !isTimeUp">🌬️ Breathing Exercise</h2>
+  <h2 class="title" *ngIf="!isBreathing && !isTimeUp">Breathing Exercise</h2>
   <p class="message" *ngIf="!isBreathing && !isTimeUp">Click to start your breathing exercise</p>
   <p class="timer" *ngIf="isBreathing">Time left: {{ formatTime(timeLeft) }}</p>
   <div *ngIf="isBreathing" class="instructions">

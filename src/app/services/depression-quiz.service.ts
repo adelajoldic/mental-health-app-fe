@@ -14,21 +14,93 @@ interface Question {
 export class DepressionQuizService {
   public questions: Question[] = [
     {
-      questionText: 'Who was the first President of the United States?',
-      options: ['George Washington', 'Thomas Jefferson', 'Thomas Edison', 'I don\'t know'],
-      correctOption: 0
+      questionText: 'What is depression?',
+      options: ['A temporary mood fluctuation',
+        'A severe form of anxiety disorder',
+        'A common mental disorder characterized by a depressed mood or loss of interest in activities for long periods of time',
+        'A physical illness caused by a virus'],
+      correctOption: 2
     },
     {
-      questionText: 'Which planet is known as the Red Planet?',
-      options: ['Mars', 'Venus', 'Jupiter', 'Saturn'],
-      correctOption: 0
-    },
-    {
-      questionText: 'What is the largest mammal?',
-      options: ['Elephant', 'Blue Whale', 'Giraffe', 'Kangaroo'],
+      questionText: 'Which of the following are symptoms of depression?',
+      options: [' Increased appetite and energy',
+        'Decreased self-esteem, poor concentration, feeling very tired or low in energy',
+        'Excessive talkativeness and racing thoughts',
+        'Feeling excessively happy or euphoric'],
       correctOption: 1
     },
-    // Add more questions here if needed
+    {
+      questionText: 'What is the best way to treat depression?',
+      options: ['Only through self-care practices like exercise and socializing',
+        'Exclusively with antidepressant medications',
+        'Through a combination of psychological treatments and medications',
+        'Solely by ignoring the symptoms and hoping they go away'],
+      correctOption: 2
+    },
+    {
+      questionText: 'What percentage of pregnant women and women who have just given birth experience depression?',
+      options: ['More than 10%',
+        '10%',
+        '3%',
+        '5%'],
+      correctOption: 0
+    },
+    {
+      questionText: 'What are some barriers to effective care for depression?',
+      options: ['Accessible mental health services, trained health-care providers, and societal acceptance of mental health issues',
+        'Strict government regulations, excessive treatment options, and lack of community support',
+        'High investment in mental health care, overabundance of trained health-care providers, and normalization of mental health disorders',
+        'Lack of investment in mental health care, lack of trained health-care providers, and social stigma associated with mental disorders'],
+      correctOption: 3
+    },
+    {
+      questionText: 'How does a depressive episode differ from regular mood fluctuations?',
+      options: ['Depressive episodes occur sporadically throughout the day, while mood fluctuations are constant',
+        'Regular mood fluctuations last longer and are more severe than depressive episodes',
+        'Depressive episodes last most of the day, nearly every day, for at least two weeks, while regular mood fluctuations are short-lived',
+        'Regular mood fluctuations occur with specific triggers, whereas depressive episodes do not'],
+      correctOption: 2
+    },
+    {
+      questionText: 'What contributes to the development of depression?',
+      options: ['Genetics alone determine the onset of depression',
+        'Only social factors such as unemployment and bereavement contribute to depression',
+        'Depression is solely caused by biological factors and is unrelated to life experiences',
+        'Depression results from a complex interaction of social, psychological, and biological factors, including adverse life events'],
+      correctOption: 3
+    },
+    {
+      questionText: 'How is depression related to physical health?',
+      options: ['Depression has no impact on physical health',
+        'Only mental health conditions affect physical health',
+        'Depression is closely related to and affected by physical health, with factors like physical inactivity or harmful alcohol use posing risks',
+        'Physical health is completely independent of depression and its symptoms'],
+      correctOption: 2
+    },
+    {
+      questionText: 'Which of the following are effective psychological treatments for depression?',
+      options: [' Behavioural activation, cognitive behavioural therapy, interpersonal psychotherapy, problem-solving therapy',
+        'Herbal remedies and crystal healing',
+        'Pharmacotherapy and electroconvulsive therapy',
+        'Hypnotherapy and acupuncture'],
+      correctOption: 0
+    },
+    {
+      questionText: 'How should antidepressants be used in the treatment of depression in children and adolescents?',
+      options: ['Antidepressants are the preferred treatment for children and adolescents with depression',
+        'Antidepressants should be used without caution in children and adolescents',
+        'Antidepressants should be the first line of treatment for adolescents but not for children',
+        'Antidepressants should not be used for treating depression in children and are not the first line of treatment in adolescents, among whom they should be used with extra caution'],
+      correctOption: 3
+    },
+    {
+      questionText: 'Which of the following are recommended self-care practices for managing symptoms of depression?',
+      options: ['Spending excessive time alone and avoiding social interaction',
+        'Trying to keep doing activities you used to enjoy, staying connected to friends and family, and exercising regularly',
+        'Increasing alcohol consumption and using illicit drugs',
+        'Ignoring feelings and not seeking help from anyone'],
+      correctOption: 1
+    },
   ];
 
   public currentQuestionIndex = 0;

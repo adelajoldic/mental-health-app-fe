@@ -89,9 +89,10 @@ button {
 }
 @media (max-width: 768px) {
   .choice {
-    max-width: 99.9%;
-    height: 100px;
-    margin: 0;
+    display: none;
+    /*max-width: 99.9%;*/
+    /*height: 100px;*/
+    /*margin: 0;*/
   }
 
   #introduction {

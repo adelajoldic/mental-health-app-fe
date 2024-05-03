@@ -63,15 +63,15 @@
 }
 
 .option {
-  width: 70%; /* Adjust as needed, leave some space for margin */
-  margin-left: 15%; /* Adjust spacing between options */
+  width: 70%;
+  margin-left: 15%;
   margin-bottom: 1.5%;
-  padding: 10px; /* Add padding to create a box */
+  padding: 10px;
   font-size: 14px;
-  border: 1px solid #ccc; /* Add border for box styling */
-  border-radius: 30px; /* Optional: Add border-radius for rounded corners */
-  cursor: pointer; /* Add cursor pointer for better UX */
-  transition: background-color 0.3s; /* Add smooth transition for color change */
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .option:hover {
@@ -84,8 +84,8 @@
 }
 
 .selected {
-  background-color: #5ada86; /* Set the color for selected option */
-  color: #fff; /* Set text color for better visibility */
+  background-color: #5ada86;
+  color: #fff;
 }
 
 .feedback-message{
@@ -141,62 +141,53 @@
   .main {
     margin-top: 5%;
   }
-
   .question-number {
     margin-left: 7%;
   }
-
   #question {
     padding-top: 17%;
     padding-bottom: 17%;
     font-size: 18px;
     text-align: center;
   }
-
   .question-container  {
     font-size: 14px;
     margin-bottom: 5%;
   }
-
   .question-container img {
     display: none;
   }
-
   .feedback-message {
     font-size: 18px;
     text-align: center;
     padding: 5% auto;
     width: 100%;
-
   }
-
   .options-container {
     margin-bottom: 5%;
   }
-
   .option {
     width: 100%;
     margin: 5% auto;
     font-size: 13px;
   }
-
+  .option:hover {
+    background-color: #5ada86;
+  }
   button {
     margin: 3% 0 1% auto;
     padding: 1% 10%;
     align-items: center;
   }
-
   .images {
     max-width: 100%;
     height: auto;
     width: 200px;
     margin: 0 auto;
   }
-
   .button-container {
     justify-content: center;
   }
-
   .submit,
   .go-back {
     width: 120px;
@@ -213,7 +204,6 @@
     text-align: center;
     margin: 5% auto auto;
   }
-
   .result-content {
     display: flex;
     justify-content: center;
@@ -221,7 +211,6 @@
     margin-top: 20px;
     padding: 0;
   }
-
   .result-image {
     width: 120px;
     height: auto;
@@ -229,24 +218,19 @@
     margin-top: 5%;
     margin-bottom: 20px;
   }
-
   .result-text {
     text-align: center;
   }
-
   .quiz-result h3 {
     font-size: 20px;
     margin-bottom: 30px;
     color: #5d5d5d;
-
   }
-
   .quiz-result p {
     font-size: 14px;
     margin-bottom: 30px;
     line-height: 25px;
   }
-
   .button-container {
     display: flex;
     justify-content: center;

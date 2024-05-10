@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
-
+import {Component, ElementRef, ViewChild} from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from "@angular/platform-browser";
+import {FormBuilder} from "@angular/forms";
 @Component({
   selector: 'app-knowledge',
   templateUrl: './music.component.html',
@@ -88,26 +88,15 @@ export class MusicComponent {
         'to COVID-19. With a unique blend of gravity and power, the track delivers a gentle and authentic message of comfort.',
       embedUrl: 'https://www.youtube.com/embed/-5q5mZbe3V8?si=BSMA2GfWur3jcrXE'
     },
-    // Add more videos as needed
   ];
 
+  // Reference to the video element
+  @ViewChild('videoPlayer') videoPlayer!: ElementRef;
+  videoWatched: boolean = false;
+  showSkipButton: boolean = false;
+  showPlayButton: boolean = true;
 
-  surveyQuestions = [
-    { question: 'Question 1', options: ['Option A', 'Option B', 'Option C'] },
-    { question: 'Question 2', options: ['Option X', 'Option Y', 'Option Z'] },
-    { question: 'Question 3', options: ['Option P', 'Option Q', 'Option R'] },
-    { question: 'Question 4', options: ['Option M', 'Option N', 'Option O'] },
-    { question: 'Question 5', options: ['Option D', 'Option E', 'Option F'] }
-  ];
-
-  userResponses: string[] = new Array(5);
-  isSurveyComplete = false;
-  canOpenContent = false;
-  surveyTitle= 'To unlock the music playlist, please fill out this survey';
-  userAnswers = new Array(5);
-  isQuizComplete = false;
-
-  constructor(private sanitizer: DomSanitizer) {}
+  constructor(private sanitizer: DomSanitizer, private _formBuilder: FormBuilder) {}
 
   ngOnInit() {
     this.videos.forEach(video => {
@@ -119,11 +108,40 @@ export class MusicComponent {
     video.isExpanded = !video.isExpanded;
   }
 
-  submitSurvey() {
-    // Check if all survey questions are answered
-    this.isSurveyComplete = this.userResponses.every(response => !!response);
+  // Variable to track whether the content is unlocked
+  contentUnlocked: boolean = false;
 
-    // Allow opening content only if the survey is complete and all questions are answered
-    this.canOpenContent = this.isSurveyComplete && this.userResponses.every(response => !!response);
+  // Function to unlock content when user watches a video
+  unlockContent() {
+    // This function is called when the video ends
+    this.videoWatched = true;
+
+    // Hide the video
+    const videoElement = this.videoPlayer.nativeElement;
+    videoElement.style.display = 'none';
+  }
+  // Function to track video playback progress
+  trackVideoProgress() {
+    const videoElement = this.videoPlayer.nativeElement;
+      videoElement.addEventListener('timeupdate', () => {
+        if (videoElement.currentTime >= 10) {
+          this.showSkipButton = true;
+        }
+    });
+  }
+
+  playVideo() {
+    const videoElement = this.videoPlayer.nativeElement;
+    videoElement.play();
+  }
+
+  skipVideo() {
+    const videoElement = this.videoPlayer.nativeElement;
+    videoElement.currentTime = videoElement.duration;
+    this.unlockContent();
+  }
+
+  hidePlayButton() {
+    this.showPlayButton = false;
   }
 }

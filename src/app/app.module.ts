@@ -26,7 +26,10 @@ import { VideoIntroAvatarComponent } from './components/features/video-intro-ava
 import { GameIntroAvatarComponent } from './components/features/game-intro-avatar/game-intro-avatar.component';
 import { MusicIntroComponent } from './components/features/music-intro/music-intro.component';
 import { ExerciseIntroComponent } from './components/features/exercise-intro/exercise-intro.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatIconModule} from "@angular/material/icon";
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 
 @NgModule({
@@ -57,12 +60,16 @@ import { ExerciseIntroComponent } from './components/features/exercise-intro/exe
     ExerciseIntroComponent,
 
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        ReactiveFormsModule,
-        FormsModule,
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    MatIconModule,
+    MatCheckboxModule,
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

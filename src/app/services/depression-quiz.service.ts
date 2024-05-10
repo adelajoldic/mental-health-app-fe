@@ -101,6 +101,14 @@ export class DepressionQuizService {
         'Ignoring feelings and not seeking help from anyone'],
       correctOption: 1
     },
+    {
+      questionText: 'Is it true that depression affects men and women equally?',
+      options: ['Yes',
+        'No',
+        'Maybe',
+        'I don\'t know'],
+      correctOption: 1
+    },
   ];
 
   public currentQuestionIndex = 0;

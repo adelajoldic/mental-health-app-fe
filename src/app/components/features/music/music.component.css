@@ -3,7 +3,9 @@ h2{
   color: #202020F2;
   /*font-size: 28px;*/
 }
-
+.example-section {
+  margin: 12px 0;
+}
 .text{
   text-align: center;
   margin: 3% 4%;
@@ -16,31 +18,78 @@ h2{
 .intro{
   background: linear-gradient(90deg, rgba(225,239,253,1) 2%, rgba(173,211,252,1) 23%, rgba(132,189,251,1) 90%, rgba(102,175,255,1) 100%);
   padding: 30px 30px 40px;
-  /*border-radius: 250px 50px 250px 50px;*/
   border-radius: 8px;
 }
 
-.intro-video{
-    width: 72%;
-    height: 500px;
+.intro-video {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
     border-radius: 10px;
     margin: 1% 5%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-playlist, .why{
+.video-player {
+  border-radius: 5px;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.video {
+  position: relative;
+}
+
+.video .play-button {
+  position: absolute;
+  background-color: transparent;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon {
+  font-size: 68px;
+  padding: 40px;
+}
+
+iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+}
+
+.playlist, .why{
   text-align: center;
   margin: 7% auto;
   color: #FFFFFF;
 }
 
-h4{
-  color: #333;
-  font-weight: bold;
+.container-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-#playlist{
-  margin-left: 6%;
+
+.skip-button {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  background-color: #0302026D;
+  color: #fff;
+  padding: 10px 20px;
+  border: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.skip-button :hover {
+  background-color: #03020225;
 }
 
 .video-list {
@@ -49,7 +98,7 @@ h4{
   justify-content: center;
   background: white;
   color: #202020F2;
-
+  border-radius: 0;
 }
 
 .video-container {
@@ -57,38 +106,42 @@ h4{
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.1s ease-in-out;
-  width: 350px;
-  margin: 5px 5px 25px;
-  flex-direction: column;
+  width: 400px;
+  margin: 5px 5px 20px;
 }
 
 .video-container:hover {
   transform: scale(1.01);
 }
-iframe {
+
+.ted-talks {
   width: 100%;
   height: 200px;
   border: none;
-  border-radius: 8px 8px 0 0;
+  border-radius: 0;
 }
 
 h3 {
   margin-top: 10px;
-  font-size: 1.2em;
-  justify-content: center;
-  padding-left: 15px;
-  padding-right: 15px;
+  font-size: 16px;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
   line-height: 22px;
 }
 
 p {
   color: #202020F2;
-  font-size: 16px;
-  padding-left: 20px;
-  padding-right: 20px;
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: justify;
-  line-height: 24px;
+  line-height: 22px;
   font-weight: lighter;
+}
+
+#description{
+  font-weight: bolder;
 }
 
 #description{
@@ -153,67 +206,3 @@ p {
   }
 }
 
-
-
-
-/* quiz.component.css */
-.container {
-  max-width: 1000px;
-  margin: auto;
-}
-
-.title {
-  text-align: center;
-  color: #333;
-}
-
-.form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.question {
-  margin-bottom: 10px;
-}
-
-.response-select {
-  appearance: none;
-  margin-bottom: 15px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 10px;
-  width: 100%;
-  border: 1px solid #B4B2B2FF;
-  border-radius: 20px;
-  box-sizing: border-box;
-}
-
-/*.submit-button {*/
-/*  background-color: #4CAF50;*/
-/*  color: white;*/
-/*  padding: 10px;*/
-/*  border: none;*/
-/*  cursor: pointer;*/
-/*  font-size: 16px;*/
-/*}*/
-
-/*.submit-button:hover {*/
-/*  background-color: #45a049;*/
-/*}*/
-
-.thank-you-container {
-  text-align: center;
-  font-size: 18px;
-  margin-top: 20px;
-}
-
-/* Additional survey-specific styles */
-
-/* Question container */
-.question-container {
-  border: 1px solid rgba(204, 204, 204, 0.57);
-  padding: 15px;
-  margin-bottom: 20px;
-}

@@ -19,7 +19,8 @@ h2{
 
 .card-container {
   margin: 5% auto;
-  padding: 30px;
+  padding: 40px 20px;
+
 }
 
 .card-container h4 {
@@ -53,6 +54,7 @@ h2{
 .card-img{
   max-width: 200px;
   align-content: center;
+  /*padding-top: 20px;*/
 }
 
 .title {
@@ -95,13 +97,17 @@ button{
   border-radius: 8px;
 }
 
-.intro-video{
-  width: 72%;
-  height: 500px;
-  border-radius: 10px;
-  margin: 1% 5%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+.description-title {
+  margin: 30px;
 }
+/*.intro-video{*/
+/*  width: 72%;*/
+/*  height: 500px;*/
+/*  border-radius: 10px;*/
+/*  margin: 1% 5%;*/
+/*  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
 .playlist, .why{
   text-align: center;
   margin: 7% auto;

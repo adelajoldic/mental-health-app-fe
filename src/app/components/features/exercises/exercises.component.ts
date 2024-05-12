@@ -39,7 +39,8 @@ export class ExercisesComponent {
 
   descriptions: any[] = [
     {
-      title: '🧘 Yoga',
+      image: 'assets/Joga.jpg',
+      title: 'Yoga',
       text: 'Yoga plays a crucial role in promoting mental health by fostering a profound connection between ' +
         'the mind and body. Through its practice, individuals experience improved mood, enhanced cognitive function, ' +
         'and a reduction in symptoms related to anxiety, PTSD, anger, and depression. The focus on breathwork and ' +
@@ -49,7 +50,8 @@ export class ExercisesComponent {
         'tool for enhancing mental health and emotional balance.',
     },
     {
-      title: '😌 Breathing Exercises',
+      image: 'assets/Breathing-exercise.png',
+      title: 'Breathing Exercises',
       text: 'Breathing exercises significantly impact mental health by leveraging the brain\'s respiratory center.' +
         ' Deliberate breath control, found in practices like yoga, effectively manages stress. ' +
         'The interplay between breathing and stress involves the diaphragm and rib muscles, crucial for lung function. ' +
@@ -59,7 +61,8 @@ export class ExercisesComponent {
         'a key technique, fosters physical relaxation and mental serenity within a quiet environment.'
     },
     {
-      title: '💃 Dancing',
+      image: 'assets/Dance.png',
+      title: 'Dancing',
       text: 'Considering ways to combat depression and anxiety, one might not immediately think of dancing as ' +
         'an exercise, but its health benefits should not be underestimated.' +
         'Dance encompasses various forms, and the more energetic styles can provide an excellent physical workout. ' +
@@ -69,7 +72,8 @@ export class ExercisesComponent {
         'effectively addressing symptoms of anxiety and depression.'
     },
     {
-      title: '🏊 Swimming',
+      image: 'assets/Swim.jpg',
+      title: 'Swimming',
       text: 'Engaging in swimming stands out as an excellent exercise method and a potent tool to combat symptoms of ' +
         'depression and anxiety. Particularly beneficial in warm-weather climates during the summer, it encourages' +
         ' deeper breathing and activates various muscles, both large and small, seldom utilized outside the water.' +
@@ -78,7 +82,8 @@ export class ExercisesComponent {
         'only helps alleviate anxiety and depression but also contributes to enhancing aerobic health.'
     },
     {
-      title: '🏋️ Weightlifting',
+      image: 'assets/Weightlifting.png',
+      title: '️Weightlifting',
       text: 'Participating in weightlifting not only enhances your physical appearance but also contributes to ' +
         'improving your mental well-being. Instances of depression, whether triggered by age-related weight gain or ' +
         'traumatic events, can find relief through the physical challenges weightlifting offers. ' +
@@ -86,7 +91,8 @@ export class ExercisesComponent {
         'aggression, providing valuable support, especially after demanding and stressful days at home or work.'
     },
     {
-      title: '🏃 Running',
+      image: 'assets/Run.jpg',
+      title: 'Running',
       text: 'Running serves as a beneficial practice to clear your mind, reduce stress, and mitigate anxiety ' +
         'and depression. You don\'t have to cover extensive distances; even a moderate run allows you to break ' +
         'from routine and concentrate on self-care. The act of running for at least 30 minutes redirects your ' +

@@ -22,46 +22,41 @@
 </div>
 
   <h2 id="playlist">🏊🏼‍♀️ Exercises</h2>
-  <div class="card-container">
-    <img class="card-img" src="assets/Run.jpg" alt="Image">
-    <h4>Running</h4>
-    <p class="text">Exercise proves to be a valuable ally in supporting mental health by triggering the release of 'feel-good'
-      chemicals like endorphins and serotonin, contributing to mood improvement. Overcoming potential obstacles,
-      such as lack of motivation, cost concerns, anxiety, or time constraints, involves setting small goals,
-      exploring affordable options, and breaking exercise into manageable chunks. The emphasis is on finding
-      enjoyable activities, considering various resources and support networks, and ultimately integrating
-      exercise seamlessly into daily routines for enhanced mental well-being. </p>
+  <div *ngFor="let description of descriptions" class="card-container">
+    <img class="card-img" src="{{ description.image }}" alt="Image">
+    <h2 class="description-title"> {{ description.title }}</h2>
+    <p class="text">{{ description.text }} </p>
   </div>
-  <div class="card-container">
-    <img class="card-img" src="assets/Walk.jpg" alt="Image">
-    <h4>Walking</h4>
-    <p class="text">Exercise proves to be a valuable ally in supporting mental health by triggering the release of 'feel-good'
-      chemicals like endorphins and serotonin, contributing to mood improvement. Overcoming potential obstacles,
-      such as lack of motivation, cost concerns, anxiety, or time constraints, involves setting small goals,
-      exploring affordable options, and breaking exercise into manageable chunks. The emphasis is on finding
-      enjoyable activities, considering various resources and support networks, and ultimately integrating
-      exercise seamlessly into daily routines for enhanced mental well-being. </p>
-  </div>
-  <div class="card-container">
-    <img class="card-img" src="assets/Swim.jpg" alt="Image">
-    <h4>Swimming</h4>
-    <p class="text">Exercise proves to be a valuable ally in supporting mental health by triggering the release of 'feel-good'
-      chemicals like endorphins and serotonin, contributing to mood improvement. Overcoming potential obstacles,
-      such as lack of motivation, cost concerns, anxiety, or time constraints, involves setting small goals,
-      exploring affordable options, and breaking exercise into manageable chunks. The emphasis is on finding
-      enjoyable activities, considering various resources and support networks, and ultimately integrating
-      exercise seamlessly into daily routines for enhanced mental well-being. </p>
-  </div>
-  <div class="card-container">
-    <img class="card-img" src="assets/Joga.jpg" alt="Image">
-    <h4>Joga</h4>
-    <p class="text">Exercise proves to be a valuable ally in supporting mental health by triggering the release of 'feel-good'
-      chemicals like endorphins and serotonin, contributing to mood improvement. Overcoming potential obstacles,
-      such as lack of motivation, cost concerns, anxiety, or time constraints, involves setting small goals,
-      exploring affordable options, and breaking exercise into manageable chunks. The emphasis is on finding
-      enjoyable activities, considering various resources and support networks, and ultimately integrating
-      exercise seamlessly into daily routines for enhanced mental well-being. </p>
-  </div>
+<!--  <div class="card-container">-->
+<!--    <img class="card-img" src="assets/Walk.jpg" alt="Image">-->
+<!--    <h4>Walking</h4>-->
+<!--    <p class="text">Exercise proves to be a valuable ally in supporting mental health by triggering the release of 'feel-good'-->
+<!--      chemicals like endorphins and serotonin, contributing to mood improvement. Overcoming potential obstacles,-->
+<!--      such as lack of motivation, cost concerns, anxiety, or time constraints, involves setting small goals,-->
+<!--      exploring affordable options, and breaking exercise into manageable chunks. The emphasis is on finding-->
+<!--      enjoyable activities, considering various resources and support networks, and ultimately integrating-->
+<!--      exercise seamlessly into daily routines for enhanced mental well-being. </p>-->
+<!--  </div>-->
+<!--  <div class="card-container">-->
+<!--    <img class="card-img" src="assets/Swim.jpg" alt="Image">-->
+<!--    <h4>Swimming</h4>-->
+<!--    <p class="text">Exercise proves to be a valuable ally in supporting mental health by triggering the release of 'feel-good'-->
+<!--      chemicals like endorphins and serotonin, contributing to mood improvement. Overcoming potential obstacles,-->
+<!--      such as lack of motivation, cost concerns, anxiety, or time constraints, involves setting small goals,-->
+<!--      exploring affordable options, and breaking exercise into manageable chunks. The emphasis is on finding-->
+<!--      enjoyable activities, considering various resources and support networks, and ultimately integrating-->
+<!--      exercise seamlessly into daily routines for enhanced mental well-being. </p>-->
+<!--  </div>-->
+<!--  <div class="card-container">-->
+<!--    <img class="card-img" src="assets/Joga.jpg" alt="Image">-->
+<!--    <h4>Joga</h4>-->
+<!--    <p class="text">Exercise proves to be a valuable ally in supporting mental health by triggering the release of 'feel-good'-->
+<!--      chemicals like endorphins and serotonin, contributing to mood improvement. Overcoming potential obstacles,-->
+<!--      such as lack of motivation, cost concerns, anxiety, or time constraints, involves setting small goals,-->
+<!--      exploring affordable options, and breaking exercise into manageable chunks. The emphasis is on finding-->
+<!--      enjoyable activities, considering various resources and support networks, and ultimately integrating-->
+<!--      exercise seamlessly into daily routines for enhanced mental well-being. </p>-->
+<!--  </div>-->
 <!--<div *ngFor="let description of descriptions" class="description">-->
 <!--  <p id="title">{{ description.title }}</p>-->
 <!--  <p>{{ description.text }}</p>-->

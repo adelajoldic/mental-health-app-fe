@@ -76,6 +76,11 @@ export class MemoryGameComponent implements OnInit {
       card.matched = false;
     });
 
+    // Reset timer
+    this.timerStarted = false;
+    this.elapsedTime = 0;
+    clearInterval(this.timerInterval); // Clear any running timer interval
+
     this.shuffleCards();
     this.showCongratulatoryMessage = false;
   }

@@ -10,27 +10,14 @@
   <iframe class="intro-video" src="https://www.youtube.com/embed/_eXdP7ojSkI?si=BYES8_odHJPH8E1m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
-<!--<div *ngIf="!videoWatched">-->
-<!--  <h3 class="text"> To unlock the playlist of songs that address mental health issues that-->
-<!--    provide support and encouragement, please watch the video below. </h3>-->
-
-<!--  <div class="container-video">-->
-<!--    <div class="video">-->
-<!--      <video (ended)="unlockContent()" (loadedmetadata)="trackVideoProgress()">-->
-<!--        <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4" />-->
-<!--        Browser not supported-->
-<!--      </video>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
 <div *ngIf="!videoWatched">
-  <h3 class="text"> 🔓 To unlock the playlist of songs that address mental health issues and provide support and encouragement, please watch the video below 👀
+  <h3 class="unlock-text"> 🔓👀 To unlock the playlist of songs that address mental health issues and provide support and encouragement, please watch the video below.
   </h3>
 
   <div class="container-video">
     <div class="video">
       <video #videoPlayer class="video-player" (ended)="unlockContent()" (loadedmetadata)="trackVideoProgress()" (play)="hidePlayButton()" preload="metadata">
-        <source src="assets/video-mental-health.mp4"  />
+        <source src="assets/video-What-actually-is-mental-health.mp4"  />
         Browser not supported
       </video>
       <button *ngIf="showPlayButton" class="play-button" (click)="playVideo()">
@@ -39,7 +26,6 @@
       <button *ngIf="showSkipButton" class="skip-button" (click)="skipVideo()">Skip</button>
     </div>
     </div>
-
 </div>
 
 <div id="unlockedContent" *ngIf="videoWatched">

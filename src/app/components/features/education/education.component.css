@@ -36,6 +36,12 @@
   color: white;
 }
 
+.swipe-down {
+  margin-top: 5%;
+  font-weight: bold;
+  font-size: 18px;
+}
+
 .image-section {
   flex: 1;
   max-width: 550px;

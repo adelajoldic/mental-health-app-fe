@@ -113,6 +113,10 @@ export class MoodQuizService {
     });
   }
 
+  getTotalQuestions(): number {
+    return this.questions.length;
+  }
+
   getCurrentQuestionNumber(): number {
     return this.currentQuestionIndex + 1;
   }
@@ -124,7 +128,6 @@ export class MoodQuizService {
     }
     selectedQuestion.selectedOption = optionIndex;
   }
-
   goBack(): void {
     this.currentQuestionIndex--;
   }

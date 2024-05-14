@@ -7,7 +7,7 @@
   <p class="feedback-message" *ngIf="anxietyQuizService.showFeedback">{{ anxietyQuizService.feedbackMessage }}</p>
 
   <div *ngIf="anxietyQuizService.currentQuestionIndex < anxietyQuizService.questions.length" class="question-container">
-    <img src="assets/Ena-Thinking.png" alt="Ena Thinking">
+    <img src="assets/Ena-Looking.png" alt="Ena Thinking">
     <p id="question">
       {{ anxietyQuizService.getCurrentQuestionNumber() }}. {{ anxietyQuizService.questions[anxietyQuizService.currentQuestionIndex].questionText }}
     </p>

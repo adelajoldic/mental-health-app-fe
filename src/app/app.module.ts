@@ -30,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatIconModule} from "@angular/material/icon";
 import {MatCheckboxModule} from "@angular/material/checkbox";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -38,7 +39,6 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
     HomeComponent,
     HeaderComponent,
     EducationComponent,
-
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
@@ -69,6 +69,7 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
     MatSlideToggleModule,
     MatIconModule,
     MatCheckboxModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

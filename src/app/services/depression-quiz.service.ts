@@ -81,7 +81,7 @@ export class DepressionQuizService {
       questionText: 'Which of the following are effective psychological treatments for depression?',
       options: [' Behavioural activation, cognitive behavioural therapy, interpersonal psychotherapy, problem-solving therapy',
         'Herbal remedies and crystal healing',
-        'Pharmacotherapy and electroconvulsive therapy',
+        'Engaging in solitary activities without seeking professional help',
         'Hypnotherapy and acupuncture'],
       correctOption: 0
     },
@@ -119,13 +119,34 @@ export class DepressionQuizService {
 
   constructor(private router: Router) {}
 
+  // submitQuiz(): void {
+  //   this.feedbackMessage = '';
+  //   if (this.questions[this.currentQuestionIndex].selectedOption === this.questions[this.currentQuestionIndex].correctOption) {
+  //     this.correctQuestions++;
+  //     this.earnedScore = (this.correctQuestions / this.questions.length) * 100;
+  //   }
+  //   this.moveToNextQuestion();
+  //   if (this.currentQuestionIndex === this.questions.length) {
+  //     this.displayScore();
+  //   }
+  // }
   submitQuiz(): void {
     this.feedbackMessage = '';
+
+    // Check if an option has been selected
+    if (this.questions[this.currentQuestionIndex].selectedOption === undefined) {
+      this.feedbackMessage = 'Please select an option before submitting.';
+      return; // Exit the method without further processing
+    }
+
+    // Check if the selected option is correct
     if (this.questions[this.currentQuestionIndex].selectedOption === this.questions[this.currentQuestionIndex].correctOption) {
       this.correctQuestions++;
       this.earnedScore = (this.correctQuestions / this.questions.length) * 100;
     }
     this.moveToNextQuestion();
+
+    // Check if all questions have been answered
     if (this.currentQuestionIndex === this.questions.length) {
       this.displayScore();
     }

@@ -1,6 +1,10 @@
 <!--<app-header></app-header>-->
 <div class="main">
   <div *ngIf="showQuizOptions()">
+
+    <div *ngIf="moodQuizService.currentQuestionIndex < moodQuizService.questions.length"  id="question-counter">
+      <p class="question-number">Question {{ moodQuizService.getCurrentQuestionNumber() }} out of {{ moodQuizService.questions.length }}</p>
+    </div>
     <div class="question-container">
       <p id="question">
         {{ moodQuizService.getCurrentQuestionNumber() }}. {{ moodQuizService.questions[moodQuizService.currentQuestionIndex].questionText }}
@@ -16,8 +20,8 @@
     </div>
 
     <div class="button-container">
-      <button class="submit" (click)="moodQuizService.moveToNextQuestion()">Next</button>
       <button class="go-back" *ngIf="moodQuizService.currentQuestionIndex > 0" (click)="moodQuizService.goBack()">Previous</button>
+      <button class="submit" (click)="moodQuizService.moveToNextQuestion()">Next</button>
     </div>
   </div>
 </div>

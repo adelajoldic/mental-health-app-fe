@@ -3,7 +3,8 @@
   <img src="{{ getResultImage() }}" class="result-image" alt="Result Image">
   <h3>{{ congratulatoryMessage }}</h3>
   <h4 *ngIf="elapsedTime > 0">Time taken: {{ formatTime(elapsedTime) }}</h4>
-  <button (click)="playAgain()">Play Again</button>
+  <button class="submit" (click)="playAgain()">Play Again</button>
+  <button class="submit" (click)="navigateToGames()">Go back</button>
 </div>
 
 <div class="timer" *ngIf="!showCongratulatoryMessage">

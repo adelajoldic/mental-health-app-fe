@@ -1,9 +1,9 @@
 .main{
-  margin-top: 6%;
+  margin-top: 4%;
 }
 
 #question-counter {
-  font-size: 15px;
+  font-size: 12px;
   color: #5d5d5d;
   margin: auto;
   text-align: center;
@@ -52,8 +52,8 @@
   background: #66AFFF;
   color: #f8f8f8;
   padding-top: 5%;
+  font-size: 18px;
 }
-
 .options-container {
   /*text-align: center;*/
   display: flex;

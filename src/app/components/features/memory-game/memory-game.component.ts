@@ -183,4 +183,8 @@ export class MemoryGameComponent implements OnInit {
   playAgain(): void {
     this.resetGame();
   }
+
+  navigateToGames(): void {
+    this.router.navigate(['games']);
+  }
 }

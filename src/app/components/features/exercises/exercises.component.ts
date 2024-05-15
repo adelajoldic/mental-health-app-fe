@@ -145,7 +145,9 @@ export class ExercisesComponent {
   }
 
   getRandomTime(): number {
-    return Math.floor(Math.random() * (15 - 5 + 1) + 5) * 60; // Convert minutes to seconds
+    const randomMinutes = Math.floor(Math.random() * (8 - 3 + 1)) + 3;
+    // Convert the minutes to seconds
+    return randomMinutes * 60;
   }
 
   formatTime(seconds: number): string {

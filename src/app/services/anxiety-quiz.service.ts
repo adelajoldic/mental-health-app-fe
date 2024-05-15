@@ -99,6 +99,8 @@ export class AnxietyQuizService {
   //     this.displayScore();
   //   }
   // }
+
+
   submitQuiz(): void {
     this.feedbackMessage = '';
 
@@ -111,15 +113,47 @@ export class AnxietyQuizService {
     // Check if the selected option is correct
     if (this.questions[this.currentQuestionIndex].selectedOption === this.questions[this.currentQuestionIndex].correctOption) {
       this.correctQuestions++;
-      this.earnedScore = (this.correctQuestions / this.questions.length) * 100;
+      this.feedbackMessage = 'Correct!';
+    } else {
+      this.feedbackMessage = 'That was not quite it.';
     }
-    this.moveToNextQuestion();
+
+    this.earnedScore = (this.correctQuestions / this.questions.length) * 100;
+    this.showFeedback = true;
+
+    // Move to the next question after displaying feedback
+    setTimeout(() => {
+      this.moveToNextQuestion();
+      this.showFeedback = false;
+    }, 2000); // Adjust the delay as needed
 
     // Check if all questions have been answered
     if (this.currentQuestionIndex === this.questions.length) {
       this.displayScore();
     }
   }
+  // old submit
+  // submitQuiz(): void {
+  //   this.feedbackMessage = '';
+  //
+  //   // Check if an option has been selected
+  //   if (this.questions[this.currentQuestionIndex].selectedOption === undefined) {
+  //     this.feedbackMessage = 'Please select an option before submitting.';
+  //     return; // Exit the method without further processing
+  //   }
+  //
+  //   // Check if the selected option is correct
+  //   if (this.questions[this.currentQuestionIndex].selectedOption === this.questions[this.currentQuestionIndex].correctOption) {
+  //     this.correctQuestions++;
+  //     this.earnedScore = (this.correctQuestions / this.questions.length) * 100;
+  //   }
+  //   this.moveToNextQuestion();
+  //
+  //   // Check if all questions have been answered
+  //   if (this.currentQuestionIndex === this.questions.length) {
+  //     this.displayScore();
+  //   }
+  // }
 
   getResultMessage(): string {
     if (this.correctQuestions === this.questions.length) {
@@ -163,12 +197,21 @@ export class AnxietyQuizService {
       return;
     }
     selectedQuestion.selectedOption = optionIndex;
-    if (selectedQuestion.selectedOption === selectedQuestion.correctOption) {
-      this.feedbackMessage = 'Correct!';
-    } else {
-      this.feedbackMessage = 'That was not quite it.';
-    }
   }
+
+  // old select
+  // selectOption(optionIndex: number): void {
+  //   const selectedQuestion = this.questions[this.currentQuestionIndex];
+  //   if (selectedQuestion.selectedOption !== undefined) {
+  //     return;
+  //   }
+  //   selectedQuestion.selectedOption = optionIndex;
+  //   if (selectedQuestion.selectedOption === selectedQuestion.correctOption) {
+  //     this.feedbackMessage = 'Correct!';
+  //   } else {
+  //     this.feedbackMessage = 'That was not quite it.';
+  //   }
+  // }
 
   moveToNextQuestion(): void {
     this.questions[this.currentQuestionIndex].selectedOption = -1;

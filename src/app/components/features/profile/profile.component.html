@@ -1,19 +1,24 @@
 <app-header></app-header>
 <div class="wrapper-intro">
   <div class="wrapper-content">
-    <img src="assets/AvatarMaker-2.svg" alt="Profile Image">
+    <img *ngIf="user && user.gender === 'Male'" src="assets/male-avatar.jpg" alt="Male Profile Image">
+    <img *ngIf="user && user.gender === 'Female'" src="assets/female-avatar.jpg" alt="Female Profile Image">
+    <img *ngIf="user && user.gender !== 'Male' && user.gender !== 'Female'" src="assets/unknown-avatar.jpg" alt="Other Profile Image">
     <div>
-      <h1>{{ fullName }}</h1>
-      <p>Email: {{ email }}</p>
-      <p>Gender: {{ gender }}</p>
-      <p>Age: {{ age }}</p>
-      <div class="button-container">
-      </div>
-<!--        <button type="button" class="button" mat-stroked-button>Edit profile</button>--></div>
-    <button type="button" class="button" mat-stroked-button (click)="logout()">Log out</button>
+      <ng-container *ngIf="user">
+        <h1>{{ user.fullName }}</h1>
+        <p><span class="user-info"> Email: </span>{{ user.email }}</p>
+        <p><span class="user-info">Gender: </span>{{ user.gender }}</p>
+        <p><span class="user-info">Age: </span>{{ user.age }}</p>
+      </ng-container>
+    </div>
   </div>
 <div class="quote-container">
   <h2>Quotes For You</h2>
   <p>{{ quote }}</p>
 </div>
+
+</div>
+<div class="button-container">
+  <button type="button" class="button" (click)="logout()">Log out</button>
 </div>

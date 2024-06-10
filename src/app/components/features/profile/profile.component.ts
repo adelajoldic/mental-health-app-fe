@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {interval, Subject, takeUntil} from "rxjs";
 import {AuthService} from "../../../services/auth.service";
+import {UserModel} from "../../../models/user";
 
 @Component({
   selector: 'app-profile',
@@ -17,8 +18,7 @@ export class ProfileComponent {
   public age: number = 0
   quote: string = '';
   private destroy$ = new Subject<void>();
-  // public currentUser: User | null = null;
-
+  public user: UserModel | null = null;
 
   constructor(private router: Router, private authService: AuthService) {
   }
@@ -35,6 +35,15 @@ export class ProfileComponent {
       .subscribe(() => {
         this.generateRandomQuote();
       });
+
+    // Load user profile data
+    this.loadUserProfile();
+  }
+
+  loadUserProfile() {
+    console.log('Loading user profile...');
+    this.user = this.authService.getUserProfileData();
+    console.log('User profile loaded:', this.user);
   }
 
 

@@ -1,7 +1,7 @@
 .wrapper-intro {
   display: flex;
   justify-content: space-between;
-  margin: 70px auto;
+  margin: 10% auto 0;
   padding-bottom: 40px;
   /*border-bottom: 1px solid #3333333F;*/
   width: 100%;
@@ -10,21 +10,27 @@
 .wrapper-content {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
 }
 
 .wrapper-text {}
 .row-gap{
-  gap: 48px;
+  gap: 68px;
 }
+
 img {
   width: 300px;
   border-radius: 12px;
   margin-left: 10px;
 }
 
+.user-info{
+  font-weight: bold;
+}
+
 p {
   line-height: 180%;
+  font-size: 18px;
 }
 li{
   margin-bottom: 12px;
@@ -48,8 +54,9 @@ li{
 }
 
 button {
-  margin: 10px;
-  width: 50%;
+  margin: 5px 5px 5px 6%;
+  width: 10%;
+  background-color: #202020;
 }
 
 @media (max-width: 768px) {

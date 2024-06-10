@@ -33,4 +33,20 @@ export class AuthService {
     localStorage.removeItem('currentUser');
     // Add any other local storage items you may have
   }
+
+  getUserProfileData(): UserModel | null {
+    const userId = localStorage.getItem('userId');
+    if (userId) {
+      return {
+        id: parseInt(userId),
+        fullName: localStorage.getItem('userFullName') || '',
+        email: localStorage.getItem('userEmail') || '',
+        gender: localStorage.getItem('userGender') || '',
+        age: parseInt(localStorage.getItem('userAge') || '0'),
+        password: localStorage.getItem('userPassword') || ''
+      };
+    } else {
+      return null;
+    }
+  }
 }

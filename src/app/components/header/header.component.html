@@ -1,10 +1,13 @@
 <header>
 <div class="container">
-  <a (click)="navigateToHome()" class="logo"><img src="assets/pngwing.com.png" class="logo-pic" style="width: 4%;"><img src="assets/Logo%20MindSpace.png" class="logo-name" style="width: 150px;"></a>
+  <a (click)="navigateToHome()" class="logo">
+<!--    <img src="assets/pngwing.com.png" class="logo-pic" style="width: 4%;">-->
+    <img src="assets/Logo%20MindSpace.png" class="logo-name" style="width: 150px;"></a>
   <ul class="links">
    <li><button type="button" (click)="navigateToEducation()" class="button-secondary-regular separator-right" mat-flat-button>Home</button></li>
     <li><button type="button" (click)="navigateToVideos()" class="button-secondary-regular separator-right" mat-flat-button>Education</button></li>
     <li><button type="button" (click)="navigateToProfile()" class="button-secondary-regular separator-right" mat-flat-button>Profile</button></li>
+    <li><button type="button" (click)="logout()" class="button-secondary-regular separator-right" mat-flat-button>Logout</button></li>
   </ul>
 </div>
 </header>

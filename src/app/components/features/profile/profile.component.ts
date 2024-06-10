@@ -1,11 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {interval, Subject, takeUntil} from "rxjs";
+import {AuthService} from "../../../services/auth.service";
 
-interface Task {
-  name: string;
-  completed: boolean;
-}
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -13,24 +10,20 @@ interface Task {
 })
 export class ProfileComponent {
   @Input()
-  public studentId: number = 0
-  public fullName: string = 'Adela Joldić'
-  public email: string = 'adela.joldic@stu.ssst.edu.ba'
-  public gender: string = 'Female'
-  public age: number = 23
-  public profileImage: string = ''
-  public shortBio: string = localStorage.getItem('shortBio') || 'Enter short bio...';
-  public universityName: string = 'Sarajevo School Of Science and Technology'
-  public universityYear: number = 4
-  public department: string = 'Computer Science'
+  public id: number = 0
+  public fullName: string = ''
+  public email: string = ''
+  public gender: string = ''
+  public age: number = 0
   quote: string = '';
   private destroy$ = new Subject<void>();
+  // public currentUser: User | null = null;
 
 
+  constructor(private router: Router, private authService: AuthService) {
+  }
 
-  constructor(private router: Router
-             // , private _snackBar: MatSnackBar, private userService: UserService
- ) {}
+  // user: User | undefined;
 
   ngOnInit() {
     // Generate a random quote initially
@@ -43,6 +36,7 @@ export class ProfileComponent {
         this.generateRandomQuote();
       });
   }
+
 
   ngOnDestroy() {
     // Unsubscribe from the interval when the component is destroyed
@@ -61,63 +55,15 @@ export class ProfileComponent {
       "You are not a burden. You have worth. You are deserving of love and support. - Bryant McGill",
       "Your mental health is more important than the test, the interview, the lunch date, the meeting, the family dinner, and the grocery-run. Take care of yourself. - Unknown",
       "You are not alone. Reach out. Talk to someone. It's okay to ask for help. - Sian Ferguson"
-
-
-      // Add more quotes as needed
     ];
 
     const randomIndex = Math.floor(Math.random() * quotes.length);
     this.quote = quotes[randomIndex];
   }
-//
-//   // ngOnInit(): void {
-//
-//    /!* if(this.studentId){
-//       this.userService.getStudentProfile(this.studentId).subscribe((data: any) => {
-//         console.log(data)
-//         this.fullName = data.user.fullName
-//         this.email = data.user.email
-//         this.profileImage = data.onboarding.profileImage
-//         this.shortBio = data.onboarding.shortBio
-//         this.universityName = data.onboarding.universityName
-//         this.universityYear = data.onboarding.universityYear
-//         this.gpa = data.onboarding.gpa
-//         this.linkedinUrl = data.onboarding.linkedinUrl
-//         this.certificates = data.onboarding.certificates
-//       }, error => {
-//         this._snackBar.open("Failed to fetch profile", '', {
-//           duration: 1000
-//         })
-//       })
-//     } else {
-//       this.userService.getProfile().subscribe((data: any) => {
-//         console.log(data)
-//         this.fullName = data.user.fullName
-//         this.email = data.user.email
-//         this.profileImage = data.onboarding.profileImage
-//         this.shortBio = data.onboarding.shortBio
-//         this.universityName = data.onboarding.universityName
-//         this.universityYear = data.onboarding.universityYear
-//         this.gpa = data.onboarding.gpa
-//         this.linkedinUrl = data.onboarding.linkedinUrl
-//         this.certificates = data.onboarding.certificates
-//       }, error => {
-//         this._snackBar.open("Failed to fetch profile", '', {
-//           duration: 1000
-//         })
-//       })
-//     }
-//
-//
-//   }
-//
-//   public openLinkedin(url: string){
-//     window.open(url)
-//   }
-//   navigateToOnboarding(): void {
-//     const path = "onboarding"
-//     this.router.navigate([path])
-//   }*!/
-//
-// }
+
+  logout(): void {
+    this.authService.logout();
+  }
+
 }
+

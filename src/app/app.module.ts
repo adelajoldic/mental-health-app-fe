@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/features/home/home.component';
@@ -8,7 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { EducationComponent } from './components/features/education/education.component';
 import { LoginComponent } from './components/features/login/login.component';
 import { RegisterComponent } from './components/features/register/register.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ProfileComponent } from './components/features/profile/profile.component';
 import { QuizComponent } from './components/features/quiz/quiz.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -28,10 +27,10 @@ import { MusicIntroComponent } from './components/features/music-intro/music-int
 import { ExerciseIntroComponent } from './components/features/exercise-intro/exercise-intro.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import {MatIconModule} from "@angular/material/icon";
-import {MatCheckboxModule} from "@angular/material/checkbox";
-import {HttpClientModule} from "@angular/common/http";
-
+import { MatIconModule } from "@angular/material/icon";
+import { MatCheckboxModule } from "@angular/material/checkbox";
+import { HttpClientModule } from "@angular/common/http";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -70,6 +69,8 @@ import {HttpClientModule} from "@angular/common/http";
     MatIconModule,
     MatCheckboxModule,
     HttpClientModule,
+    MatSnackBarModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

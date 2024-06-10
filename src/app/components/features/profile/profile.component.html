@@ -1,20 +1,17 @@
 <app-header></app-header>
 <div class="wrapper-intro">
   <div class="wrapper-content">
-    <!-- Uncomment the following line if you want to use profileImage from the component -->
-    <!-- <img [src]="profileImage" alt=""> -->
     <img src="assets/AvatarMaker-2.svg" alt="Profile Image">
     <div>
-      <h1>{{fullName}}</h1>
-      <p>Email: {{email}}</p>
-      <p>Gender: {{gender}}</p>
-      <p>Age: {{age}}</p>
-<!--      <div class="button-container">-->
-<!--        <button type="button" class="button" mat-stroked-button>Edit profile</button>-->
-<!--        <button type="button" class="button" mat-stroked-button>Log out</button>-->
-<!--      </div>-->
+      <h1>{{ fullName }}</h1>
+      <p>Email: {{ email }}</p>
+      <p>Gender: {{ gender }}</p>
+      <p>Age: {{ age }}</p>
+      <div class="button-container">
+      </div>
+<!--        <button type="button" class="button" mat-stroked-button>Edit profile</button>--></div>
+    <button type="button" class="button" mat-stroked-button (click)="logout()">Log out</button>
   </div>
-</div>
 <div class="quote-container">
   <h2>Quotes For You</h2>
   <p>{{ quote }}</p>

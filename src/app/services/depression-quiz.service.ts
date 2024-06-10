@@ -119,40 +119,6 @@ export class DepressionQuizService {
 
   constructor(private router: Router) {}
 
-  // submitQuiz(): void {
-  //   this.feedbackMessage = '';
-  //   if (this.questions[this.currentQuestionIndex].selectedOption === this.questions[this.currentQuestionIndex].correctOption) {
-  //     this.correctQuestions++;
-  //     this.earnedScore = (this.correctQuestions / this.questions.length) * 100;
-  //   }
-  //   this.moveToNextQuestion();
-  //   if (this.currentQuestionIndex === this.questions.length) {
-  //     this.displayScore();
-  //   }
-  // }
-
-  // old submit
-  // submitQuiz(): void {
-  //   this.feedbackMessage = '';
-  //
-  //   // Check if an option has been selected
-  //   if (this.questions[this.currentQuestionIndex].selectedOption === undefined) {
-  //     this.feedbackMessage = 'Please select an option before submitting.';
-  //     return; // Exit the method without further processing
-  //   }
-  //
-  //   // Check if the selected option is correct
-  //   if (this.questions[this.currentQuestionIndex].selectedOption === this.questions[this.currentQuestionIndex].correctOption) {
-  //     this.correctQuestions++;
-  //     this.earnedScore = (this.correctQuestions / this.questions.length) * 100;
-  //   }
-  //   this.moveToNextQuestion();
-  //
-  //   // Check if all questions have been answered
-  //   if (this.currentQuestionIndex === this.questions.length) {
-  //     this.displayScore();
-  //   }
-  // }
   submitQuiz(): void {
     this.feedbackMessage = '';
 
@@ -228,19 +194,6 @@ export class DepressionQuizService {
     }
     selectedQuestion.selectedOption = optionIndex;
   }
-  // old select
-  // selectOption(optionIndex: number): void {
-  //   const selectedQuestion = this.questions[this.currentQuestionIndex];
-  //   if (selectedQuestion.selectedOption !== undefined) {
-  //     return;
-  //   }
-  //   selectedQuestion.selectedOption = optionIndex;
-  //   if (selectedQuestion.selectedOption === selectedQuestion.correctOption) {
-  //     this.feedbackMessage = 'Correct!';
-  //   } else {
-  //     this.feedbackMessage = 'That was not quite it.';
-  //   }
-  // }
 
   moveToNextQuestion(): void {
     this.questions[this.currentQuestionIndex].selectedOption = -1;

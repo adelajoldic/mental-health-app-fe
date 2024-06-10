@@ -8,28 +8,21 @@
       <div class="form">
         <form [formGroup]="registerForm" (ngSubmit)="submit()">
           <label for="name">Full Name</label>
-          <input id="name" type="text" [formControlName]="'name'" placeholder="Jane Doe">
+          <input id="name" type="text" [formControlName]="'fullName'" placeholder="Jane Doe">
           <label for="gender">Gender</label>
-            <select id="gender" name="gender" [formControlName]="'gender'" [style.backgroundImage]="'url(' + arrowImageUrl + ')'" style="padding-right: 30px;">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-            </select>
-            <label for="age">Age</label>
-            <select id="age" name="age" [formControlName]="'age'" [style.backgroundImage]="'url(' + arrowImageUrl + ')'" style="padding-right: 30px;">
-              <option value="18-24">18-24</option>
-              <option value="25-34">25-34</option>
-              <option value="35-44">35-44</option>
-              <option value="45-54">45-54</option>
-              <option value="55+">55+</option>
-            </select>
+          <input id="gender" type="text" [formControlName]="'gender'" placeholder="Female">
+          <label for="age">Age</label>
+          <input id="age" type="text" [formControlName]="'age'" placeholder="20">
           <label for="email">Email address</label>
           <input id="email" type="email" [formControlName]="'email'" placeholder="name@example.com">
           <label for="pass">Password</label>
           <input id="pass" type="password" [formControlName]="'password'" placeholder="********">
+          <div>
+             <button type="submit">Register</button>
+          </div>
         </form>
       </div>
-      <button type="submit" [disabled]="registerForm.invalid" (click)="navigateToHome()">Register</button>
+
       <p class="register">You already have an account? <a href="./login" >Login here.</a></p>
     </div>
     <div class="image">

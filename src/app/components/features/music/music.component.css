@@ -10,7 +10,7 @@ h2{
 
 .text, .unlock-text{
   text-align: center;
-  margin: 3% 4%;
+  margin: 1% 4% 3%;
   line-height: 30px;
   letter-spacing: 1px;
   color: #202020F2;
@@ -21,8 +21,14 @@ h2{
 }
 
 .unlock-text {
-  font-weight: bold;
-  font-size: 22px;
+  font-weight: bolder;
+  font-size: 22.5px;
+}
+
+.content-unlock-img {
+  width: 280px;
+  height: 170px;
+  margin-left: 40%;
 }
 
 .intro{
@@ -41,12 +47,12 @@ h2{
 }
 
 .video-player {
-  border-radius: 10px;
+  border-radius: 8px;
   width: 100%;
-  max-width: 800px;
+  max-width: 700px;
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 5%;
 }
 
 .video {
@@ -68,7 +74,7 @@ h2{
 
 iframe {
   width: 100%;
-  height: 200px;
+  height: 180px;
   border: none;
 }
 

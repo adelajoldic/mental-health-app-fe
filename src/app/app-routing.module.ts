@@ -23,7 +23,7 @@ import {ExerciseIntroComponent} from "./components/features/exercise-intro/exerc
 const routes: Routes = [
   {
     path: "",
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: "register",

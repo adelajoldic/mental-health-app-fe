@@ -1,16 +1,19 @@
 <!--<app-header></app-header>-->
 
 <div class="main">
+  <div class="button-container">
+    <button class="go-back" (click)="navigateToGames()">Go Back</button>
+  </div>
   <div class="choose-level">
     <img src="assets/Ena-Search.png" alt="Image">
-    <label for="wordInput">Enter word: </label>
+    <label for="wordInput">Enter positive word: </label>
     <input type="text" id="wordInput" [(ngModel)]="userInput" (keyup.enter)="checkWord()"/>
     <button class="word-input" (click)="checkWord()">Check</button>
-    <div class="levels">
-      <button *ngFor="let level of levelOptions" [disabled]="level > currentLevel" (click)="changeLevel()">
-        Level {{ level }}
-      </button>
-    </div>
+<!--    <div class="levels">-->
+<!--      <button *ngFor="let level of levelOptions" [disabled]="level > currentLevel" (click)="changeLevel()">-->
+<!--        Level {{ level }}-->
+<!--      </button>-->
+<!--    </div>-->
   </div>
 
   <div class="game-content">

@@ -1,5 +1,6 @@
 import {Component, HostListener, OnDestroy} from '@angular/core';
 import { Subject } from 'rxjs';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-words-game',
@@ -7,6 +8,8 @@ import { Subject } from 'rxjs';
   styleUrls: ['./words-game.component.css'],
 })
 export class WordsGameComponent implements OnDestroy {
+  constructor(private router: Router) {}
+
   private ngUnsubscribe = new Subject<void>();
 
   levels: { [key: number]: string[] } = {
@@ -47,27 +50,27 @@ export class WordsGameComponent implements OnDestroy {
     this.gameStarted = true;
   }
 
-  changeLevel(): void {
-    if (this.gameStarted) {
-      const confirmChange = confirm('Changing the level during the game will reset your progress. Are you sure you want to continue?');
+  // changeLevel(): void {
+  //   if (this.gameStarted) {
+  //     const confirmChange = confirm('Changing the level during the game will reset your progress. Are you sure you want to continue?');
+  //
+  //     if (confirmChange) {
+  //       this.resetGame();
+  //       this.goToNextLevel();
+  //     }
+  //   } else {
+  //     this.goToNextLevel();
+  //   }
+  // }
 
-      if (confirmChange) {
-        this.resetGame();
-        this.goToNextLevel();
-      }
-    } else {
-      this.goToNextLevel();
-    }
-  }
-
-  selectLevel(selectedLevel: number): void {
-    if (!this.gameStarted && selectedLevel <= this.currentLevel) {
-      this.currentLevel = selectedLevel;
-      this.resetGame();
-      this.generateGrid();
-      this.startGame();
-    }
-  }
+  // selectLevel(selectedLevel: number): void {
+  //   if (!this.gameStarted && selectedLevel <= this.currentLevel) {
+  //     this.currentLevel = selectedLevel;
+  //     this.resetGame();
+  //     this.generateGrid();
+  //     this.startGame();
+  //   }
+  // }
 
 
   generateRandomDirection(): { row: number; col: number } {
@@ -224,6 +227,16 @@ export class WordsGameComponent implements OnDestroy {
     }
   }
 
+  // checkGameCompletion(): void {
+  //   const wordsToFind = this.levels[this.currentLevel];
+  //
+  //   if (this.foundWords.length === wordsToFind.length) {
+  //     this.congratulatoryMessage = `Congratulations! All the words are found.`;
+  //
+  //     // Trigger the next level
+  //     this.goToNextLevel();
+  //   }
+  // }
   checkGameCompletion(): void {
     const wordsToFind = this.levels[this.currentLevel];
 
@@ -235,18 +248,48 @@ export class WordsGameComponent implements OnDestroy {
     }
   }
 
-// Method to go to the next level
+  // Method to go to the next level
   goToNextLevel(): void {
-    this.currentLevel++;
+    const lastLevel = 3;
 
-    if (this.currentLevel > Object.keys(this.levels).length) {
+    if (this.currentLevel >= lastLevel) {
       console.log("You've completed all levels!");
-    } else {
-      this.resetGame();
-      this.generateGrid(); // Generate a new grid for the new level
-      this.startGame();
+      return; // Exit the function to prevent going to the next level
     }
+
+    this.currentLevel++;
+    this.resetGame();
+    this.generateGrid(); // Generate a new grid for the new level
+    this.startGame();
   }
+
+// Method to go to the next level
+//   goToNextLevel(): void {
+//     this.currentLevel++;
+//
+//     // Assuming level 3 is the last level
+//     const lastLevel = 3;
+//
+//     if (this.currentLevel > lastLevel) {
+//       console.log("You've completed all levels!");
+//     } else {
+//       this.resetGame();
+//       this.generateGrid(); // Generate a new grid for the new level
+//       this.startGame();
+//     }
+//   }
+
+//   goToNextLevel(): void {
+//     this.currentLevel++;
+//
+//     if (this.currentLevel > Object.keys(this.levels).length) {
+//       console.log("You've completed all levels!");
+//     } else {
+//       this.resetGame();
+//       this.generateGrid(); // Generate a new grid for the new level
+//       this.startGame();
+//     }
+//   }
 
   // Method to reset the game properties
   resetGame(): void {
@@ -262,7 +305,12 @@ export class WordsGameComponent implements OnDestroy {
   unloadHandler(event: Event) {
     this.resetGame();
   }
+  navigateToGames(): void {
+    this.router.navigate(['games']);
+  }
+
 }
+
 
 
 

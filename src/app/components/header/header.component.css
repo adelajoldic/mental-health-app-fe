@@ -41,37 +41,48 @@ header .links {
   align-items: center;
 }
 
-header .links button {
-  color: #202020F2;
+header .links .first_buttons, .last_button {
   cursor: pointer;
-  transition: .3s;
   border-radius: 20px;
   border: white;
   background-color: transparent;
-  margin: 5%;
+  /*margin: 5%;*/
+  padding: 7px 30px;
 }
 
-header .links button:hover {
+header .links .first_buttons {
+  color: #202020F2;
+}
+
+header .links .last_button {
+  /*margin: 5px 5px 5px 6%;*/
+  background-color: #66AFFF;
+}
+
+header .links .first_buttons:hover {
   color: #66AFFF;
 }
 
-header .links #last_button:last-child {
-  border-radius: 20px;
-  margin: 2%;
-  background: #66AFFF;
-  color: #f8f8f8;
+header .links .last_button:hover {
+  color: #202020;
 }
-header .links #last2_button:last-child {
-  border-radius: 20px;
-  margin: 2%;
-  background: #66AFFF;
-  color: #f8f8f8;
-}
+/*!*header .links #last_button:last-child {*!*/
+/*!*  border-radius: 20px;*!*/
+/*!*  margin: 2%;*!*/
+/*!*  background: #66AFFF;*!*/
+/*!*  color: #f8f8f8;*!*/
+/*!*}*!*/
+/*header .links .last_button {*/
+/*  border-radius: 20px;*/
+/*  margin: 2%;*/
+/*  background: #FFFFFF;*/
+/*  color: #202020;*/
+/*}*/
 
-header .links #last_button:hover {
-  color: #202020F2;
-  cursor: pointer;
-}
+/*header .links .last_button:hover {*/
+/*  color: #66AFFF;*/
+/*  cursor: pointer;*/
+/*}*/
 
 .content .container {
   display: flex;

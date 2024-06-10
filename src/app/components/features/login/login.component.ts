@@ -52,26 +52,3 @@ export class LoginComponent implements OnInit {
   }
 }
 
-//   public submit(): void {
-//     if (!this.loginForm.valid) {
-//       this._snackBar.open("Input is not valid", '', {
-//         duration: 1000
-//       })
-//       return;
-//     }
-//
-//     this.authService.login(this.loginForm.value).subscribe((data:any) => {
-//       console.log(this.loginForm.value);
-//       console.log(JSON.stringify(data));
-//
-//       localStorage.setItem('userId', data.id)
-//
-//       this.router.navigate(["education"]);
-//
-//     }, error => {
-//       this._snackBar.open("Unable to log in account", '', {
-//         duration: 1000
-//       })
-//     })
-//   }
-// }

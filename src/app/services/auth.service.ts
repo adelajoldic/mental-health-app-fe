@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Observable} from "rxjs";
+import {Observable, tap} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
 import {UserModel} from "../models/user";
@@ -15,7 +15,16 @@ export class AuthService {
   }
 
   login(userData: UserModel): Observable<UserModel> {
-    return this.http.post<UserModel>(`${this.baseUrl}/login`, userData)
+    return this.http.post<UserModel>(`${this.baseUrl}/login`, userData).pipe(
+      tap((data: UserModel) => {
+        // Save user data to local storage upon successful login
+        localStorage.setItem('userId', data.id.toString());
+        localStorage.setItem('userFullName', data.fullName);
+        localStorage.setItem('userEmail', data.email);
+        localStorage.setItem('userGender', data.gender);
+        localStorage.setItem('userAge', data.age.toString());
+      })
+    );
   }
 
   register(userData: UserModel): Observable<UserModel> {
@@ -27,6 +36,10 @@ export class AuthService {
       this.clearLocalStorage();
       this.router.navigate(['/login']);
     });
+  }
+
+  isLoggedIn(): boolean {
+    return !!localStorage.getItem('userId');
   }
 
   private clearLocalStorage(): void {

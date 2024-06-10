@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import {HttpClient} from "@angular/common/http";
+import {environment} from "../../environments/environment";
 
 interface Question {
   questionText: string;
@@ -77,17 +79,16 @@ export class AnxietyQuizService {
   public earnedScore = 0;
   public feedbackMessage = '';
   public showFeedback = true;
+  private readonly baseUrl: string = `${environment.backendUrl}`;
+  constructor(private router: Router, private http: HttpClient) {}
 
-  constructor(private router: Router) {}
-
-
-  submitQuiz(): void {
-    this.feedbackMessage = '';
+  submitQuiz(userEmail: string): void {
     // Check if an option has been selected
     if (this.questions[this.currentQuestionIndex].selectedOption === undefined) {
       this.feedbackMessage = 'Please select an option before submitting.';
       return; // Exit the method without further processing
     }
+
     // Check if the selected option is correct
     if (this.questions[this.currentQuestionIndex].selectedOption === this.questions[this.currentQuestionIndex].correctOption) {
       this.correctQuestions++;
@@ -96,9 +97,6 @@ export class AnxietyQuizService {
       this.feedbackMessage = 'That was not quite it.';
     }
 
-    this.earnedScore = (this.correctQuestions / this.questions.length) * 100;
-    this.showFeedback = true;
-
     // Move to the next question after displaying feedback
     setTimeout(() => {
       this.moveToNextQuestion();
@@ -106,10 +104,50 @@ export class AnxietyQuizService {
     }, 2000); // Adjust the delay as needed
 
     // Check if all questions have been answered
-    if (this.currentQuestionIndex === this.questions.length) {
+    if (this.currentQuestionIndex === this.questions.length - 1) {
+      // Calculate the score based on correct answers
+      const score = (this.correctQuestions / this.questions.length) * 100;
+
+      // Determine the feedback message based on the score
+      let feedbackMessage = '';
+      if (score === 100) {
+        feedbackMessage = 'Perfect! You answered all questions correctly.';
+      } else if (score >= 70) {
+        feedbackMessage = 'Great job! You scored well.';
+      } else if (score >= 50) {
+        feedbackMessage = 'Not bad! Keep practicing.';
+      } else {
+        feedbackMessage = 'Oops! You can do better.';
+      }
+
+      // Prepare the quiz result object to be sent to the backend
+      const quizResult = {
+        email: userEmail,
+        totalQuestions: this.questions.length,
+        correctAnswers: this.correctQuestions,
+        score: score,
+        feedbackMessage: feedbackMessage
+      };
+
+      // Send the quiz result to the backend
+      this.http.post(`${this.baseUrl}/anxiety-quiz-result`, quizResult).subscribe(
+        response => {
+          console.log('Quiz result saved successfully:', response);
+        },
+        error => {
+          console.error('Error saving quiz result:', error);
+        }
+      );
+
+      // Display final score
       this.displayScore();
+    } else {
+      // Show feedback for the current question
+      this.earnedScore = (this.correctQuestions / this.questions.length) * 100;
+      this.showFeedback = true;
     }
   }
+
 
   getResultMessage(): string {
     if (this.correctQuestions === this.questions.length) {

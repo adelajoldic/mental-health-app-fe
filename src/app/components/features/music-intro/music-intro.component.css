@@ -31,14 +31,12 @@ button:hover{
     padding: 20px;
     min-height: 92vh;
   }
-
   img {
     max-width: 100%;
     display: block;
     margin: 50% auto 10px;
     object-fit: cover;
   }
-
   button {
     display: block;
     width: 100%;
@@ -50,7 +48,6 @@ button:hover{
     border-radius: 30px;
     margin-top: 200px;
   }
-
   button:hover {
     background: #202020;
   }

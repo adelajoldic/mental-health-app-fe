@@ -1,7 +1,6 @@
 h2{
   text-align: center;
   color: #202020F2;
-  /*font-size: 28px;*/
 }
 
 .example-section {
@@ -91,7 +90,6 @@ iframe {
   height: 100%;
 }
 
-
 .skip-button {
   position: absolute;
   bottom: 20px;
@@ -165,7 +163,6 @@ p {
 }
 
 @media screen and (max-width: 767px) {
-
   .intro{
     padding: 10px;
   }

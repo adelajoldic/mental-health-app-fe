@@ -5,6 +5,7 @@
   margin: 2% 5% 0 5%;
   background: white;
 }
+
 .button {
   margin: 0;
   font-size: 20px;
@@ -19,11 +20,13 @@
   z-index: 1;
   border: none;
 }
+
 .button:hover {
   background:rgb(19, 17, 17);
   color: white;
   box-shadow: 0 0 10px  rgba(255,255,255,0.6);
 }
+
 .button:before {
   content: "";
   position: absolute;
@@ -35,24 +38,29 @@
   border-right: 2px solid white;
   animation: border-top-right 3s infinite alternate;
 }
+
 @keyframes border-top-right {
   0% {
     width: 0;
     height: 0;
   }
+
   25% {
     width: 100%;
     height: 0;
   }
+
   50% {
     width: 100%;
     height: 100%;
   }
+
   100% {
     width: 100%;
     height: 100%;
   }
 }
+
 .button:after {
   content: "";
   position: absolute;
@@ -64,24 +72,29 @@
   border-left: 2px solid white;
   animation: border-bottom-left 3s infinite alternate;
 }
+
 @keyframes border-bottom-left {
   0% {
     width: 0;
     height: 0;
   }
+
   50% {
     width: 0;
     height: 0;
   }
+
   75% {
     width: 100%;
     height: 0;
   }
+
   100% {
     width: 100%;
     height: 100%;
   }
 }
+
 @keyframes border-bottom-left {
   0%    {width:0;   height:0; opacity: 0;}
   50%   {width:0;   height:0; opacity: 0;}
@@ -89,10 +102,12 @@
   75%   {width:100%; height:0; opacity: 1;}
   100%  {width:100%; height:100%;opacity: 1;}
 }
+
 .img-slider .slide .info h1 {
   color: white;
   font-size: 40px;
 }
+
 .img-slider .slide .info h2 {
   position: absolute;
   margin-top: 0.5%;
@@ -101,31 +116,37 @@
   opacity: 0;
   transition: opacity 1s ease-in-out 1s;
 }
+
 .img-slider .slide.active .info h2 {
   opacity: 1;
 }
+
 .img-slider {
   position: relative;
   background: #1D212B;
   max-height: 100vh;
 }
+
 .img-slider .slide {
   z-index: 1;
   position: absolute;
   width: 100%;
   clip-path: circle(0% at 0 50%);
 }
+
 .img-slider .slide.active {
   clip-path: circle(150% at 0 50%);
   transition: 2s;
   transition-property: clip-path;
 }
+
 .img-slider .slide img {
   filter: brightness(60%);
   z-index: 1;
   width: 100%;
   border-radius: 5px;
 }
+
 .img-slider .slide .info {
   width: 50%;
   position: absolute;
@@ -138,20 +159,14 @@
     font-size: 16px;
     width: 150px;
     height: 40px;
-    /*bottom: 3%;*/
-    /*left: 5%;*/
-    right: 5%; /* Position the button on the right side */
-
+    right: 5%;
   }
-
   .background-image {
     margin: 2% 5% 0;
   }
-
   .img-slider .slide .info h1 {
     font-size: 24px;
   }
-
   .img-slider .slide .info h2 {
     font-size: 14px;
     margin-top: 0.3%;

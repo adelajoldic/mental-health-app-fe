@@ -16,8 +16,6 @@ export class WordsGameComponent implements OnDestroy {
     1: ['love', 'smile', 'happiness'],
     2: ['harmony', 'gratitude', 'joyful', 'hope'],
     3: ['positive', 'compassion', 'cherish', 'empathy', 'optimistic', 'kind', 'sweet', 'safe']
-    // 1: ['positive', 'compassion', 'cherish', 'empathy', 'optimistic', 'kind', 'sweet', 'fun', 'safe', 'free', 'harmony',
-    //   'gratitude', 'joyful', 'soft', 'hope', 'bliss', 'love', 'smile', 'happiness', 'joy'],
   };
 
   currentLevel: number = 1;
@@ -29,8 +27,6 @@ export class WordsGameComponent implements OnDestroy {
   userInput: string = '';
   errorMessage: string | null = null;
   congratulatoryMessage: string | null = null;
-  // timer: number = 0;
-  timerInterval: any;
   gameStarted: boolean = false;
 
   ngOnInit(): void {
@@ -49,29 +45,6 @@ export class WordsGameComponent implements OnDestroy {
   startGame(): void {
     this.gameStarted = true;
   }
-
-  // changeLevel(): void {
-  //   if (this.gameStarted) {
-  //     const confirmChange = confirm('Changing the level during the game will reset your progress. Are you sure you want to continue?');
-  //
-  //     if (confirmChange) {
-  //       this.resetGame();
-  //       this.goToNextLevel();
-  //     }
-  //   } else {
-  //     this.goToNextLevel();
-  //   }
-  // }
-
-  // selectLevel(selectedLevel: number): void {
-  //   if (!this.gameStarted && selectedLevel <= this.currentLevel) {
-  //     this.currentLevel = selectedLevel;
-  //     this.resetGame();
-  //     this.generateGrid();
-  //     this.startGame();
-  //   }
-  // }
-
 
   generateRandomDirection(): { row: number; col: number } {
     const directions = [
@@ -227,16 +200,6 @@ export class WordsGameComponent implements OnDestroy {
     }
   }
 
-  // checkGameCompletion(): void {
-  //   const wordsToFind = this.levels[this.currentLevel];
-  //
-  //   if (this.foundWords.length === wordsToFind.length) {
-  //     this.congratulatoryMessage = `Congratulations! All the words are found.`;
-  //
-  //     // Trigger the next level
-  //     this.goToNextLevel();
-  //   }
-  // }
   checkGameCompletion(): void {
     const wordsToFind = this.levels[this.currentLevel];
 
@@ -262,34 +225,6 @@ export class WordsGameComponent implements OnDestroy {
     this.generateGrid(); // Generate a new grid for the new level
     this.startGame();
   }
-
-// Method to go to the next level
-//   goToNextLevel(): void {
-//     this.currentLevel++;
-//
-//     // Assuming level 3 is the last level
-//     const lastLevel = 3;
-//
-//     if (this.currentLevel > lastLevel) {
-//       console.log("You've completed all levels!");
-//     } else {
-//       this.resetGame();
-//       this.generateGrid(); // Generate a new grid for the new level
-//       this.startGame();
-//     }
-//   }
-
-//   goToNextLevel(): void {
-//     this.currentLevel++;
-//
-//     if (this.currentLevel > Object.keys(this.levels).length) {
-//       console.log("You've completed all levels!");
-//     } else {
-//       this.resetGame();
-//       this.generateGrid(); // Generate a new grid for the new level
-//       this.startGame();
-//     }
-//   }
 
   // Method to reset the game properties
   resetGame(): void {

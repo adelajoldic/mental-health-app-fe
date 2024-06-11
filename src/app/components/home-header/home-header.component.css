@@ -1,5 +1,3 @@
-/* Global Rules */
-
 a {
   text-decoration: none;
 }
@@ -16,8 +14,6 @@ ul {
   padding-bottom: 1%;
   margin-left: auto;
   margin-right: auto;
-  /*border-bottom: 1px solid #E1E1E1;*/
-
 }
 
 /* Small */
@@ -41,9 +37,6 @@ ul {
   }
 }
 
-/* End Global Rules */
-
-/* Start Landing Page */
 header {
   display: flex;
 }
@@ -53,22 +46,18 @@ header {
     min-height: auto;
     display: initial;
   }
-
   header .container {
     flex-direction: column;
     align-items: center;
   }
-
   header .logo {
     margin-top: 20px;
     margin-bottom: 20px;
   }
-
   header .links {
     text-align: center;
     gap: 10px;
   }
-
   header .links button {
     margin-left: 0;
   }

@@ -26,8 +26,8 @@ ul {
   margin-top: -5px;
   font-weight: lighter;
   color: #f8f8f8;
-
 }
+
 .content .container {
   display: flex;
   align-items: center;
@@ -107,7 +107,6 @@ a{
 }
 
 @media (max-width: 768px) {
-
   .content .container {
     flex-direction: column;
     align-items: center;
@@ -155,44 +154,34 @@ a{
     padding-left: 0;
     padding-right: 0;
   }
-
-
 }
 
 @media (max-width: 480px) {
-
   .welcome {
     font-size: 24px;
   }
-
   .login {
     font-size: 16px;
   }
-
   input {
     width: 110%;
     font-size: 12px;
     padding-left: 10px;
     margin-left: 5%;
   }
-
   label, .register {
     font-size: 14px;
     padding: 10px 20px;
   }
-
   .register {
     margin-left: -40px;
     text-align: center;
   }
-
   .content button {
     width: 110%;
     margin-left: 5%;
     font-size: 14px;
-
   }
-
   .form {
     padding-left: 0;
     padding-right: 0;

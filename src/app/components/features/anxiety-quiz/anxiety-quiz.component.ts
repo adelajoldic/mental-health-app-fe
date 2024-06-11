@@ -44,12 +44,4 @@ export class AnxietyQuizComponent {
   getResultImage(): string {
     return this.anxietyQuizService.getResultImage();
   }
-
-  // submitQuiz(): void {
-  //   const userProfileData = this.authService.getUserProfileData();
-  //   if (userProfileData) {
-  //     const userEmail = userProfileData.email;
-  //     this.anxietyQuizService.submitQuiz(userEmail);
-  //   }
-  // }
 }

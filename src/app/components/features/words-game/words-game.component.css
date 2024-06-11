@@ -78,7 +78,6 @@ img{
   background: #FFFFFF;
     height: 40px;
     padding: 1px 1px 1px 15px;
-    /*margin-bottom: 5px;*/
     color: #202020F2;
     font-size: 13px;
     font-weight: lighter;
@@ -95,9 +94,6 @@ button{
 .go-back {
   width: 120px;
   padding: 10px 0;
-  /*margin: 20px 25px;*/
-  /*border: none;*/
-  /*background-color: #66AFFF;*/
   background-color: #FFFFFF;
   border: 0.1px solid #5d5d5d;
   color: #5d5d5d;
@@ -114,52 +110,41 @@ button{
   .main {
     margin-top: 10px;
   }
-
   .levels {
     display: none;
   }
-
   img {
     display: none;
   }
-
   .choose-level{
     margin-left: 0;
   }
-
   button {
     padding: 10px;
   }
-
   .level-title {
     margin-left: 37%;
   }
-
   #counter {
     margin-left: 28%;
   }
-
   .congratulation {
     margin-left: 10%;
   }
-
   .content .container {
     gap: 0;
     min-height: calc(100vh - 101px);
     justify-content: center;
     flex-direction: column-reverse;
   }
-
   .content .info {
     text-align: center;
     margin-bottom: 15px
   }
-
   .content .info h1 {
     color: #5d5d5d;
     font-size: 44px;
   }
-
   .content .info p {
     text-align: justify;
     margin: 2%;
@@ -167,12 +152,10 @@ button{
     font-size: 15px;
     color: #5d5d5d;
   }
-
   .content .info button:hover {
     color: #5d5d5d;
     cursor: pointer;
   }
-
   .content .image img {
     max-width: 80%;
     position: inherit;

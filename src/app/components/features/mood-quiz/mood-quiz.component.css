@@ -1,4 +1,4 @@
-.main{
+.main {
   margin-top: 4%;
 }
 
@@ -24,8 +24,7 @@
   float: none;
 }
 
-.quiz-container h2
- {
+.quiz-container h2 {
   text-align: center;
   max-width: 600px;
   margin: auto auto 1%;
@@ -35,14 +34,12 @@
   line-height: 1.09524;
   letter-spacing: 1px;
   padding-bottom: 5px;
-
 }
 
-.question-container p{
+.question-container p {
   font-weight: 300;
   font-size: 25px;
   line-height: 1.5;
-  /*margin-top: 3%;*/
   letter-spacing: 1px;
   text-align: center;
   padding-bottom: 5%;
@@ -54,8 +51,8 @@
   padding-top: 5%;
   font-size: 18px;
 }
+
 .options-container {
-  /*text-align: center;*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -63,29 +60,28 @@
 }
 
 .option {
-  width: 48%; /* Adjust as needed, leave some space for margin */
-  margin-left: 25%; /* Adjust spacing between options */
+  width: 48%;
+  margin-left: 25%;
   margin-bottom: 3%;
-  padding: 10px; /* Add padding to create a box */
-  border: 1px solid #ccc; /* Add border for box styling */
-  border-radius: 30px; /* Optional: Add border-radius for rounded corners */
-  cursor: pointer; /* Add cursor pointer for better UX */
-  transition: background-color 0.3s; /* Add smooth transition for color change */
-
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .option:hover {
-  background-color: #f0f0f0; /* Add hover effect for better visibility */
+  background-color: #f0f0f0;
 }
 
 .option label {
   display: inline-block;
-  margin-right: 5px; /* Adjust spacing between the radio button and label */
+  margin-right: 5px;
 }
 
 .selected {
-  background-color: #66AFFF; /* Set the color for selected option */
-  color: #fff; /* Set text color for better visibility */
+  background-color: #66AFFF;
+  color: #fff;
 }
 
 .button-container {
@@ -94,8 +90,7 @@
   margin-top: 20px;
 }
 
-.submit,
-.go-back {
+.submit, .go-back {
   width: 150px;
   padding: 10px 0;
   margin: 20px 10px;
@@ -108,8 +103,8 @@
 
 .button-container {
   display: flex;
-  justify-content: center; /* Center the buttons horizontally */
-  margin-top: 20px; /* Add some space between the buttons and other elements */
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .submit,.go-back {
@@ -124,7 +119,6 @@
 
 .quiz-result {
   text-align: center;
-  /*margin-top: 10px;*/
 }
 
 .images {
@@ -153,46 +147,37 @@
   .main {
     margin-top: 5%;
   }
-
   #question {
     padding-top: 17%;
     padding-bottom: 17%;
     font-size: 15px;
   }
-
   .question-container  {
     font-size: 14px;
     margin-bottom: 5%;
   }
-
   .options-container {
     margin-bottom: 5%;
   }
-
   .option {
     width: 100%;
     margin: 5% auto;
     font-size: 13px;
   }
-
   button {
     margin: 3% 0 1% auto;
     padding: 1% 10%;
   }
-
   .images {
     max-width: 100%;
     height: auto;
     width: 200px;
     margin: 0 auto;
   }
-
   .button-container {
     justify-content: center;
   }
-
-  .submit,
-  .go-back {
+  .submit, .go-back {
     width: 120px;
     padding: 10px 0;
     margin: 20px 25px;
@@ -207,7 +192,6 @@
     text-align: center;
     margin: 20% auto auto;
   }
-
   .result-content {
     display: flex;
     justify-content: center;
@@ -215,7 +199,6 @@
     margin-top: 20px;
     padding: 0;
   }
-
   .result-image {
     width: 120px;
     height: auto;
@@ -223,23 +206,19 @@
     margin-top: 5%;
     margin-bottom: 20px;
   }
-
   .result-text {
     text-align: center;
   }
-
   .quiz-result h3 {
     font-size: 20px;
     margin-bottom: 30px;
     color: #5d5d5d;
   }
-
   .quiz-result p {
     font-size: 14px;
     margin-bottom: 30px;
     line-height: 25px;
   }
-
   .button-container {
     display: flex;
     justify-content: center;

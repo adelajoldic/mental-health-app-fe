@@ -3,7 +3,6 @@
   justify-content: space-between;
   margin: 10% auto 0;
   padding-bottom: 40px;
-  /*border-bottom: 1px solid #3333333F;*/
   width: 100%;
 }
 
@@ -32,7 +31,8 @@ p {
   line-height: 180%;
   font-size: 18px;
 }
-li{
+
+li {
   margin-bottom: 12px;
 }
 
@@ -44,7 +44,7 @@ li{
   color: #333;
 }
 
-.quote-container h2{
+.quote-container h2 {
   font-size: 20px;
 }
 
@@ -70,27 +70,23 @@ button:hover {
     align-items: center;
     border-bottom: 1px solid #3333333F;
   }
-
   .wrapper-content {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .wrapper-content img {
     width: 200px;
     border-radius: 12px;
   }
-
   .button-container {
     display: flex;
     gap: 10px;
   }
-
   .button {
     margin: 30px auto;
+    width: 30%;
   }
-
   .quote-container {
     text-align: center;
     margin: 10px auto;
@@ -98,16 +94,13 @@ button:hover {
     color: #333;
     max-width: 100%;
   }
-
   .wrapper-content h1 {
     font-size: 25px;
     text-align: center;
   }
-
   .quote-container h2 {
     font-size: 20px;
   }
-
   .quote-container p {
     font-style: italic;
     font-size: 14px;

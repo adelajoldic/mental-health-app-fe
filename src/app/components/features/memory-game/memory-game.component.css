@@ -21,14 +21,12 @@
 }
 
 .card.flipped {
-  /*background-color: #2ecc71;*/
   background-color: #E0A3AA;
 }
 
 .card.matched {
-  /*background: #E0AA3A;*/
   background-color: #2ecc71;
-  pointer-events: none; /* Disable clicking on matched cards */
+  pointer-events: none;
 }
 
 .container {
@@ -84,79 +82,66 @@
   .header {
     display: none;
   }
-
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .image {
-    max-width: 80%; /* Adjust based on your requirements */
+    max-width: 80%;
     margin-bottom: 20px;
   }
-
   .timer {
     text-align: center;
     margin-bottom: 20px;
   }
-
   .congratulatory-message {
     text-align: center;
     margin-top: 50px;
   }
-
   .congratulatory-message h3 {
-    font-size: 24px; /* Adjust based on your requirements */
+    font-size: 24px;
     color: #5d5d5d;
   }
-
   .congratulatory-message button {
     margin-top: 10px;
   }
-
   #game-board {
     display: grid;
-    grid-template-columns: repeat(4, 70px); /* Adjust based on your requirements */
-    grid-template-rows: repeat(4, 70px); /* Adjust based on your requirements */
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(4, 70px);
     grid-gap: 5px;
     margin: 0 auto 20px;
   }
-
   .card {
-    width: 100px; /* Adjust based on your requirements */
-    height: 100px; /* Adjust based on your requirements */
+    width: 100px;
+    height: 100px;
     font-family: "Gochi Hand", cursive;
     background-color: #3498db;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px; /* Adjust based on your requirements */
+    font-size: 16px;
     cursor: pointer;
     border-radius: 8px;
   }
-
   .card.flipped {
     background-color: #E0A3AA;
   }
-
   .card.matched {
     background-color: #2ecc71;
-    pointer-events: none; /* Disable clicking on matched cards */
+    pointer-events: none;
   }
-
   .image {
-    max-width: 80%; /* Adjust based on your requirements */
+    max-width: 80%;
   }
-
   .congratulatory-message h3 {
-    font-size: 20px; /* Adjust based on your requirements */
+    font-size: 20px;
   }
-
   .card {
-    width: 60px; /* Adjust based on your requirements */
-    height: 60px; /* Adjust based on your requirements */
-    font-size: 14px; /* Adjust based on your requirements */
+    width: 60px;
+    height: 60px;
+    font-size: 14px;
   }
 }

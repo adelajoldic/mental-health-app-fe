@@ -25,20 +25,20 @@
 .question-container{
   display: flex;
   align-items: center;
-  width: 100%; /* Take up the full width of the screen */
+  width: 100%;
   margin: auto auto 3%;
   background: #E0A3AA;
 }
 
 .question-container img {
-  flex: 0 0 auto; /* Allow image to grow or shrink as needed */
-  max-width: 50%; /* Set maximum width of the image to 50% of container width */
+  flex: 0 0 auto;
+  max-width: 50%;
   height: 147px;
   margin-left: 11%;
 }
 
 .question-container p {
-  flex: 1; /* Allow paragraph to take up remaining space */
+  flex: 1;
 }
 
 .question-container p{
@@ -54,14 +54,12 @@
 }
 
 #question {
-  /*background: #66AFFF;*/
   background: #E0A3AA;
   color: #f8f8f8;
   padding-top: 4%;
 }
 
 .options-container {
-  /*text-align: center;*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -69,29 +67,29 @@
 }
 
 .option {
-  width: 70%; /* Adjust as needed, leave some space for margin */
-  margin-left: 15%; /* Adjust spacing between options */
+  width: 70%;
+  margin-left: 15%;
   margin-bottom: 1.5%;
-  padding: 10px; /* Add padding to create a box */
+  padding: 10px;
   font-size: 14px;
-  border: 1px solid #ccc; /* Add border for box styling */
-  border-radius: 30px; /* Optional: Add border-radius for rounded corners */
-  cursor: pointer; /* Add cursor pointer for better UX */
-  transition: background-color 0.3s; /* Add smooth transition for color change */
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .option:hover {
-  background-color: #f0f0f0; /* Add hover effect for better visibility */
+  background-color: #f0f0f0;
 }
 
 .option label {
   display: inline-block;
-  margin-right: 5px; /* Adjust spacing between the radio button and label */
+  margin-right: 5px;
 }
 
 .selected {
-  background-color: #E0A3AA; /* Set the color for selected option */
-  color: #fff; /* Set text color for better visibility */
+  background-color: #E0A3AA;
+  color: #fff;
 }
 
 .feedback-message{
@@ -123,7 +121,6 @@
 
 .quiz-result {
   text-align: center;
-  /*margin-top: 10px;*/
 }
 
 .images {
@@ -263,15 +260,15 @@
 
 
 /*@media (max-width: 768px) {*/
-/*  !*.options-container {*!*/
-/*  !*  flex-direction: column;*!*/
-/*  !*  align-items: center;*!*/
-/*  !*}*!*/
+/*  .options-container {*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*  }*/
 
-/*  !*.option {*!*/
-/*  !*  margin-right: 0;*!*/
-/*  !*  margin-bottom: 5px;*!*/
-/*  !*}*!*/
+/*  .option {*/
+/*    margin-right: 0;*/
+/*    margin-bottom: 5px;*/
+/*  }*/
 /*  .option {*/
 /*    width: 100%;*/
 /*  }*/
@@ -283,8 +280,8 @@
 /*  background: #E0A3AA;*/
 /*}*/
 /*.go-back{*/
-/*  !*width: 100%;*!*/
-/*  !*padding: 2% 15%;*!*/
+/*  width: 100%;*/
+/*  padding: 2% 15%;*/
 /*  margin: auto 35%;*/
 /*}*/
 

@@ -11,41 +11,13 @@ export class HeaderComponent {
   constructor(private router:Router, private authService: AuthService) {
   }
 
-  navigateToLogin(): void {
-    const path = "login"
-    this.router.navigate([path])
-  }
-
-  navigateToRegister(): void {
-    const path = "register"
-    this.router.navigate([path])
-  }
-  navigateToHome() {
-    const path = ""
-    this.router.navigate([path])
-
-  }
   navigateToEducation() {
     const path = "education"
     this.router.navigate([path])
   }
 
-  navigateToGames() {
-    const path = "games"
-    this.router.navigate([path])
-  }
-
   navigateToVideos() {
     const path = "videos"
-    this.router.navigate([path])
-  }
-
-  navigateToMusic() {
-    const path = "music"
-    this.router.navigate([path])
-  }
-  navigateToExercises() {
-    const path = "exercises"
     this.router.navigate([path])
   }
 

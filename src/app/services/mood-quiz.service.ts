@@ -93,7 +93,6 @@ export class MoodQuizService {
         break;
     }
 
-
     return feedback;
   }
 
@@ -131,5 +130,4 @@ export class MoodQuizService {
   goBack(): void {
     this.currentQuestionIndex--;
   }
-
 }

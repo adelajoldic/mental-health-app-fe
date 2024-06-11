@@ -46,7 +46,7 @@ h2{
   font-weight: lighter;
   letter-spacing: 0.7px;
   line-height: 25px;
-  flex-grow: 1; /* Allow text to grow and take available space */
+  flex-grow: 1;
   margin: auto 5%;
 }
 
@@ -59,7 +59,7 @@ h2{
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 92%; /* Adjust the height to 100% */
+  height: 92%;
 }
 
 .game-card:hover {
@@ -76,27 +76,24 @@ h2{
 
 .button-container {
   position: relative;
-  bottom: 15px; /* Adjust as needed */
+  bottom: 15px;
   width: 100%;
-  text-align: center; /* Center the buttons horizontally */
+  text-align: center;
 }
 
 button {
   width: 80%;
   font-size: 20px;
-  margin: 5% auto; /* Center the button horizontally */
-  padding: 10px; /* Adjust padding as needed */
+  margin: 5% auto;
+  padding: 10px;
 }
 @media (max-width: 768px) {
   .choice {
     display: none;
-    /*max-width: 99.9%;*/
-    /*height: 100px;*/
-    /*margin: 0;*/
   }
 
   #introduction {
-    display: none; /* Hide the introduction text on mobile devices */
+    display: none;
   }
 
   h2{
@@ -110,7 +107,6 @@ button {
 
   .game-card:hover {
     transition: none;
-    /*background: #ffffff;*/
   }
 
   .game-grid img{
@@ -131,30 +127,3 @@ button {
     padding: 10px;
   }
 }
-
-/*@media (max-width: 768px) {*/
-/*  h2{*/
-/*    font-size: 17px;*/
-/*  }*/
-/*  #introduction{*/
-/*    display: none;*/
-/*  }*/
-/*  .game-grid{*/
-/*    margin: auto;*/
-/*    grid-row-gap: 2%;*/
-/*  }*/
-/*  .game-card:hover{*/
-/*    transition: none;*/
-/*    background: #ffffff;*/
-/*  }*/
-/*  .game-grid h3{*/
-/*    font-size: 16px;*/
-/*  }*/
-/*  .game-grid p{*/
-/*    font-size: 14px;*/
-/*  }*/
-/*   button{*/
-/*    font-size: 14px;*/
-/*    padding: 4px;*/
-/*  }*/
-/*}*/

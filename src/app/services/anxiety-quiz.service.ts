@@ -148,7 +148,6 @@ export class AnxietyQuizService {
     }
   }
 
-
   getResultMessage(): string {
     if (this.correctQuestions === this.questions.length) {
       return 'Good job!';

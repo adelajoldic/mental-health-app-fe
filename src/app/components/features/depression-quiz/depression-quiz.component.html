@@ -21,17 +21,16 @@
     </div>
   </div>
   <div class="button-container">
-    <button *ngIf="depressionQuizService.currentQuestionIndex < depressionQuizService.questions.length" class="submit" (click)="depressionQuizService.submitQuiz()">Submit Answer</button>
+    <button *ngIf="depressionQuizService.currentQuestionIndex < depressionQuizService.questions.length" class="submit" (click)="submitAnswer()">Submit Answer</button>
   </div>
+
   <div *ngIf="depressionQuizService.currentQuestionIndex === depressionQuizService.questions.length" class="quiz-result" id="quiz-result">
     <div *ngIf="depressionQuizService.currentQuestionIndex === depressionQuizService.questions.length">
       <div class="quiz-result">
         <img [src]="depressionQuizService.getResultImage()" class="images" alt="Result Image">
         <h3>{{ depressionQuizService.getResultMessage() }}</h3>
         <p>You answered correctly on {{ depressionQuizService.getTotalScore() }} out of {{ depressionQuizService.getTotalQuestions() }} questions.</p>
-       <div class="button-container">
-         <button *ngIf="depressionQuizService.currentQuestionIndex === depressionQuizService.questions.length" class="go-back" (click)="depressionQuizService.navigateToGames()">Go Back</button>
-       </div>
+        <button *ngIf="depressionQuizService.currentQuestionIndex === depressionQuizService.questions.length" class="go-back" (click)="goBack()">Go Back</button>
       </div>
     </div>
   </div>

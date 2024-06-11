@@ -7,10 +7,6 @@ import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
   styleUrls: ['./videos.component.css']
 })
 export class VideosComponent implements OnInit{
-  // public intro: string = "Explore powerful video narratives of individuals navigating mental health challenges." +
-  //   " Gain insights and practical strategies for coping as they share personal experiences, offering support" +
-  //   " and guidance on the journey to improved mental well-being. Discover resilience, find relatable stories," +
-  //   " and access resources to help navigate your own path towards mental health. 📺 #VideoTherapy";
   public intro: string = " Explore a compassionate space " +
     "dedicated to empowering minds and fostering well-being. Discover practical tips, evidence-based strategies, " +
     "and uplifting stories to nurture your mental resilience. Let's break down stigmas, build a supportive community," +

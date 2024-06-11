@@ -1,22 +1,9 @@
-/* Start Landing Page */
 .landing-page .content .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
 }
-
-/*@media (max-width: 767px) {*/
-/*  .landing-page .content .container {*/
-/*    gap: 0;*/
-/*    min-height: calc(100vh - 101px);*/
-/*    justify-content: center;*/
-/*    flex-direction: column-reverse;*/
-/*  }*/
-/*  .landing-page .content .info h1 {*/
-/*    font-size: 28px;*/
-/*  }*/
-/*}*/
 
 .landing-page .content .info{
   margin: 120px 40px 20px;
@@ -29,7 +16,6 @@
 
 .landing-page .content .info p {
   text-align: justify;
-  /*margin: 2%;*/
   line-height: 1.6;
   font-size: 15px;
   color: #202020F2;
@@ -54,6 +40,7 @@
   width: 300px;
   padding-left: 25%;
 }
+
 @media (max-width: 767px) {
   .landing-page{
     margin-top: 50%;
@@ -74,21 +61,15 @@
     flex-direction: column-reverse;
     text-align: center;
   }
-
   .landing-page .content .info {
     text-align: center;
-    /*margin-bottom: 5px;*/
   }
-
   .landing-page .content .info h1 {
     font-size: 18px;
   }
-
   .landing-page .content .info p {
-    /*font-size: 11px;*/
     display: none;
   }
-
   button{
     font-size: 20px;
     padding: 10px 80px;
